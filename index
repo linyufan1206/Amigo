@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+ <html>
+
+ <body>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />		
+    <link rel="apple-touch-icon-precomposed" href="image/pdapp_icon.png">	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="themes/sapido.css"/>
+	<script src="themes/sapido.js">
+	</script>	
+</head> 
+ 
+ 
+ <!-- /device -->
+<div data-role="page" id="device" data-theme="f">
+ 	<div data-role="content" data-theme="f" style="border:none;"><!--/content --> 		
+		<div class="version">Power by Sapido
+			<span style="float:right;">Versio:2.2.x<br>
+			<a style="float:right;" href="#setting" data-role="button" data-icon="gear" data-iconpos="notext" data-theme="d" data-inline="true"></a>
+			</span>
+		</div>
+		<a href="html/camera.html#cam_selected" rel="external" data-role="button" data-theme="z" class="logo" ></a>
+	</div> 
+ </br>
+ 		<div style="height:170px;overflow-y:scroll;">
+			<table class="login_device">	
+				<tr>
+					<td width="60%"><a href="#wireframe" data-role="button">
+						<div class="status_on"> 主管理者</div>
+					</a></td>
+					<td>
+						<a href="#seurity_off" data-rel="dialog" data-role="button" class="ui-icon-sec_gr" data-theme="h" onclick="sec_type(this)"></a>
+					</td>
+					<td><a href="#login_pw" data-role="button" class="ui-icon-loginpw" data-theme="h" ></a></td>
+					<td><a href="#login_delete" data-rel="dialog" data-role="button" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a>
+					</td>
+				</tr>
+			</table>
+			<table class="login_device">
+				<tr>
+					<td width="60%"><a href="#wireframe_secAdmin_Setting" rel="external" data-role="button">
+						<div class="status_on">User 1</div>
+					</a></td>
+					<td>
+						<a href="#seurity_off" data-rel="dialog" data-role="button" class="ui-icon-sec_gr" data-theme="h" onclick="sec_type(this)"></a>
+					</td>
+					<td><a href="#login_pw" data-role="button" class="ui-icon-loginpw" data-theme="h" data-iconpos="notext"></a></td>
+					<td><a href="#login_delete" data-rel="dialog" data-role="button" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a></td>
+				</tr>
+			</table>
+			<table class="login_device">
+				<tr>
+					<td width="60%"><a href="#wireframe_general" data-role="button">
+						<div class="status_on"> User 2</div>
+					</a></td>
+					<td>
+						<a href="#seurity_off" data-rel="dialog" data-role="button" class="ui-icon-sec_gr" data-theme="h" onclick="sec_type(this)"></a>
+					</td>
+					<td><a href="#login_pw" data-role="button" class="ui-icon-loginpw" data-theme="h" ></a></td>
+					<td><a href="#login_delete" data-rel="dialog" data-role="button" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a>
+					</td>
+				</tr>
+			</table>			
+			<table class="login_device">
+				<tr>
+					<td width="60%"><a href="#wireframe_guest" data-role="button" >
+						<div class="status_on">User 3</div>
+					</a></td>
+					<td>
+					<a href="#seurity_off" data-rel="dialog" data-role="button" class="ui-icon-sec_gr" data-theme="h" onclick="sec_type(this)"></a>
+					</td>
+					<td><a href="#login_pw" data-role="button" class="ui-icon-loginpw" data-theme="h" ></a></td>
+					<td><a href="#login_delete" data-rel="dialog" data-role="button" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a></td>
+				</tr></table>
+		</div><!--/content_end --> 
+	<div data-role="footer" data-position="fixed" data-theme="g" style="border:none;">
+		<div style="text-align:center;">
+			<a href="#login_manual" data-role="button" data-theme="f" class="but" style="width:300px;height:35px;margin:0 auto;">新增物連網</a>
+		</div>
+	</div> <!-- /footer -->
+
+<!-- /page1_end --></div>
+  
+  
+<!-- /wireframe -->
+<div data-role="page" id="wireframe" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1 class="a">GR297n_135da0</h1>
+	<a href="#device" data-theme="g" data-role="button" class="back">上一頁</a>
+	<a href="#wireframe" data-role="button" data-inline="true" data-mini="true" data-theme="g"  class="a" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d" ><!--/content --> 	
+	<ul data-role="listview" data-theme="d" class="a">
+		<!--<li class="a">
+			<a href="html/map.html#menu" rel="external">
+			<img src="image/wan.png" class="ui-li-icon">
+			上網設定
+			</a>
+		</li>-->
+		<li>
+			<a href="html/alert.html#infor" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲訊息
+			</a>
+		</li>
+		<li>
+			<a href="html/stream.html#media_device" rel="external">
+			<img src="image/online.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			雲上傳
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			雲下載
+			</a>
+		</li>
+		<li>
+			<a href="html/tv.html#media_device" rel="external">
+			<img src="image/dtv.png" class="ui-li-icon">
+			雲電視
+			</a>
+		</li>	
+		<li>
+			<a href="html/stream.html#media_download" rel="external">
+			<img src="image/dlna.png" class="ui-li-icon">
+			雲投影
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#device_select" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			雲音響
+			</a>
+		</li>
+		<!--
+		<li>
+			<a href="html/films.html#media_list" rel="external">
+			<img src="image/wd091.png" class="ui-li-icon">
+			雲匯流
+			</a>
+		</li>
+		-->
+		<li>
+			<a href="html/camera.html#cam_selected" rel="external">
+			<img src="image/camera.png" class="ui-li-icon">
+			雲監控
+			</a>
+		</li>
+		<li>
+			<a href="html/preservation.html#sensor_infor" rel="external">
+			<img src="image/preservation.png" class="ui-li-icon">
+			雲保全
+			</a>
+		</li>
+		<li>
+			<a href="html/sensor.html" rel="external">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+			雲感測
+			</a>
+		</li>
+		<!--<li>
+			<a href="html/device.html#device" rel="external">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+			雲裝置
+			</a>
+		</li>-->
+		<li>
+			<a href="html/switch.html#switch_infor" rel="external">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			雲開關
+			</a>
+		</li>	
+		<!--
+		<li>
+			<a href="html/air.html#device_list" rel="external">
+			<img src="image/air.png" class="ui-li-icon">
+			雲空氣
+			</a>
+		</li>	
+		<li>
+			<a href="html/message.html#device_list" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲留言
+			</a>
+		</li>
+		-->
+		<li>
+			<a href="html/security.html#info" rel="external">
+			<img src="image/security.png" class="ui-li-icon">
+			雲網管
+			</a>
+		</li>
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+		<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>    
+		<li>
+			<a href="html/management.html#deviceall_manage" rel="external">
+			<img src="image/manage.png" class="ui-li-icon">
+			物聯網裝置管理
+			</a>
+		</li>
+		<li>
+			<a href="html/management.html#account_manage"  rel="external">
+			<img src="image/acc_man.png" class="ui-li-icon">			
+			物聯網帳號管理
+			</a>
+		</li>
+
+		<!--<li>
+			<a href="html/management.html#manage_type" rel="external">
+			<img src="image/setting.png" class="ui-li-icon">
+			Pdnet系統設定
+			</a>
+		</li>-->
+		<!--	<li>
+			<a href="html/tv.html#media_function" rel="external">
+			<img src="image/wan.png" class="ui-li-icon">
+			tv
+			</a>
+		</li>
+	<li>
+			<a href="html/zigbee.html#zigbee_list" rel="external">
+			<img src="image/home.png" class="ui-li-icon">
+			智能家庭
+			</a>
+		</li>-->
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /alert_wireframe -->
+<div data-role="page" id="alert_wireframe" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>BRB72n_465543</h1>
+	<a href="#device" data-role="button" class="back">上一頁</a>
+	<a href="#alert_wireframe" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true" class="a">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/alert.html#infor" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲訊息
+			 <span class="alert"></span>
+			</a>
+		</li>
+		<li>
+			<a href="html/stream.html#media_device" rel="external">
+			<img src="image/online.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			雲上傳
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			雲下載
+			</a>
+		</li>		
+		<li>
+			<a href="html/tv.html#channel_list" rel="external">
+			<img src="image/dtv.png" class="ui-li-icon">
+			雲電視
+			</a>
+		</li>	
+		<li>
+			<a href="html/stream.html#media_download" rel="external">
+			<img src="image/dlna.png" class="ui-li-icon">
+			雲投影
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#device_select" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			雲音響
+			</a>
+		</li>
+		<!--
+		<li>
+			<a href="html/films.html#media_list" rel="external">
+			<img src="image/wd091.png" class="ui-li-icon">
+			雲匯流
+			</a>
+		</li>
+		-->
+		<li>
+			<a href="html/camera.html#webcamall" rel="external">
+			<img src="image/camera.png" class="ui-li-icon">
+			雲監控
+			</a>
+		</li>
+		<!--
+		<li>
+			<a href="html/films.html#media_download" rel="external">
+			<img src="image/media_fun.png" class="ui-li-icon">
+			雲投影
+			</a>
+		</li>
+		<li>
+			<a href="html/tv.html#player" rel="external">
+			<img src="image/media_fun.png" class="ui-li-icon">
+			雲電視
+			</a>
+		</li>
+		<li>
+			<a href="html/printer.html#print_download" rel="external">
+			<img src="image/printer.png" class="ui-li-icon">
+			雲列印
+			</a>
+		</li>
+		-->
+		<li>
+			<a href="html/preservation.html#sensor_infor" rel="external">
+			<img src="image/preservation.png" class="ui-li-icon">
+			雲保全
+			</a>
+		</li>
+		<li>
+			<a href="html/sensor.html#sensor_infor" rel="external">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+			雲感測
+			</a>
+		</li> 
+		<li>
+			<a href="html/switch.html#switch_list" rel="external">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			雲開關
+			</a>
+		</li>	
+		<!--
+		<li>
+			<a href="html/air.html#device_list" rel="external">
+			<img src="image/air.png" class="ui-li-icon">
+			雲空氣
+			</a>
+		</li>
+		<li>
+			<a href="html/message.html#device_list" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲留言
+			</a>
+		</li>		
+		-->
+		<li>
+			<a href="html/security.html#info" rel="external">
+			<img src="image/security.png" class="ui-li-icon">
+			雲網管
+			</a>
+		</li>
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+    	<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>
+		<li>
+			<a href="html/management.html#manage_type" rel="external">
+			<img src="image/setting.png" class="ui-li-icon">
+			Pdnet系統設定
+			</a>
+		</li>
+	<!--	<li>
+			<a href="html/switch.html#switch_list" rel="external">
+			<img src="image/home.png" class="ui-li-icon">
+			智慧節能
+			</a>
+		</li>
+		<li>
+			<a href="html/zigbee.html#zigbee_list" rel="external">
+			<img src="image/home.png" class="ui-li-icon">
+			智能家庭
+			</a>
+		</li>-->
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /wireframe_security -->
+<div data-role="page" id="wireframe_security" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>GR297n_135da0</h1>
+	<a href="#device" data-role="button" class="back">上一頁</a>
+	<a href="#wireframe" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/alert.html#infor" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲訊息
+			</a>
+		</li>
+		<li>
+			<a href="html/camera.html#webcamall" rel="external">
+			<img src="image/camera.png" class="ui-li-icon">
+			雲監控
+			</a>
+		</li>
+		<li>
+			<a href="html/preservation.html#sensor_infor" rel="external">
+			<img src="image/preservation.png" class="ui-li-icon">
+			雲保全
+			</a>
+		</li>
+		<li>
+			<a href="html/sensor.html#sensor_infor" rel="external">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+			雲感測
+			</a>
+		</li>	
+		<li>
+			<a href="html/switch.html#switch_list" rel="external">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			雲開關
+			</a>
+		</li>
+		<li>
+			<a href="html/security.html#info" rel="external">
+			<img src="image/security.png" class="ui-li-icon">
+			雲網管
+			</a>
+		</li>
+		<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>  
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /wireframe_file -->
+<div data-role="page" id="wireframe_file" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>GR297n_135da0</h1>
+	<a href="#device" data-role="button" class="back">上一頁</a>
+	<a href="#wireframe" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/stream.html#media_device" rel="external">
+			<img src="image/online.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			雲上傳
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			雲下載
+			</a>
+		</li>
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+		<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>   	
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /wireframe_media -->
+<div data-role="page" id="wireframe_media" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>GR297n_135da0</h1>
+	<a href="#device" data-role="button" class="back">上一頁</a>
+	<a href="#wireframe" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/stream.html#media_device" rel="external">
+			<img src="image/online.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<li>
+			<a href="html/tv.html#channel_list" rel="external">
+			<img src="image/dtv.png" class="ui-li-icon">
+			雲電視
+			</a>
+		</li>	
+		<li>
+			<a href="html/stream.html#media_download" rel="external">
+			<img src="image/dlna.png" class="ui-li-icon">
+			雲投影
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#device_select" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			雲音響
+			</a>
+		</li>
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+		<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>    
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /wireframe_secAdmin_Setting -->
+<div data-role="page" id="wireframe_secAdmin_Setting" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>副管理者</h1>
+	<a href="#device" data-role="button" class="back">上一頁</a>
+	<a href="#wireframe_secAdmin_Setting" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/alert.html#infor" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲訊息
+			</a>
+		</li>
+		<li>
+			<a href="html/stream.html#media_device" rel="external">
+			<img src="image/online.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			雲上傳
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			雲下載
+			</a>
+		</li>
+		<li>
+			<a href="html/tv.html#channel_list" rel="external">
+			<img src="image/dtv.png" class="ui-li-icon">
+			雲電視
+			</a>
+		</li>	
+		<li>
+			<a href="html/stream.html#media_download" rel="external">
+			<img src="image/dlna.png" class="ui-li-icon">
+			雲投影
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#device_select" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			雲音響
+			</a>
+		</li>
+		<li>
+			<a href="html/camera.html#webcamall" rel="external">
+			<img src="image/camera.png" class="ui-li-icon">
+			雲監控
+			</a>
+		</li>
+		<li>
+			<a href="html/preservation.html#sensor_infor" rel="external">
+			<img src="image/preservation.png" class="ui-li-icon">
+			雲保全
+			</a>
+		</li>
+		<li>
+			<a href="html/sensor.html#sensor_infor" rel="external">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+			雲感測
+			</a>
+		</li>	
+		<li>
+			<a href="html/switch.html#switch_list" rel="external">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			雲開關
+			</a>
+		</li>	
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+		<!--<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>-->   	
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /wireframe_secAdmin -->
+<div data-role="page" id="wireframe_secAdmin" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>副管理者</h1>
+	<a href="#device" data-role="button" class="back" >上一頁</a>
+	<a href="#wireframe_secAdmin" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/alert.html#infor" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲訊息
+			</a>
+		</li>
+		<li>
+			<a href="html/stream.html#media_device" rel="external">
+			<img src="image/online.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			雲上傳
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			雲下載
+			</a>
+		</li>
+		<li>
+			<a href="html/tv.html#channel_list" rel="external">
+			<img src="image/dtv.png" class="ui-li-icon">
+			雲電視
+			</a>
+		</li>	
+		<li>
+			<a href="html/stream.html#media_download" rel="external">
+			<img src="image/dlna.png" class="ui-li-icon">
+			雲投影
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#device_select" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			雲音響
+			</a>
+		</li>
+		<li>
+			<a href="html/camera.html#webcamall_assistant" rel="external">
+			<img src="image/camera.png" class="ui-li-icon">
+			雲監控
+			</a>
+		</li>
+		<li>
+			<a href="html/preservation.html#sensor_infor_1" rel="external">
+			<img src="image/preservation.png" class="ui-li-icon">
+			雲保全
+			</a>
+		</li>
+		<li>
+			<a href="html/sensor.html#sensor_infor_1" rel="external">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+			雲感測
+			</a>
+		</li>	
+		<li>
+			<a href="html/switch.html#switch_list_1" rel="external">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			雲開關
+			</a>
+		</li>	
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+		<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>   	
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /wireframe_general -->
+<div data-role="page" id="wireframe_general" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>一般使用者</h1>
+	<a href="#device" data-role="button" class="back">上一頁</a>
+	<a href="#wireframe_general" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/alert.html#infor" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲訊息
+			</a>
+		</li>
+		<li>
+			<a href="html/stream.html#media_device" rel="external">
+			<img src="image/online.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			雲上傳
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			雲下載
+			</a>
+		</li>
+		<li>
+			<a href="html/tv.html#channel_list" rel="external">
+			<img src="image/dtv.png" class="ui-li-icon">
+			雲電視
+			</a>
+		</li>	
+		<li>
+			<a href="html/stream.html#media_download" rel="external">
+			<img src="image/dlna.png" class="ui-li-icon">
+			雲投影
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#device_select" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			雲音響
+			</a>
+		</li>	
+		<li>
+			<a href="html/camera.html#cam_selected_guest" rel="external">
+			<img src="image/camera.png" class="ui-li-icon">
+			雲監控
+			</a>
+		</li>
+		<li>
+			<a href="html/switch.html#switch_list_1" rel="external">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			雲開關
+			</a>
+		</li>	
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+		<!--<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>-->   	
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /wireframe_guest -->
+<div data-role="page" id="wireframe_guest" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>訪客</h1>
+	<a href="#device" data-role="button" class="back">上一頁</a>
+	<a href="#wireframe_guest" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/stream.html#media_device" rel="external">
+			<img src="image/online.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<!--<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			雲上傳
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			雲下載
+			</a>
+		</li>-->
+		<li>
+			<a href="html/tv.html#channel_list" rel="external">
+			<img src="image/dtv.png" class="ui-li-icon">
+			雲電視
+			</a>
+		</li>	
+		<li>
+			<a href="html/stream.html#media_download" rel="external">
+			<img src="image/dlna.png" class="ui-li-icon">
+			雲投影
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#device_select" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			雲音響
+			</a>
+		</li>	
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+		<!--<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>-->   	
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /disconnect -->
+<div data-role="page" id="disconnect" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>BRE71n_ad0d12</h1>
+	<a href="#device" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<!--
+		<li>
+			<a href="html/map.html#menu" rel="external">
+			<img src="image/wan.png" class="ui-li-icon">
+			上網設定
+			</a>
+		</li>
+		<li>
+			<a href="html/alert.html#infor" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲訊息
+			</a>
+		</li>
+		<li>
+			<a href="html/camera.html#webcamall" rel="external">
+			<img src="image/camera.png" class="ui-li-icon">
+			雲監控
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			雲下載
+			</a>
+		</li>
+		<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			雲上傳
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#music_download" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			雲音響
+			</a>
+		</li>
+		<li>
+			<a href="html/films.html#media_download" rel="external">
+			<img src="image/media_fun.png" class="ui-li-icon">
+			雲播放
+			</a>
+		</li>
+		<li>
+			<a href="html/printer.html#print_download" rel="external">
+			<img src="image/printer.png" class="ui-li-icon">
+			雲列印
+			</a>
+		</li>
+		<li>
+			<a href="html/switch.html#switch_list" rel="external">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			雲開關
+			</a>
+		</li>		
+		<li>
+			<a href="html/sensor.html#sensor_infor" rel="external">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+			雲感測
+			</a>
+		</li>	
+		<li>
+			<a href="html/air.html#device_list" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			雲空氣
+			</a>
+		</li>
+		<li>
+			<a href="html/security.html#info" rel="external">
+			<img src="image/security.png" class="ui-li-icon">
+			雲網管
+			</a>
+		</li>
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			本機檔案
+			</a>
+		</li>
+		<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			物聯網網路圖
+			</a>
+		</li>    
+		<li>
+			<a href="html/management.html#deviceall_manage" rel="external">
+			<img src="image/setting.png" class="ui-li-icon">
+			Pdnet裝置設定
+			</a>
+		</li>	
+		-->
+		<li>
+			<a href="html/download_list.html#offline" rel="external">
+			<img src="image/offline.png" class="ui-li-icon">
+			檔案離線瀏覽
+			</a>
+		</li>	
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /wireframe_map -->
+<div data-role="page" id="wireframe_map" data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>GR297n_465543</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	<a href="#wireframe" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">更新</a>		
+ </div><!--/header -->
+
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<a href="html/alert.html#infor" rel="external">
+			<img src="image/monitor.png" class="ui-li-icon">
+			訊息通知
+			 <span class="alert">3</span>
+			</a>
+		</li>
+		<li>
+			<a href="html/download.html#storageall" rel="external">
+			<img src="image/download.png" class="ui-li-icon">
+			下載檔案
+			</a>
+		</li>
+		<li>
+			<a href="html/upload.html#upload_folder" rel="external">
+			<img src="image/upload.png" class="ui-li-icon">
+			上傳檔案
+			</a>
+		</li>
+		<li>
+			<a href="html/music.html#music_download" rel="external">
+			<img src="image/music.png" class="ui-li-icon">
+			音樂
+			</a>
+		</li>
+		<li>
+			<a href="html/films.html#media_download" rel="external">
+			<img src="image/media_fun.png" class="ui-li-icon">
+			影片&照片
+			</a>
+		</li>
+		<li>
+			<a href="html/download_list.html#download_folder" rel="external">
+			<img src="image/file2.png" class="ui-li-icon">
+			檔案瀏覽
+			</a>
+		</li>
+		<li>
+			<a href="html/printer.html#print_download" rel="external">
+			<img src="image/printer.png" class="ui-li-icon">
+			雲列印
+			</a>
+		</li>	
+		<li>
+			<a href="html/camera.html#webcamall" rel="external">
+			<img src="image/camera.png" class="ui-li-icon">
+			雲監控
+			</a>
+		</li>
+		<li>
+			<a href="html/security.html#info" rel="external">
+			<img src="image/security.png" class="ui-li-icon">
+			安全防護
+			</a>
+		</li>
+		<li>
+			<a href="html/map.html#map_css" rel="external">
+			<img src="image/map.png" class="ui-li-icon">
+			網路狀態圖
+			</a>
+		</li>
+		<li>
+			<a href="html/management.html#deviceall_manage" rel="external">
+			<img src="image/setting.png" class="ui-li-icon">
+			裝置設定
+			</a>
+		</li>
+	<!--	<li>
+			<a href="html/zigbee.html#zigbee_list" rel="external">
+			<img src="image/home.png" class="ui-li-icon">
+			智能家庭
+			</a>
+		</li>-->
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /setting -->
+<div data-role="page" id="setting" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+<!--	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>-->
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d" data-divider-theme="d">
+		<li>
+			<h2>語音通知</h2>			
+			<fieldset class="ui-li-aside">
+				<select data-inline="true" data-mini="true">
+					<option value="OFF">ON</option>
+					<option value="ON">OFF</option>
+				</select>
+			</fieldset>
+		</li>
+		<!--
+		<li data-role="list-divider">推播設定</li>
+		<li><a href="#notify_set">
+			<h2>GR267c_135da0</h2>
+		</a></li>	
+		<li><a href="#notify_set">
+			<h2>BR261c_135da0</h2>
+		</a></li>
+		<li><a href="#notify_set">
+			<h2>BRE71n_ad0d12</h2>
+		</a></li>	
+		-->
+	</ul>
+ </div><!--/content_end -->  
+</div><!-- /page3_end -->
+
+
+<!-- /notify_set -->
+<div data-role="page" id="notify_set" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>推播設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<h2>推播通知</h2>			
+			<fieldset class="ui-li-aside">
+				<select data-inline="true" data-mini="true" onchange="notify(this,'audio')">
+					<option value="OFF" selected>ON</option>
+					<option value="ON">OFF</option>
+				</select>
+			</fieldset>
+		</li>
+		<li id="audio">
+			<h2>推播聲音:</h2>
+			<fieldset class="ui-li-aside">
+			    <select id="white_balance" data-inline="true" data-mini="true" onchange="notify(this,'sound')">
+			        <option value="OFF">ON</option>
+			        <option value="ON">OFF</option>
+			    </select>
+			</fieldset>
+		</li>
+		<li name="sound">
+			<h2>推播音效:</h2>
+			<fieldset class="ui-li-aside">
+			    <select id="white_balance" data-inline="true" data-mini="true">
+			        <option value="OFF">情境1</option>
+			        <option value="ON">情境2</option>
+			        <option value="ON">情境3</option>
+			        <option value="ON">情境4</option>
+			        <option value="ON">情境5</option>
+			    </select>
+			</fieldset>
+		</li>
+	</ul>
+ </div><!--/content_end -->  
+</div><!-- /page3_end -->
+
+
+<!-- Start of third page: #login_pw -->
+<div data-role="page" id="login_pw" data-theme="f">
+
+	<div data-role="header" data-theme="f">
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1 style="margin-left:80px;" id="modle_name">Pdnet的暱稱</h1>
+		<a data-role="button" class="og_but" data-theme="g" data-rel="back">取消</a>		
+	</div><!-- /header -->
+	
+<div data-role="content"  data-theme="f" style="border:none;">		
+	<table>
+		<tr>
+			<div class="device_bg">
+				<img src="image/nickname.png" width="252px" height="35px">
+				<input type="text" placeholder="更改Pdnet暱稱" data-role="none">
+			</div>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<div class="device_bg">
+				<img src="image/device.png" width="252px" height="35px">	
+				<input type="text" placeholder="裝置名稱" data-role="none">
+			</div>
+		</tr>
+	</table>
+	<table  class="device_noicon_2">
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+		<div class="device_noico_1" >
+			<select   data-mini="true" data-native-menu="false" ;>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;帳號選擇:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主管理者&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;副管理者&nbsp;&nbsp;&nbsp;</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一般使用者&nbsp;&nbsp;&nbsp;</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;訪客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+				</select>
+			</div>
+	</td>
+	</table>
+	<table>
+		<tr>
+			<div class="device_bg">
+				<img src="image/password.png" width="252px" height="35px">	
+				<input type="password" placeholder="密碼" data-role="none">
+			</div>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<div class="device_noicon">
+				<img src="image/text.png" width="252px" height="35px">	
+				<input type="password" placeholder="新密碼" data-role="none">
+			</div>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<div class="device_noicon">
+				<img src="image/text.png" width="252px" height="35px">	
+				<input type="password" placeholder="確認新密碼" data-role="none">
+			</div>
+		</tr>
+	</table>
+</div><!-- /content -->
+
+	
+<div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#device" rel="external" data-role="button"  data-theme="f" data-mini="true" style="border:3px solid gray;">確認</a>
+		</div>
+</div>
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #login_delete -->
+<div data-role="page" id="login_delete" data-theme="a">
+
+	<div data-role="content">	
+		<div style="text-align:center;">
+		<h4>刪除裝置<br>確定要刪除此裝置嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #seurity_on -->
+<div data-role="page" id="seurity_on" data-theme="a">
+
+	<div data-role="content">	
+		<div style="text-align:center;">
+		<h4>雲保全開啟</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #seurity_off -->
+<div data-role="page" id="seurity_off" data-theme="a">
+
+	<div data-role="content">	
+		<div style="text-align:center;">
+		<h4>雲保全關閉</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #login_manual -->
+<div data-role="page" id="login_manual" data-theme="f">
+
+<div data-role="header" data-theme="f">
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1 style="margin-left:80px;" id="modle_name">新增裝置</h1>
+		<a data-role="button" class="a" data-theme="g" data-rel="back" >取消</a>		
+</div><!-- /header -->
+
+<div data-role="content"  data-theme="f" style="border:none;">		
+	<table>
+		<tr>
+			<div class="device_bg">
+				<img src="image/nickname.png" width="252px" height="35px">
+				<input type="text" placeholder="更改Pdnet暱稱" data-role="none">
+			</div>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<div class="device_bg">
+				<img src="image/device.png" width="252px" height="35px">	
+				<input type="text" placeholder="裝置名稱" data-role="none">
+			</div>
+		</tr>
+	</table>
+	<table  class="device_noicon_2">
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+	</td>
+	<td>
+		<div class="device_noico_1" >
+			<select   data-mini="true" data-native-menu="false" ;>
+					<option>帳號選擇:</option>
+					<option>&nbsp;&nbsp;&nbsp;主管理者&nbsp;&nbsp;&nbsp;</option>
+					<option>&nbsp;&nbsp;&nbsp;副管理者&nbsp;&nbsp;&nbsp;</option>
+					<option>&nbsp;&nbsp;&nbsp;一般使用者&nbsp;&nbsp;&nbsp;</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp;訪客&nbsp;&nbsp;&nbsp;&nbsp;</option>
+				</select>
+			</div>
+		</td>
+	</table>
+	<table>
+		<tr>
+			<div class="device_bg">
+				<img src="image/password.png" width="252px" height="35px">	
+				<input type="password" placeholder="密碼" data-role="none">
+			</div>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<div class="device_noicon">
+				<img src="image/text.png" width="252px" height="35px">	
+				<input type="password" placeholder="新密碼" data-role="none">
+			</div>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<div class="device_noicon">
+				<img src="image/text.png" width="252px" height="35px">	
+				<input type="password" placeholder="確認新密碼" data-role="none">
+			</div>
+		</tr>
+	</table>
+	</div><!-- /content -->
+
+	
+<div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#device" rel="external" data-role="button"  data-theme="f" data-mini="true" style="border:3px solid gray;">確認</a>
+		</div>
+</div>
+</div>
+
+ 
+ </body>
+ </html> 
