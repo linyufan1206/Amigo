@@ -1,0 +1,592 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body>
+<!-- /device_list -->
+<div data-role="page" id="device_list" data-mini="true"  data-theme="d">
+
+ <div data-role="header"  data-theme="f">
+	<h1>雲空氣</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="d"><!--/content --> 
+	<ul data-role="listview" data-theme="d" data-mini="true">
+		<li><a href="#air">
+			<table><tr>
+				<td width="10%"><img src="image/air.png" class="ui-li-icon"></td>
+				<td width="55%"><a style="color:#333">1F 客廳</a></td>
+				<td width="25%">
+					<a><img src="image/power_on.png" style="height:36px;display:inline;" onclick="switch_power(this)"></a>			
+				</td>
+				<td width="10%">
+					<a href="#schedule_on"><img src="image/schedule_on.png" style="width:36px;height:36px;"></a>
+				</td>
+			</tr></table>		
+		</a></li>
+		<li><a>
+			<table><tr>
+				<td width="10%"><img src="image/air.png" class="ui-li-icon"></td>
+				<td width="55%"><a href="#air" style="color:#333">ADM70n_1a123a</a></td>
+				<td width="25%">
+				<a><img src="image/power_on.png" style="height:36px;display:inline;" onclick="switch_power(this)"></a>			
+				</td>
+				<td width="10%">
+					<a href="#schedule_on"><img src="image/schedule_off.png" style="width:36px;height:36px;"></a>
+				</td>
+			</tr></table>
+		</a></li>
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /switch_edit -->
+<div data-role="page" id="switch_edit" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1> 1F 空調</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+	<!--<a href="#sche_edit"  data-role="button" class="og_but" data-theme="g">排程</a>-->
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-divider-theme="d" data-mini="true"data-split-icon="delete" data-split-theme="d">
+	<!--	<li data-role="fieldcontain">
+			<img src="images/switch.png" width="36px" class="ui-li-icon ui-corner-none">
+			<input type="text" data-mini="true" style="width:200px;" value="1F 空調">
+		</li>
+		<li data-role="fieldcontain">
+			IP位址: <span style="color:#808080;">192.168.1.210</span>
+		</li>
+		<li data-role="fieldcontain">
+			目前電壓: <span style="color:#808080;">220V</span>
+		</li>
+		<li data-role="fieldcontain">
+			目前電流: <span style="color:#808080;">4.3A</span>
+		</li>
+	-->
+		<li data-role="fieldcontain">
+			目前耗電量: <span style="color:#808080;">0.01度</span>
+				<span style="float:right;font-size:12px;">07/07 09:00</span>
+		</li>
+		<li> 
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+			<legend>電量統計:</legend>
+			<input type="radio" name="radio-choice-a" id="day" checked="checked" onclick="power(this)">
+			<label for="day">日</label>
+			<input type="radio" name="radio-choice-a" id="week"onclick="power(this)">
+			<label for="week">週</label>
+			<input type="radio" name="radio-choice-a" id="month" onclick="power(this)">
+			<label for="month">月</label>
+			<input type="radio" name="radio-choice-a" id="year" onclick="power(this)">
+			<label for="year">年</label>
+			</fieldset>
+		<!--	<input type="date" name="bday" id="day_select" onchange="day_title(this)" data-mini="true">-->
+			<div id="power_chart_day"></div>
+		</li>
+	</ul>
+ </div><!--/content_end --> 
+	<!--	
+ <div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+	<div style="width:280px;margin:0 auto;">
+		<a href="#" data-role="button" data-theme="f" data-mini="true" class="but">儲存設定</a>
+	</div>
+ </div>
+ -->
+ </div><!-- /page7_end -->
+
+
+<!-- /sche_edit -->
+<div data-role="page" id="sche_edit" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1> Wi-Fi Switch</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-divider-theme="d" data-mini="true"data-split-icon="delete" data-split-theme="d">
+		<li data-role="list-divider">開啟時程
+			<a href="#schedule_on" data-role="none"><img src="image/schedule_on.png" style="float:right;margin-top:-3px;width:24px;height:24px;"></a>
+		</li>
+		<li>
+			<a href="#schedule_on">
+			<h2>星期一</h2>
+			<span class="ui-li-count">23:00</span>
+			<a href="#delete" data-rel="dialog" onclick="switch_time_del(this.parentNode)"></a>
+			</a>
+		</li>
+		<li>
+			<a href="#schedule_on">
+			<h2>星期日</h2>
+			<span class="ui-li-count">10:00</span>
+			<a href="#delete" data-rel="dialog" onclick="switch_time_del(this.parentNode)"></a>
+			</a>
+		</li>
+		<li data-role="list-divider">關閉時程
+			<a href="#schedule_off" data-role="none"><img src="image/schedule_on.png" style="float:right;margin-top:-3px;width:24px;height:24px;"></a>
+		</li>
+		<li>
+			<a href="#schedule_off"><h2>星期二</h2>
+			<span class="ui-li-count">02:00</span>
+			<a href="#delete" data-rel="dialog"></a>
+			</a>
+		</li>
+		<li>
+			<a href="#schedule_off"><h2>星期日</h2>
+			<span class="ui-li-count">13:00</span>
+			<a href="#delete" data-rel="dialog"></a>
+			</a>
+		</li>
+	</ul>
+ </div><!--/content_end --> 
+	  
+ </div><!-- /sche_end -->
+ 
+
+<!-- /air -->
+<div data-role="page" id="air" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>ADM70n_1a123a</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+	<a href="#setting" data-role="button" data-theme="g">設定</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-divider-theme="d" data-mini="true"data-split-icon="delete" data-split-theme="d">
+		<li data-role="fieldcontain">
+			目前溫度: <span style="color:#808080;">28</span>
+		</li>
+		<li data-role="fieldcontain">
+			目前溼度: <span style="color:#808080;">56</span>
+		</li>
+		<li data-role="fieldcontain">
+			空氣品質: <span style="color:#808080;">優</span>
+		</li>
+		<li data-role="fieldcontain">
+			警報器:
+			<select data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on" selected>On</option>
+			</select>
+		</li>
+	</ul>	
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+
+
+<!-- /sche -->
+<div data-role="page" id="sche" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1> WSG70n_a1a3c1</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-divider-theme="d" data-mini="true"data-split-icon="delete" data-split-theme="d">
+
+		<li data-role="list-divider">開啟排程
+			<a href="#schedule_on" data-role="none"><img src="image/schedule_on.png" style="float:right;margin-top:-3px;width:24px;height:24px;"></a>
+		</li>
+		<li data-role="list-divider">關閉排程
+			<a href="#schedule_off" data-role="none"><img src="image/schedule_on.png" style="float:right;margin-top:-3px;width:24px;height:24px;"></a>
+		
+		</li>
+	</ul>
+ </div><!--/content_end --> 
+	  
+ </div><!-- /sche_end -->
+
+ 
+<!-- Start of third page: #delete -->
+<div data-role="page" id="delete" data-theme="a">
+
+	<div data-role="content">	
+		<div style="text-align:center;">
+		<h4>刪除排程<br>確定要刪除此排程嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #schedule_on -->
+<div data-role="page" id="schedule_on" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 id="schedule_title">排程設定</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content"data-theme="d">			
+		
+		<fieldset class="ui-grid-a">   		
+			<legend class="ui-block-a">開啟時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			
+			</fieldset>
+		</fieldset>
+		<br>
+		<fieldset class="ui-grid-a">  
+			<legend class="ui-block-a">關閉時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			</fieldset>
+		</fieldset>
+			<br>
+		<fieldset class="ui-grid-a">   
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-a">
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期一</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期二</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期三</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期四</label>
+		    </fieldset>
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-b">
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期五</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期六</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期日</label>
+		    </fieldset>
+		</fieldset>
+
+	</div><!-- /content -->
+	 
+	<div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-role="button" data-theme="f" data-mini="true" class="but">儲存設定</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #schedule_off -->
+<div data-role="page" id="schedule_off" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 id="schedule_title">關閉排程</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content"data-theme="d">			
+		
+		<fieldset class="ui-grid-a">  
+			<legend class="ui-block-a">關閉時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			</fieldset>
+		</fieldset>
+			<br>
+		<fieldset class="ui-grid-a">   
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-a">
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期一</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期二</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期三</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期四</label>
+		    </fieldset>
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-b">
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期五</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期六</label>
+				<label data-inline="true" style="border:none;"><input type="checkbox"/>星期日</label>
+		    </fieldset>
+		</fieldset>
+
+	</div><!-- /content -->
+	 
+	<div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-role="button" data-theme="f" data-mini="true" class="but">儲存設定</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+ 
+ </body>
+ </html> 

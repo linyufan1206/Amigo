@@ -1,0 +1,1253 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body>
+<!-- /switch_list -->
+<div data-role="page" id="switch_list" data-mini="true"  data-theme="d">
+
+ <div data-role="header"  data-theme="f">
+	<h1>雲插座</h1>
+	<a href="../index.html#wireframe" data-role="button" class="back" style="color:#fff;" rel="external"> 首頁 </a>
+	<!--
+    <a href="#switch_sche" data-role="button" data-theme="g">排程表</a>
+	-->
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="d"><!--/content --> 
+	<ul data-role="listview" data-theme="d" data-mini="true">
+		<li><a href="#switch_edit_sapido">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			<h3>1F 電扇</h3>
+			<p class="ui-li-aside" style="margin-right:40px;margin-top:10px;width:110px;">			
+				<a onclick="switch_power(this)">
+					<img src="image/power_on.png" id="circle_power" alt="1" style="height:36px;display:inline;">
+				</a>					
+			</p>
+		</a></li>
+		<li><a href="#switch_edit_sapido">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+			<h3>WSG70n_123321</h3>
+			<p class="ui-li-aside" style="margin-right:40px;margin-top:10px;width:110px;">			
+				<a onclick="switch_power(this)">
+					<img src="image/power_off.png" id="circle_power" alt="0" style="height:36px;display:inline;">
+				</a>						
+			</p>
+		</a></li>
+	</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /switch_edit_sapido -->
+<div data-role="page" id="switch_edit_sapido" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<a href="#switch_list" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	<h1>1F 電扇</h1>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-divider-theme="d" data-mini="true"data-split-icon="delete" data-split-theme="d">
+		<li>開機時間
+			<p class="ui-li-aside" style="color:#808080;">2014/08/25 08:00</p>
+		</li>
+		<li>本次開啟時間
+			<p class="ui-li-aside" style="color:#808080;">2014/09/02 15:00</p>
+		</li>
+		<!--
+		<li>開啟時間統計
+			<p class="ui-li-aside" style="color:#808080;">
+				<span style="font-weight:bold;">6</span>小時
+				<span style="font-weight:bold;">12</span>分
+			</p>
+		</li>
+		-->
+		<li>開啟原因
+			<p class="ui-li-aside" style="color:#808080;">實體按鈕</p>
+		</li>
+		<li>目前耗電量
+			<p class="ui-li-aside" style="color:#808080;">45瓦</p>			
+		</li>
+		<li data-role="list-divider">進階</li>
+		<li><a href="#schedule_list">排程設定</a></li>
+		<li>
+			<a href="#pw_type_set">開關模式</a>			
+			<p class="ui-li-aside" style="margin:15px 25px;width:50px;" id="pw_type">一般</p>
+		</li>		
+		<li><a href="#consumption ">電量統計</a></li>
+		<li><a href="#history">歷史紀錄</a></li>
+	</ul>
+ </div><!--/content_end --> 
+  
+</div><!-- /page7_end -->
+
+ 
+<!-- consumption  -->
+<div data-role="page" id="consumption " data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>電量統計</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">重置</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content --> 
+	<ul data-role="listview" data-divider-theme="d" data-mini="true"data-split-icon="delete" data-split-theme="d">
+		<li>重置時間
+			<p class="ui-li-aside" style="color:#808080;">2014/08/30 08:00</p>
+		</li>
+		<li>重置後開啟時間統計
+			<p class="ui-li-aside" style="color:#808080;">
+				<span style="font-weight:bold;">20</span>小時
+				<span style="font-weight:bold;">12</span>分
+			</p>
+		</li>
+	</ul>
+	<br>	
+	<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+		<input type="radio" name="radio-choice-b" id="day2" checked="checked" onclick="power2(this)">
+		<label for="day2">日</label>
+		<input type="radio" name="radio-choice-b" id="week2"onclick="power2(this)">
+		<label for="week2">週</label>
+		<input type="radio" name="radio-choice-b" id="month2" onclick="power2(this)">
+		<label for="month2">月</label>
+		<input type="radio" name="radio-choice-b" id="year2" onclick="power2(this)">
+		<label for="year2">年</label>
+	</fieldset>
+	<div id="today_d">
+		今日耗電量: 1.03度<br>
+		今日電費: 5元
+	</div>
+	<div id="week_d" style="display:none">
+		本周耗電量: 10.31度<br>
+		本周電費: 46元
+	</div>
+	<div id="month_d" style="display:none">
+		本月耗電量: 100.21度<br>
+		本月電費: 451元
+	</div>	
+	<div id="year_d" style="display:none">
+		本年度耗電量: 1000.51度<br>
+		本年度電費: 4501元
+	</div>
+	<div id="power_chart_day_2"></div>
+ </div>
+ 
+</div><!-- /page7_end -->
+ 
+ 
+<!-- pw_type_set -->
+<div data-role="page" id="pw_type_set" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>開關模式</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+	<a href="#switch_list" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 
+	<ul data-role="listview">
+		<li>
+			<h2>開關模式:</h2>
+			<fieldset class="ui-li-aside">
+			    <select data-inline="true" data-mini="true" onchange="sw_mode(this,'timer','pw_type','circle_power')">
+			        <option value="OFF">一般</option>
+			        <option value="ON">循環</option>
+			    </select>
+			</fieldset>
+		</li>
+		<li name="timer" style="display:none">
+			<h2>開啟:</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside" style="width:70%;">
+				<select>
+					<option>00 時</option>
+					<option>01 時</option>
+					<option>02 時</option>
+					<option>03 時</option>
+					<option>04 時</option>
+					<option>05 時</option>
+					<option>06 時</option>
+					<option>07 時</option>
+					<option>08 時</option>
+					<option>09 時</option>
+					<option>10 時</option>
+					<option>11 時</option>
+					<option>12 時</option>
+				</select>
+				<select>
+					<option>01 分</option>
+					<option>02 分</option>
+					<option>03 分</option>
+					<option>04 分</option>
+					<option>05 分</option>
+					<option>06 分</option>
+					<option>07 分</option>
+					<option>08 分</option>
+					<option>09 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</li>
+		<li name="timer" style="display:none">
+			<h2>關閉:</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside" style="width:70%;">
+				<select>
+					<option>00 時</option>
+					<option>01 時</option>
+					<option>02 時</option>
+					<option>03 時</option>
+					<option>04 時</option>
+					<option>05 時</option>
+					<option>06 時</option>
+					<option>07 時</option>
+					<option>08 時</option>
+					<option>09 時</option>
+					<option>10 時</option>
+					<option>11 時</option>
+					<option>12 時</option>
+				</select>
+				<select>
+					<option>01 分</option>
+					<option>02 分</option>
+					<option>03 分</option>
+					<option>04 分</option>
+					<option>05 分</option>
+					<option>06 分</option>
+					<option>07 分</option>
+					<option>08 分</option>
+					<option>09 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</li>
+		<li name="timer" style="display:none">
+			<h2>循環時間:</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside" style="width:70%;">
+				<select>
+					<option>00 時</option>
+					<option>01 時</option>
+					<option>02 時</option>
+					<option>03 時</option>
+					<option>04 時</option>
+					<option>05 時</option>
+					<option>06 時</option>
+					<option>07 時</option>
+					<option>08 時</option>
+					<option>09 時</option>
+					<option>10 時</option>
+					<option>11 時</option>
+					<option>12 時</option>
+				</select>
+				<select>
+					<option>01 分</option>
+					<option>02 分</option>
+					<option>03 分</option>
+					<option>04 分</option>
+					<option>05 分</option>
+					<option>06 分</option>
+					<option>07 分</option>
+					<option>08 分</option>
+					<option>09 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</li>
+	</ul>
+ </div><!-- /page7_end -->
+</div>
+ 
+ 
+<!-- /history -->
+<div data-role="page" id="history" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+    	<h1>歷史紀錄</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#" data-role="button" data-inline="true" data-mini="true" data-theme="g">重置</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true" id="sensor_alert" data-split-icon="alertoff" data-split-theme="c" >
+			<li>
+				實體按鈕<br>				
+				<span style="font-weight:normal;font-size:12px;">開啟
+				<span class="ui-li-aside">09/02 15:00:00</span> 
+				</span>
+			</li>
+			<li>
+				實體按鈕<br>				
+				<span style="font-weight:normal;font-size:12px;">關閉
+				<span class="ui-li-aside">08/30 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				電腦網頁開關<br>				
+				<span style="font-weight:normal;font-size:12px;">開啟
+				<span class="ui-li-aside">08/29 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				電腦網頁開關<br>				
+				<span style="font-weight:normal;font-size:12px;">關閉
+				<span class="ui-li-aside">08/28 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				電腦網頁開關<br>				
+				<span style="font-weight:normal;font-size:12px;">循環開關
+				<span class="ui-li-aside">08/27 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				手機APP開關<br>				
+				<span style="font-weight:normal;font-size:12px;">開啟
+				<span class="ui-li-aside">08/26 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				手機APP開關<br>				
+				<span style="font-weight:normal;font-size:12px;">關閉
+				<span class="ui-li-aside">08/25 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				手機APP開關<br>				
+				<span style="font-weight:normal;font-size:12px;">循環開關
+				<span class="ui-li-aside">08/24 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				雲插座排程<br>				
+				<span style="font-weight:normal;font-size:12px;">開啟
+				<span class="ui-li-aside">08/23 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				雲插座排程<br>				
+				<span style="font-weight:normal;font-size:12px;">關閉
+				<span class="ui-li-aside">08/22 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				雲插座排程<br>				
+				<span style="font-weight:normal;font-size:12px;">循環開關
+				<span class="ui-li-aside">08/20 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				電視遙控開關<br>				
+				<span style="font-weight:normal;font-size:12px;">關閉
+				<span class="ui-li-aside">08/19 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				電視遙控開關<br>				
+				<span style="font-weight:normal;font-size:12px;">開啟
+				<span class="ui-li-aside">08/18 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				電視遙控開關<br>				
+				<span style="font-weight:normal;font-size:12px;">循環開關
+				<span class="ui-li-aside">08/17 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				移動偵測<br>				
+				<span style="font-weight:normal;font-size:12px;">開啟
+				<span class="ui-li-aside">08/16 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				聲音偵測<br>				
+				<span style="font-weight:normal;font-size:12px;">關閉
+				<span class="ui-li-aside">08/16 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				聲音異常<br>				
+				<span style="font-weight:normal;font-size:12px;">循環開關
+				<span class="ui-li-aside">08/16 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				光線異常<br>				
+				<span style="font-weight:normal;font-size:12px;">關閉
+				<span class="ui-li-aside">08/16 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				溫度異常<br>				
+				<span style="font-weight:normal;font-size:12px;">循環開關
+				<span class="ui-li-aside">08/16 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				有人靠近<br>				
+				<span style="font-weight:normal;font-size:12px;">循環開關
+				<span class="ui-li-aside">08/16 18:30:00</span> 
+				</span>
+			</li>
+			<li>
+				門窗開啟<br>				
+				<span style="font-weight:normal;font-size:12px;">循環開關
+				<span class="ui-li-aside">08/16 18:30:00</span> 
+				</span>
+			</li>	
+		</ul>	
+
+ </div><!--/content_end --> 
+ 
+</div>
+
+
+<!-- /schedule_list -->
+<div data-role="page" id="schedule_list" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+        <h1>排程表</h1>
+    	<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#schedule_setting" data-theme="g">新增</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 
+	<ul data-role="listview" data-divider-theme="d" id="list">
+		<li>
+			<h2>每天 18:00-22:00</h2>
+			<p>開啟</p>
+			<table class="ui-li-aside" style="margin-right:-20px;"><tr>
+				<td align=right>	
+				<a data-role="button" href="#schedule_setting" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a>
+				</td>
+				<td align=left>
+				<a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a>
+				</td>
+			</tr></table>
+		</li>
+    	<li>
+			<h2>星期日 13:00~18:00</h2>
+			<p>關閉</p>
+			<table class="ui-li-aside" style="margin-right:-20px;"><tr>
+				<td align=right>
+				<a data-role="button" href="#schedule_setting" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a>
+				</td>
+				<td align=left>
+				<a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a>
+				</td>
+			</tr></table>
+		</li>
+    	<li>
+			<h2>星期六 19:00~21:00</h2>
+			<p>循環</p>
+			<table class="ui-li-aside" style="margin-right:-20px;"><tr>
+				<td align=right>
+				<a data-role="button" href="#schedule_setting" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a>
+				</td>
+				<td align=left>
+				<a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a>
+				</td>
+			</tr></table>
+		</li>
+	</ul>
+		
+ </div><!--/content_end --> 
+	 
+</div><!-- /page7_end -->
+
+ 
+ 
+<!-- Start of third page: #delete -->
+<div data-role="page" id="delete" data-theme="a">
+
+	<div data-role="content">	
+		<div style="text-align:center;">
+		<h4>刪除排程<br>確定要刪除此排程嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #schedule_setting-->
+<div data-role="page" id="schedule_setting" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 id="schedule_title">排程設定</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content"data-theme="d">			
+		<ul data-role="listview" data-divider-theme="d">
+			<li>
+				<h2>開關狀態:</h2>
+				<fieldset class="ui-li-aside">
+					<select data-inline="true" data-mini="true" onchange="switch_type(this)">
+						<option>開啟</option>
+						<option>關閉</option>
+						<option>循環</option>
+					</select>
+				</fieldset>
+			</li>
+			<li name="switch_sec" style="display:none">
+				<h2>開啟:</h2>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+					<select>
+						<option>0 時</option>
+						<option selected>1 時</option>
+						<option>2 時</option>
+						<option>3 時</option>
+						<option>4 時</option>
+						<option>5 時</option>
+						<option>6 時</option>
+						<option>7 時</option>
+						<option>8 時</option>
+						<option>9 時</option>
+						<option>10時</option>
+						<option>11時</option>
+						<option>12時</option>
+					</select>
+					<select>
+						<option selected>0 分</option>
+						<option>1 分</option>
+						<option>2 分</option>
+						<option>3 分</option>
+						<option>4 分</option>
+						<option>5 分</option>
+						<option>6 分</option>
+						<option>7 分</option>
+						<option>8 分</option>
+						<option>9 分</option>
+						<option>10 分</option>
+						<option>11 分</option>
+						<option>12 分</option>
+						<option>13 分</option>
+						<option>14 分</option>
+						<option>15 分</option>
+						<option>16 分</option>
+						<option>17 分</option>
+						<option>18 分</option>
+						<option>19 分</option>
+						<option>20 分</option>
+						<option>21 分</option>
+						<option>22 分</option>
+						<option>23 分</option>
+						<option>24 分</option>
+						<option>25 分</option>
+						<option>26 分</option>
+						<option>27 分</option>
+						<option>28 分</option>
+						<option>29 分</option>
+						<option>30 分</option>
+						<option>31 分</option>
+						<option>32 分</option>
+						<option>33 分</option>
+						<option>34 分</option>
+						<option>35 分</option>
+						<option>36 分</option>
+						<option>37 分</option>
+						<option>38 分</option>
+						<option>39 分</option>
+						<option>40 分</option>
+						<option>41 分</option>
+						<option>42 分</option>
+						<option>43 分</option>
+						<option>44 分</option>
+						<option>45 分</option>
+						<option>46 分</option>
+						<option>47 分</option>
+						<option>48 分</option>
+						<option>49 分</option>
+						<option>50 分</option>
+						<option>51 分</option>
+						<option>52 分</option>
+						<option>53 分</option>
+						<option>54 分</option>
+						<option>55 分</option>
+						<option>56 分</option>
+						<option>57 分</option>
+						<option>58 分</option>
+						<option>59 分</option>
+					</select>
+				</fieldset>
+			</li>
+			<li name="switch_sec" style="display:none">
+				<h2>關閉:</h2>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+					<select>
+						<option>0 時</option>
+						<option>1 時</option>
+						<option selected>2 時</option>
+						<option>3 時</option>
+						<option>4 時</option>
+						<option>5 時</option>
+						<option>6 時</option>
+						<option>7 時</option>
+						<option>8 時</option>
+						<option>9 時</option>
+						<option>10時</option>
+						<option>11時</option>
+						<option>12時</option>
+					</select>
+					<select>
+						<option selected>0 分</option>
+						<option>1 分</option>
+						<option>2 分</option>
+						<option>3 分</option>
+						<option>4 分</option>
+						<option>5 分</option>
+						<option>6 分</option>
+						<option>7 分</option>
+						<option>8 分</option>
+						<option>9 分</option>
+						<option>10 分</option>
+						<option>11 分</option>
+						<option>12 分</option>
+						<option>13 分</option>
+						<option>14 分</option>
+						<option>15 分</option>
+						<option>16 分</option>
+						<option>17 分</option>
+						<option>18 分</option>
+						<option>19 分</option>
+						<option>20 分</option>
+						<option>21 分</option>
+						<option>22 分</option>
+						<option>23 分</option>
+						<option>24 分</option>
+						<option>25 分</option>
+						<option>26 分</option>
+						<option>27 分</option>
+						<option>28 分</option>
+						<option>29 分</option>
+						<option>30 分</option>
+						<option>31 分</option>
+						<option>32 分</option>
+						<option>33 分</option>
+						<option>34 分</option>
+						<option>35 分</option>
+						<option>36 分</option>
+						<option>37 分</option>
+						<option>38 分</option>
+						<option>39 分</option>
+						<option>40 分</option>
+						<option>41 分</option>
+						<option>42 分</option>
+						<option>43 分</option>
+						<option>44 分</option>
+						<option>45 分</option>
+						<option>46 分</option>
+						<option>47 分</option>
+						<option>48 分</option>
+						<option>49 分</option>
+						<option>50 分</option>
+						<option>51 分</option>
+						<option>52 分</option>
+						<option>53 分</option>
+						<option>54 分</option>
+						<option>55 分</option>
+						<option>56 分</option>
+						<option>57 分</option>
+						<option>58 分</option>
+						<option>59 分</option>
+					</select>
+				</fieldset>
+			</li>
+			<li>
+				<h2>工作日:</h2>
+				<fieldset class="ui-li-aside">
+					<select id="white_balance" data-inline="true" data-mini="true">
+						<option value="1">星期一</option>
+						<option value="4">星期二</option>
+						<option value="7">星期三</option>
+						<option value="10">星期四</option>
+						<option value="14">星期五</option>
+						<option value="14">星期六</option>
+						<option value="14">星期日</option>
+						<option value="14" selected>每天</option>
+					</select>
+				</fieldset>
+			</li>
+			<li>
+				<h2>開始時間:</h2>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+					<select>
+						<option>00 時</option>
+						<option>01 時</option>
+						<option>02 時</option>
+						<option>03 時</option>
+						<option>04 時</option>
+						<option>05 時</option>
+						<option>06 時</option>
+						<option>07 時</option>
+						<option>08 時</option>
+						<option>09 時</option>
+						<option>10 時</option>
+						<option>11 時</option>
+						<option>12 時</option>
+						<option>13 時</option>
+						<option>14 時</option>
+						<option>15 時</option>
+						<option>16 時</option>
+						<option>17 時</option>
+						<option>18 時</option>
+						<option>19 時</option>
+						<option>20 時</option>
+						<option>21 時</option>
+						<option>22 時</option>
+						<option>23 時</option>
+					</select>
+					<select>
+						<option>00 分</option>
+						<option>01 分</option>
+						<option>02 分</option>
+						<option>03 分</option>
+						<option>04 分</option>
+						<option>05 分</option>
+						<option>06 分</option>
+						<option>07 分</option>
+						<option>08 分</option>
+						<option>09 分</option>
+						<option>10 分</option>
+						<option>11 分</option>
+						<option>12 分</option>
+						<option>13 分</option>
+						<option>14 分</option>
+						<option>15 分</option>
+						<option>16 分</option>
+						<option>17 分</option>
+						<option>18 分</option>
+						<option>19 分</option>
+						<option>20 分</option>
+						<option>21 分</option>
+						<option>22 分</option>
+						<option>23 分</option>
+						<option>24 分</option>
+						<option>25 分</option>
+						<option>26 分</option>
+						<option>27 分</option>
+						<option>28 分</option>
+						<option>29 分</option>
+						<option>30 分</option>
+						<option>31 分</option>
+						<option>32 分</option>
+						<option>33 分</option>
+						<option>34 分</option>
+						<option>35 分</option>
+						<option>36 分</option>
+						<option>37 分</option>
+						<option>38 分</option>
+						<option>39 分</option>
+						<option>40 分</option>
+						<option>41 分</option>
+						<option>42 分</option>
+						<option>43 分</option>
+						<option>44 分</option>
+						<option>45 分</option>
+						<option>46 分</option>
+						<option>47 分</option>
+						<option>48 分</option>
+						<option>49 分</option>
+						<option>50 分</option>
+						<option>51 分</option>
+						<option>52 分</option>
+						<option>53 分</option>
+						<option>54 分</option>
+						<option>55 分</option>
+						<option>56 分</option>
+						<option>57 分</option>
+						<option>58 分</option>
+						<option>59 分</option>
+					</select>
+				</fieldset>
+			</li>
+			<li>
+				<h2>結束時間:</h2>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+					<select>
+						<option>00 時</option>
+						<option>01 時</option>
+						<option>02 時</option>
+						<option>03 時</option>
+						<option>04 時</option>
+						<option>05 時</option>
+						<option>06 時</option>
+						<option>07 時</option>
+						<option>08 時</option>
+						<option>09 時</option>
+						<option>10 時</option>
+						<option>11 時</option>
+						<option>12 時</option>
+						<option>13 時</option>
+						<option>14 時</option>
+						<option>15 時</option>
+						<option>16 時</option>
+						<option>17 時</option>
+						<option>18 時</option>
+						<option>19 時</option>
+						<option>20 時</option>
+						<option>21 時</option>
+						<option>22 時</option>
+						<option>23 時</option>
+					</select>
+					<select>
+						<option>00 分</option>
+						<option>01 分</option>
+						<option>02 分</option>
+						<option>03 分</option>
+						<option>04 分</option>
+						<option>05 分</option>
+						<option>06 分</option>
+						<option>07 分</option>
+						<option>08 分</option>
+						<option>09 分</option>
+						<option>10 分</option>
+						<option>11 分</option>
+						<option>12 分</option>
+						<option>13 分</option>
+						<option>14 分</option>
+						<option>15 分</option>
+						<option>16 分</option>
+						<option>17 分</option>
+						<option>18 分</option>
+						<option>19 分</option>
+						<option>20 分</option>
+						<option>21 分</option>
+						<option>22 分</option>
+						<option>23 分</option>
+						<option>24 分</option>
+						<option>25 分</option>
+						<option>26 分</option>
+						<option>27 分</option>
+						<option>28 分</option>
+						<option>29 分</option>
+						<option>30 分</option>
+						<option>31 分</option>
+						<option>32 分</option>
+						<option>33 分</option>
+						<option>34 分</option>
+						<option>35 分</option>
+						<option>36 分</option>
+						<option>37 分</option>
+						<option>38 分</option>
+						<option>39 分</option>
+						<option>40 分</option>
+						<option>41 分</option>
+						<option>42 分</option>
+						<option>43 分</option>
+						<option>44 分</option>
+						<option>45 分</option>
+						<option>46 分</option>
+						<option>47 分</option>
+						<option>48 分</option>
+						<option>49 分</option>
+						<option>50 分</option>
+						<option>51 分</option>
+						<option>52 分</option>
+						<option>53 分</option>
+						<option>54 分</option>
+						<option>55 分</option>
+						<option>56 分</option>
+						<option>57 分</option>
+						<option>58 分</option>
+						<option>59 分</option>
+					</select>
+				</fieldset>
+			</li>
+		
+		</ul>
+
+<!--
+		<fieldset class="ui-grid-a">   		
+			<legend class="ui-block-a">開啟時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			
+			</fieldset>
+		</fieldset>
+		<br>
+		<fieldset class="ui-grid-a">  
+			<legend class="ui-block-a">關閉時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			</fieldset>
+		</fieldset>
+			<br>
+		<fieldset class="ui-grid-a">   		
+			<legend class="ui-block-a">電源:</legend>
+			<select data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>	
+		</fieldset>
+		
+		<fieldset class="ui-grid-a" data-theme="z">   
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-a">
+				<label data-inline="true" style="border:none;"><input name="days" id="Monday" type="checkbox" onclick="chooseOne(this,'days')"/>星期一</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Tuesday" type="checkbox" onclick="chooseOne(this,'days')"/>星期二</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Wednesday" type="checkbox" onclick="chooseOne(this,'days')">星期三</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Thursday" type="checkbox" onclick="chooseOne(this,'days')"/>星期四</label>
+		    </fieldset>
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-b">
+				<label data-inline="true" style="border:none;"><input name="days" id="Friday" type="checkbox" onclick="chooseOne(this,'days')"/>星期五</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Saturday" type="checkbox" onclick="chooseOne(this,'days')"/>星期六</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Sunday" type="checkbox" onclick="chooseOne(this,'days')"/>星期日</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="everyday" type="checkbox" onclick="chooseOne(this,'days')"/>每日</label>
+		    </fieldset>
+		</fieldset>
+-->
+	</div><!-- /content -->
+	 
+	<div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-role="button" data-theme="f" data-mini="true" class="but">儲存設定</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+
+ </body>
+ </html> 

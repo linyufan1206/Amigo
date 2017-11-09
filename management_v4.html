@@ -1,0 +1,3520 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+	
+</head>
+
+ <body>
+<!-- /manage_type -->
+<div data-role="page" id="wol_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<a href="../index.html#wireframe" rel="external" data-role="button" class="back" style="color:#fff">首頁</a>
+		<h1>Pdnet系統設定</h1>
+	</div><!-- /header -->
+	
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li><a href="#deviceall_manage">
+			<img src="image/manage.png" class="ui-li-icon">
+			裝置管理
+			</a></li>
+			<!--<li><a href="#notification">
+				<h2>推播設定</h2>
+			</a></li>-->
+			<li><a href="#account_manage">
+				<img src="image/acc_man.png" class="ui-li-icon">			
+				帳號管理
+			</a></li>
+			<li><a href="#recording_alert">	
+				<img src="image/mic_1.png" class="ui-li-icon">
+				自訂錄音
+			</a></li>
+
+				<li><a href="#group_setting">	
+				<img src="image/acc_man.png" class="ui-li-icon">
+				群組設定
+				</a></li>
+			<!--<li><a href="">		
+				<img src="image/cam.png" class="ui-li-icon">
+				<h2>自訂拍照</h2>
+			</a></li>-->
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /deviceall_manage -->
+<div data-role="page" id="deviceall_manage" data-mini="true" data-theme="f">
+
+ <div data-role="header" data-theme="f" style="height:40px;padding-top:5px;">		
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1>裝置設定</h1>
+		<div data-role="controlgroup" data-type="horizontal" style="float: right;margin: -45px 5px;">
+		<a href="#wol_list" data-role="button" data-theme="g">
+		<img src="image/wol.png"></a>
+		<a data-role="button" data-theme="g">GUI</a>
+		</div>
+ </div><!--/header -->
+  
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">
+		<li data-role="list-divider" class="a">分享器列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/router.png" style="width:30px;height:30px;">
+					</td>
+					<td>GR267c_135da0</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/router_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>BR261c_a15c20</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider"  class="a">無線訊號延伸器列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/device_ap.png" style="width:30px;height:30px;">
+					</td>
+					<td>BRC70x</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/device_wifiap.png" style="width:30px;height:30px;">
+					</td>
+					<td>BRC70n</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/device_ap_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>BR476n</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/device_wifiap_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>BRB72n</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider"  class="a">網路攝影機列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/camera.png" style="width:30px;height:30px;">
+					</td>
+					<td>IPJC2n_aa11dd</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/camera_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>IPJC1n_df6900</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider"  class="a">感測器列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/wifi_sensor.png" style="width:30px;height:30px;">
+					</td>
+					<td>
+						<a href="#rule_manage" style="color:#333">感測器</a>
+					</td>
+					<td><img src="image/right.png" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table style="margin-left:30px;" width="90%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/md.png" style="width:30px;height:30px;">
+					</td>
+					<td>
+						<a href="#zigbee_list" style="color:#333">小狗</a></td>
+					<td style="float:right;">
+						<!--80%	-->						
+						<img src="image/battery_27.png" width="36px" height="36px">
+						<img src="image/right.png" >
+					</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table style="margin-left:30px;" width="90%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/dd.png" style="width:30px;height:30px;">
+					</td>
+					<td>
+						<a href="#zigbee_list" style="color:#333">小狗</a></td>
+					<td style="float:right;color:red;">
+					<!--20%-->					
+					<img src="image/battery_25.png" width="36px" height="36px">
+						<img src="image/right.png" >
+					</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table style="margin-left:30px;" width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/md_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>3f12a1</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table style="margin-left:30px;" width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/dd_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>3f12a3</td>
+				</tr>
+			</table>	
+        </li>		
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/wifi_sensor_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>
+						<a href="#" style="color:#000">WDG71n</a>
+					</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider"  class="a">智慧插座列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/wifi_switch.png" style="width:30px;height:30px;">
+					</td>
+					<td>電扇</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/wifi_switch_2.png" style="width:30px;height:30px;">
+					</td>
+					<td>WSG70n_123321</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider"  class="a">多媒體列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/media.png" style="width:30px;height:30px;">
+					</td>
+					<td>CM790x_ad3120a</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/nas.png" style="width:30px;height:30px;">
+					</td>
+					<td>WD091n_1211aa</td>
+				</tr>
+			</table>	
+        </li>
+		<!--
+		<li data-role="list-divider">其他設定</li>
+		<li><a href="#email">雲訊息通知信箱</a></li>
+		-->
+	</ul>
+ </div><!--/content_end--> 
+	
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;"  class="a">重新命名</a>
+		<a href="#delete" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;"  class="a">刪除</a>
+		</div>
+ </div>
+</div><!-- /page7_end --> 
+
+
+<!-- /rule_manage -->
+<div data-role="page" id="rule_manage" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">規則管理</h1>
+		<a href="#deviceall_manage" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li><a href="#sound_rule">
+				<img src="images/vd.png" class="ui-li-icon">
+				聲音感測規則管理
+			</a></li>
+			<li><a href="#temp_rule">
+				<img src="images/td.png" class="ui-li-icon">
+				溫度感測規則管理
+			</a></li>
+			<li><a href="#light_rule">
+				<img src="images/ld.png" class="ui-li-icon">
+				光線感測規則管理
+			</a></li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /sound_rule -->
+<div data-role="page" id="sound_rule" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">聲音感測</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<!--
+		<ul data-role="listview">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+			WSG70n_123321
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="images/md_2.png" class="ui-li-icon-checkbox">
+			WDG71n_ad1212_12aadd
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="images/dd_2.png" class="ui-li-icon-checkbox">
+			WDG71n_ad1212_ac12ad
+			</label></li>
+		</ul>
+		-->
+		<ul data-role="listview" data-divider-theme="d">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_123321
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_ad1122
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_ba12ca
+			</label></li>
+			<li data-role="list-divider">離線裝置</li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				車庫照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				玄關照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				WSG70n_aadd11
+			</label></li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f"  class="a">刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /temp_rule -->
+<div data-role="page" id="temp_rule" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">溫度感測</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_123321
+			</label></li>
+			<li data-role="list-divider">離線裝置</li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				車庫照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				玄關照明
+			</label></li>
+			<li>
+				裝置尚未使用
+			</li>
+			<li>
+				裝置尚未使用
+			</li>
+			<li>
+				裝置尚未使用
+			</li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /light_rule -->
+<div data-role="page" id="light_rule" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">光線感測</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_123321
+			</label></li>
+			<li data-role="list-divider">離線裝置</li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				車庫照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				玄關照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				WSG70n_aadd11
+			</label></li>
+			<li>
+				裝置尚未使用
+			</li>
+			<li>
+				裝置尚未使用
+			</li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /zigbee_list -->
+<div data-role="page" id="zigbee_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">Zigbee裝置</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/dd.png" class="ui-li-icon-checkbox">
+				<a href="#zigbee_rule" style="color:#4f4f4f">WDG71n_a9a100_12aa11</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/dd.png" class="ui-li-icon-checkbox">
+				<a href="#zigbee_rule" style="color:#4f4f4f">WDG71n_a9a100_12aa22</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/md.png" class="ui-li-icon-checkbox">
+				<a href="#zigbee_rule" style="color:#4f4f4f">WDG71n_a9a100_12aa44</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/md.png" class="ui-li-icon-checkbox">
+				<a href="#zigbee_rule" style="color:#4f4f4f">WDG71n_a9a100_12aa55</a>
+			</label></li>
+			<li data-role="list-divider">離線裝置</li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/dd_2.png" class="ui-li-icon-checkbox">
+				<a href="#off_zigbee_rule" style="color:#666666">WDG71n_a9a100_12aa77</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/dd_2.png" class="ui-li-icon-checkbox">
+				<a href="#off_zigbee_rule" style="color:#666666">WDG71n_a9a100_12aa88</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/md_2.png" class="ui-li-icon-checkbox">
+				<a href="#off_zigbee_rule" style="color:#666666">WDG71n_a9a100_12aa99</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/md_2.png" class="ui-li-icon-checkbox">
+				<a href="#off_zigbee_rule" style="color:#666666">WDG71n_a9a100_12aa00</a>
+			</label></li>
+			<li>
+				裝置尚未使用
+			</li>
+			<li>
+				裝置尚未使用
+			</li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /wol_list -->
+<div data-role="page" id="wol_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">遠端PC</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="image/desktop_off.png" class="ui-li-icon-checkbox">
+			Home PC
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="image/desktop_off.png" class="ui-li-icon-checkbox">
+			Public PC
+			</label></li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+ 
+<!-- /notification -->
+<div data-role="page" id="notification" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>推播設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" class="a">完成</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<h2>推播通知</h2>			
+			<fieldset class="ui-li-aside">
+				<select data-inline="true" data-mini="true" onchange="notify(this,'audio')">
+					<option value="OFF" selected>ON</option>
+					<option value="ON">OFF</option>
+				</select>
+			</fieldset>
+		</li>
+		<li id="audio">
+			<h2>推播聲音:</h2>
+			<fieldset class="ui-li-aside">
+			    <select id="white_balance" data-inline="true" data-mini="true" onchange="notify(this,'sound')">
+			        <option value="OFF">ON</option>
+			        <option value="ON">OFF</option>
+			    </select>
+			</fieldset>
+		</li>
+	</ul>
+ </div><!--/content_end -->  
+</div><!-- /page3_end -->
+
+
+<!-- /account_manage -->
+<div data-role="page" id="account_manage" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">帳號管理</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li><a href="#function_group_v1">
+				<img src="image/acc_man.png" class="ui-li-icon">			
+				<h2>副管理者</h2>
+			</a></li>
+			<li><a href="#function_group_v2">
+				<img src="image/acc_man.png" class="ui-li-icon">			
+				<h2>一般使用者</h2>
+			</a></li>
+			<li><a href="#function_group_v3">
+				<img src="image/acc_man.png" class="ui-li-icon">			
+				<h2>訪客</h2>
+			</a></li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /recording_alert -->
+<div data-role="page" id="recording_alert" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">自訂錄音</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+	<!-- /content -->
+		
+<div data-role="content" data-theme="d">
+		<div  class="record_mic">
+		<a href="#stop_rec" data-rel="dialog" onclick="timer(this)" >
+			<img src="image/ddd.png" style="width:200px;height:250px;">
+		</a>
+		<h2>
+		<!--<img src="image/time.gif">-->
+		</h2>
+	
+		<form name="ttmfm">
+		<input type="text" name="ttm" data-mini="true" style="border:none;background-color:transparent;">
+		</form>
+		</div>
+
+	</div>
+<!-- /content end -->
+	
+</div><!-- /page popup -->
+<!-- recording_alert end -->
+
+
+<!-- /group_setting -->
+<div data-role="page" id="group_setting" data-theme="d">
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">群組設定</h1>
+		<a href="../html/management.html"  data-role="button" class="back" style="color:#fff;">上一頁</a>
+			<li class="switch_on">
+				<select  data-role="slider" data-mini="true" data-inline="true" class="switch_on" data-theme="d" data-track-theme="d">
+					<option value="on">On</option>
+					<option value="off">Off</option>
+				</select>
+		</li>
+	
+		
+	</div><!-- /header -->
+		<div data-role="content" data-theme="d">
+			<ul data-role="listview">
+			<li><a href="#sensor_setting">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+			感測群組
+			</a></li>
+			<li><a href="#motion_setting">
+			<img src="image/md.png" class="ui-li-icon">			
+			動作群組
+			</a></li>
+			<li><a href="#sensor_setting_2">
+			<img src="image/md.png" class="ui-li-icon">			
+			動作群組2
+			</a></li>
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!-- group_setting end -->
+
+<!-- /sensor_setting -->
+<div data-role="page" id="sensor_setting" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">感測群組</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#sensor_list"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">新增裝置</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!-- sensor_setting end -->
+
+<!-- /sensor_list -->
+<div data-role="page" id="sensor_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">感測群組</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#sensor_list_end"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">完成</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+	<li class="a">
+				<table>
+						<td>群組名稱:</td><td><input type="text" data-mini="true" placeholder="請輸入群組名稱" ></td>   
+				</table>
+			</li>
+	<li data-role="list-divider" class="a">感測器列表:</li>
+		<li class="a">
+			<table width="100%">
+					<tr>
+					<td width="30px"><input type="checkbox" data-role="none" ></td>
+					<td><a href="#sound" style="color:#666666">聲音感測</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td><a href="#light_setting" style="color:#666666">光線感測</a></td>
+						<td class="next_page" data-mini="true"></td>
+						</tr>
+					</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td><a href="#temperature" style="color:#666666">溫度感測</a></td>
+						<td class="next_page" data-mini="true"></td>
+						</tr>
+					</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td><a href="#motion" style="color:#666666">移動感測</a></td>
+						<td class="next_page" data-mini="true"></td>
+						</tr>
+					</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td><a href="#door" style="color:#666666">門窗感測</a></td>
+						<td class="next_page" data-mini="true"></td>
+						</tr>
+					</table>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!-- sensor_list end -->
+
+<!-- light setting -->
+<div data-role="page" id="light_setting" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	<h1>設定</h1>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">   
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>1F客廳</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#">0</option>
+					<option value="#">50</option>
+					<option value="#">100</option>
+					<option value="#">150</option>
+					<option value="#">200</option>
+					<option value="#">250</option>
+					<option value="#">300</option>
+					<option value="#">400</option>
+					<option value="#">500</option>
+					<option value="#">600</option>
+					<option value="#">700</option>
+					<option value="#">800</option>
+					<option value="#">900</option>
+					<option value="#" selected>1000</option>
+					<option value="#">1100</option>
+					<option value="#">1200</option>
+					<option value="#">1300</option>
+					<option value="#">1400</option>
+					<option value="#">1500</option>
+					<option value="#">1600</option>
+					<option value="#">1700</option>
+					<option value="#">1800</option>
+					<option value="#">1900</option>
+					<option value="#">2000</option>
+				</select>
+			</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li> 
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>感測器</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#">0</option>
+					<option value="#">50</option>
+					<option value="#">100</option>
+					<option value="#">150</option>
+					<option value="#">200</option>
+					<option value="#">250</option>
+					<option value="#">300</option>
+					<option value="#">400</option>
+					<option value="#">500</option>
+					<option value="#">600</option>
+					<option value="#">700</option>
+					<option value="#" selected>800</option>
+					<option value="#">900</option>
+					<option value="#" >1000</option>
+					<option value="#">1100</option>
+					<option value="#">1200</option>
+					<option value="#">1300</option>
+					<option value="#">1400</option>
+					<option value="#">1500</option>
+					<option value="#">1600</option>
+					<option value="#">1700</option>
+					<option value="#">1800</option>
+					<option value="#">1900</option>
+					<option value="#">2000</option>
+				</select>
+			</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>車庫</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#">0</option>
+					<option value="#">50</option>
+					<option value="#">100</option>
+					<option value="#">150</option>
+					<option value="#">200</option>
+					<option value="#">250</option>
+					<option value="#">300</option>
+					<option value="#">400</option>
+					<option value="#">500</option>
+					<option value="#">600</option>
+					<option value="#" selected>700</option>
+					<option value="#">800</option>
+					<option value="#">900</option>
+					<option value="#" >1000</option>
+					<option value="#">1100</option>
+					<option value="#">1200</option>
+					<option value="#">1300</option>
+					<option value="#">1400</option>
+					<option value="#">1500</option>
+					<option value="#">1600</option>
+					<option value="#">1700</option>
+					<option value="#">1800</option>
+					<option value="#">1900</option>
+					<option value="#">2000</option>
+				</select>
+			</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li> 		
+	</ul>
+ </div>
+ </div>
+ <!-- /light_set end -->
+
+<!-- /temperature -->
+<div data-role="page" id="temperature" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>		
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">   
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>1F客廳</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+						<option value="1">0 °C</option>
+						<option value="2">1 °C</option>
+						<option value="1">2 °C</option>
+						<option value="2">3 °C</option>
+						<option value="1">4 °C</option>
+						<option value="2">5 °C</option>
+						<option value="1">6 °C</option>
+						<option value="2">7 °C</option>
+						<option value="1">8 °C</option>
+						<option value="2">9 °C</option>
+						<option value="1">10 °C</option>
+						<option value="2">12 °C</option>
+						<option value="1">13 °C</option>
+						<option value="2">14 °C</option>
+						<option value="1">15 °C</option>
+						<option value="2">16 °C</option>
+						<option value="1">17 °C</option>
+						<option value="2">18 °C</option>
+						<option value="1">19 °C</option>
+						<option value="2">20 °C</option>
+						<option value="1">21 °C</option>
+						<option value="2">22 °C</option>
+						<option value="1">23 °C</option>
+						<option value="2">24 °C</option>
+						<option value="1">25 °C</option>
+						<option value="2">26 °C</option>
+						<option value="1">27 °C</option>
+						<option value="2" selected>28 °C</option>
+						<option value="1">29 °C</option>
+						<option value="2" >30 °C</option>
+						<option value="1">31 °C</option>
+						<option value="2">32 °C</option>
+						<option value="1">33 °C</option>
+						<option value="2">34 °C</option>
+						<option value="1">35 °C</option>
+						<option value="2">36 °C</option>
+						<option value="1">37 °C</option>
+						<option value="2">38 °C</option>
+						<option value="1">39 °C</option>
+						<option value="2">40 °C</option>
+						<option value="1">41 °C</option>
+						<option value="2">42 °C</option>
+						<option value="1">43 °C</option>
+						<option value="2">44 °C</option>
+						<option value="1">45 °C</option>
+						<option value="2">46 °C</option>
+						<option value="1">47 °C</option>
+						<option value="2">48 °C</option>
+						<option value="1">49 °C</option>
+						<option value="2">50 °C</option>
+				</select>
+			</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li> 
+				<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>感測器</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+						<option value="1">0 °C</option>
+						<option value="2">1 °C</option>
+						<option value="1">2 °C</option>
+						<option value="2">3 °C</option>
+						<option value="1">4 °C</option>
+						<option value="2">5 °C</option>
+						<option value="1">6 °C</option>
+						<option value="2">7 °C</option>
+						<option value="1">8 °C</option>
+						<option value="2">9 °C</option>
+						<option value="1">10 °C</option>
+						<option value="2">12 °C</option>
+						<option value="1">13 °C</option>
+						<option value="2">14 °C</option>
+						<option value="1">15 °C</option>
+						<option value="2">16 °C</option>
+						<option value="1">17 °C</option>
+						<option value="2">18 °C</option>
+						<option value="1">19 °C</option>
+						<option value="2">20 °C</option>
+						<option value="1">21 °C</option>
+						<option value="2">22 °C</option>
+						<option value="1">23 °C</option>
+						<option value="2">24 °C</option>
+						<option value="1">25 °C</option>
+						<option value="2">26 °C</option>
+						<option value="1">27 °C</option>
+						<option value="2">28 °C</option>
+						<option value="1">29 °C</option>
+						<option value="2" >30 °C</option>
+						<option value="1">31 °C</option>
+						<option value="2">32 °C</option>
+						<option value="1">33 °C</option>
+						<option value="2">34 °C</option>
+						<option value="1" selected>35 °C</option>
+						<option value="2">36 °C</option>
+						<option value="1">37 °C</option>
+						<option value="2">38 °C</option>
+						<option value="1">39 °C</option>
+						<option value="2">40 °C</option>
+						<option value="1">41 °C</option>
+						<option value="2">42 °C</option>
+						<option value="1">43 °C</option>
+						<option value="2">44 °C</option>
+						<option value="1">45 °C</option>
+						<option value="2">46 °C</option>
+						<option value="1">47 °C</option>
+						<option value="2">48 °C</option>
+						<option value="1">49 °C</option>
+						<option value="2">50 °C</option>
+				</select>
+			</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>車庫</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+						<option value="1">0 °C</option>
+						<option value="2">1 °C</option>
+						<option value="1">2 °C</option>
+						<option value="2">3 °C</option>
+						<option value="1">4 °C</option>
+						<option value="2">5 °C</option>
+						<option value="1">6 °C</option>
+						<option value="2">7 °C</option>
+						<option value="1">8 °C</option>
+						<option value="2">9 °C</option>
+						<option value="1">10 °C</option>
+						<option value="2">12 °C</option>
+						<option value="1">13 °C</option>
+						<option value="2">14 °C</option>
+						<option value="1">15 °C</option>
+						<option value="2">16 °C</option>
+						<option value="1">17 °C</option>
+						<option value="2">18 °C</option>
+						<option value="1">19 °C</option>
+						<option value="2">20 °C</option>
+						<option value="1">21 °C</option>
+						<option value="2">22 °C</option>
+						<option value="1">23 °C</option>
+						<option value="2">24 °C</option>
+						<option value="1">25 °C</option>
+						<option value="2">26 °C</option>
+						<option value="1">27 °C</option>
+						<option value="2">28 °C</option>
+						<option value="1">29 °C</option>
+						<option value="2" selected>30 °C</option>
+						<option value="1">31 °C</option>
+						<option value="2">32 °C</option>
+						<option value="1">33 °C</option>
+						<option value="2">34 °C</option>
+						<option value="1">35 °C</option>
+						<option value="2">36 °C</option>
+						<option value="1">37 °C</option>
+						<option value="2">38 °C</option>
+						<option value="1">39 °C</option>
+						<option value="2">40 °C</option>
+						<option value="1">41 °C</option>
+						<option value="2">42 °C</option>
+						<option value="1">43 °C</option>
+						<option value="2">44 °C</option>
+						<option value="1">45 °C</option>
+						<option value="2">46 °C</option>
+						<option value="1">47 °C</option>
+						<option value="2">48 °C</option>
+						<option value="1">49 °C</option>
+						<option value="2">50 °C</option>
+				</select>
+			</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li>
+		</ul>
+ </div>
+ </div>
+</div> 
+<!-- /tem end --> 
+
+<!-- /sound -->
+<div data-role="page" id="sound" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">  
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>1F客廳</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+						<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+							<option value="#" selected>高於</option>
+							<option value="#">低於</option>
+						</select>
+				      <select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option value="1">0 dB</option>
+								<option value="2">5 dB</option>
+								<option value="1">10 dB</option>
+								<option value="2">15 dB</option>
+								<option value="1">20 dB</option>
+								<option value="2">25 dB</option>
+								<option value="1">30 dB</option>
+								<option value="2">35 dB</option>
+								<option value="1">40 dB</option>
+								<option value="2">45 dB</option>
+								<option value="1">50 dB</option>
+								<option value="2">55 dB</option>
+								<option value="1" selected>60 dB</option>
+								<option value="2">65 dB</option>
+								<option value="1">70 dB</option>
+								<option value="2">75 dB</option>
+								<option value="1">80 dB</option>
+								<option value="2">85 dB</option>
+								<option value="1">90 dB</option>
+								<option value="2">95 dB</option>
+								<option value="1">100 dB</option>
+								<option value="2">105 dB</option>
+								<option value="1">110 dB</option>
+							</select>
+						</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li> 
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>感測器</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+						<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+							<option value="#" selected>高於</option>
+							<option value="#">低於</option>
+						</select>
+				      <select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option value="1">0 dB</option>
+								<option value="2">5 dB</option>
+								<option value="1">10 dB</option>
+								<option value="2">15 dB</option>
+								<option value="1">20 dB</option>
+								<option value="2">25 dB</option>
+								<option value="1">30 dB</option>
+								<option value="2">35 dB</option>
+								<option value="1">40 dB</option>
+								<option value="2">45 dB</option>
+								<option value="1">50 dB</option>
+								<option value="2">55 dB</option>
+								<option value="1" >60 dB</option>
+								<option value="2">65 dB</option>
+								<option value="1" selected>70 dB</option>
+								<option value="2">75 dB</option>
+								<option value="1">80 dB</option>
+								<option value="2">85 dB</option>
+								<option value="1">90 dB</option>
+								<option value="2">95 dB</option>
+								<option value="1">100 dB</option>
+								<option value="2">105 dB</option>
+								<option value="1">110 dB</option>
+							</select>
+						</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li> 
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>車庫</td>
+					<td>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+						<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+							<option value="#" selected>高於</option>
+							<option value="#">低於</option>
+						</select>
+				      <select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option value="1">0 dB</option>
+								<option value="2">5 dB</option>
+								<option value="1">10 dB</option>
+								<option value="2">15 dB</option>
+								<option value="1">20 dB</option>
+								<option value="2">25 dB</option>
+								<option value="1">30 dB</option>
+								<option value="2">35 dB</option>
+								<option value="1">40 dB</option>
+								<option value="2">45 dB</option>
+								<option value="1"selected>50 dB</option>
+								<option value="2">55 dB</option>
+								<option value="1" >60 dB</option>
+								<option value="2">65 dB</option>
+								<option value="1">70 dB</option>
+								<option value="2">75 dB</option>
+								<option value="1">80 dB</option>
+								<option value="2">85 dB</option>
+								<option value="1">90 dB</option>
+								<option value="2">95 dB</option>
+								<option value="1">100 dB</option>
+								<option value="2">105 dB</option>
+								<option value="1">110 dB</option>
+							</select>
+						</fieldset>
+			</td>
+			</tr>
+			</table>	
+		</li> 
+	</ul>
+ </div>
+ </div>
+<!-- /sound -->
+
+<!-- /motion-->
+<div data-role="page" id="motion" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>		
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d"> 
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>感測器_小狗</td>
+					<td>
+						<fieldset data-mini="true" class="ui-li-aside">
+							<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option>開啟</option>
+								<option selected>關閉</option>
+							</select>
+						</fieldset>
+					</td>
+				</tr>
+			</table>	
+		</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>1F客廳_egfh01</td>
+					<td>
+						<fieldset data-mini="true" class="ui-li-aside">
+							<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option>開啟</option>
+								<option selected>關閉</option>
+							</select>
+						</fieldset>
+					</td>
+				</tr>
+			</table>	
+		</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>1F客廳_egfh03</td>
+					<td>
+						<fieldset data-mini="true" class="ui-li-aside">
+							<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option selected>開啟</option>
+								<option >關閉</option>
+							</select>
+						</fieldset>
+					</td>
+				</tr>
+			</table>	
+		</li> 	 		
+	</ul>
+ </div>
+ </div> 
+<!-- /motion_set -->
+ 
+<!-- /door -->
+<div data-role="page" id="door" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">  
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>感測器_小狗</td>
+					<td>
+						<fieldset data-mini="true" class="ui-li-aside">
+							<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option>開啟</option>
+								<option selected>關閉</option>
+							</select>
+						</fieldset>
+					</td>
+				</tr>
+			</table>	
+		</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>1F客廳_egfh01</td>
+					<td>
+						<fieldset data-mini="true" class="ui-li-aside">
+							<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option>開啟</option>
+								<option selected>關閉</option>
+							</select>
+						</fieldset>
+					</td>
+				</tr>
+			</table>	
+		</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" /></td>
+					<td>1F客廳_egfh03</td>
+					<td>
+						<fieldset data-mini="true" class="ui-li-aside">
+							<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option selected>開啟</option>
+								<option >關閉</option>
+							</select>
+						</fieldset>
+					</td>
+				</tr>
+			</table>	
+		</li> 
+	</ul>
+ </div>
+ </div>
+<!-- /door_set end -->
+
+
+
+<!-- /sensor_list_end -->
+<div data-role="page" id="sensor_list_end" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">感測群組</h1>
+		<a  href="#group_setting"  data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#sensor_list"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">新增裝置</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li class="a">
+				<table>
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>全感測</td>
+						</tr>
+					</table>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;"  class="a">重新命名</a>
+		<a href="#delete" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;"  class="a">刪除</a>
+		</div>
+ </div>
+</div>
+<!-- sensor_list_end -->
+
+<!-- /motion_list_end -->
+<div data-role="page" id="motion_list_end" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">動作群組</h1>
+		<a  href="#group_setting"  data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#sensor_list"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">新增裝置</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li class="a">
+				<table>
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>全動作</td>
+						</tr>
+					</table>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;"  class="a">重新命名</a>
+		<a href="#delete" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;"  class="a">刪除</a>
+		</div>
+ </div>
+</div>
+<!-- sensor_list_end -->
+
+<!-- /motion_setting -->
+<div data-role="page" id="motion_setting" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">動作群組</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#motion_list"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">新增裝置</a>
+	</div><!-- /header -->
+			
+</div>
+<!-- motion_setting end -->
+
+<!-- /motion_list -->
+<div data-role="page" id="motion_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">動作群組</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#motion_list_end"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true" class="a">完成</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+	<ul data-role="listview" data-divider-theme="d">
+	<li class="a">
+		<table>
+			<td>群組名稱:</td>
+			<td><input type="text" data-mini="true" placeholder="請輸入群組名稱" ></td>   
+		</table>
+	</li>
+	<li data-role="list-divider" class="a">動作列表:</li>
+		<li class="a">
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" ></td>
+					<td><a href="#alarm_set" style="color:#666666">警報器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+		</li>
+		<li class="a">
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" ></td>
+					<td><a href="#switch_set" style="color:#666666">智慧插座</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+				</table>
+		</li>
+		<li class="a">
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" ></td>
+					<td><a href="#alarm_set" style="color:#666666" >喇叭裝置</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+		</li>
+		<li class="a">
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"></td>
+					<td><a href="#record_set" style="color:#666666">網路攝影機</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!-- motion_list -->
+
+
+<!-- /motion_setting_2 -->
+<div data-role="page" id="sensor_setting_2" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">動作群組</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#motion_list_2"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">新增裝置</a>
+	</div><!-- /header -->
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!-- motion_setting end -->
+
+<!-- /motion_list_2 -->
+<div data-role="page" id="motion_list_2" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">動作群組</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#motion_list_end"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true" class="a">完成</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+	<ul data-role="listview" data-divider-theme="d">
+	<li class="a">
+		<table>
+		<td>群組名稱:</td> <td><input type="text" data-mini="true" placeholder="請輸入群組名稱" ></td>   
+		</table>
+	</li>
+	<li data-role="list-divider" class="a">動作列表:</li>
+			<li class="a">
+				<table width="100%">
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td><a href="#alarm_set_2" style="color:#666666">警報器</a></td>
+						<td class="next_page" data-mini="true"></td>
+						</tr>
+					</table>
+			</li>
+	
+			<li class="a">
+				<table width="100%">
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td><a href="#alarm_set_2" style="color:#666666">智慧插座</a></td>
+						<td class="next_page" data-mini="true"></td>
+						</tr>
+					</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td><a href="#alarm_set_2" style="color:#666666" >喇叭裝置</a></td>
+						<td class="next_page" data-mini="true"></td>
+						</tr>
+					</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td><a href="#alarm_set_2" style="color:#666666">網路攝影機</a></td>
+						<td class="next_page" data-mini="true"></td>
+						</tr>
+					</table>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!-- motion_list end -->
+
+<!-- alarm_set -->
+<div data-role="page" id="alarm_set" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>		
+ </div><!--/header -->
+ 
+<div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">   
+		<li>
+		<table width="100%">
+				<tr>
+					<td><input type="checkbox" data-role="none" onclick="ok.style.display=ok.style.display=='none'?'':'none'" value="on">31af12</input></td>
+				</tr>
+			</table>
+		<div id="ok" style="display:none" data-theme="d">
+		<div>
+			<h2>警報方式</h2> 
+			<br>
+			<p name="alert_message" style="display:none;">事件觸發後，警報器將持續聲響，可於雲訊息通知中關閉警報器</p>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>連續警報聲響</option>
+					<option>設定警報聲響</option>	
+				</select>
+			</fieldset>
+			</div>
+		<div name="alert_manual" style="display:none;">
+			<h2>警報聲響持續</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside" >
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+				</select>
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>1 秒</option>
+					<option>2 秒</option>
+					<option>3 秒</option>
+					<option selected>4 秒</option>
+					<option>5 秒</option>
+					<option>6 秒</option>
+					<option>7 秒</option>
+					<option>8 秒</option>
+					<option>9 秒</option>
+					<option>10 秒</option>
+					<option>11 秒</option>
+					<option>12 秒</option>
+					<option>13 秒</option>
+					<option>14 秒</option>
+					<option>15 秒</option>
+					<option>16 秒</option>
+					<option>17 秒</option>
+					<option>18 秒</option>
+					<option>19 秒</option>
+					<option>20 秒</option>
+					<option>21 秒</option>
+					<option>22 秒</option>
+					<option>23 秒</option>
+					<option>24 秒</option>
+					<option>25 秒</option>
+					<option>26 秒</option>
+					<option>27 秒</option>
+					<option>28 秒</option>
+					<option>29 秒</option>
+					<option>30 秒</option>
+					<option>31 秒</option>
+					<option>32 秒</option>
+					<option>33 秒</option>
+					<option>34 秒</option>
+					<option>35 秒</option>
+					<option>36 秒</option>
+					<option>37 秒</option>
+					<option>38 秒</option>
+					<option>39 秒</option>
+					<option>40 秒</option>
+					<option>41 秒</option>
+					<option>42 秒</option>
+					<option>43 秒</option>
+					<option>44 秒</option>
+					<option>45 秒</option>
+					<option>46 秒</option>
+					<option>47 秒</option>
+					<option>48 秒</option>
+					<option>49 秒</option>
+					<option>50 秒</option>
+					<option>51 秒</option>
+					<option>52 秒</option>
+					<option>53 秒</option>
+					<option>54 秒</option>
+					<option>55 秒</option>
+					<option>56 秒</option>
+					<option>57 秒</option>
+					<option>58 秒</option>
+					<option>59 秒</option>
+				</select>
+			</fieldset>
+			<br>
+		</div>
+		<div>
+			<h2>鈴聲</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>聲音警報音</option>
+					<option>光線警報音</option>
+					<option selected>溫度警報音</option>
+					<option>移動警報音</option>
+					<option>門窗警報音</option>
+				</select>
+			</fieldset>
+		</div>
+		</div>
+		</li>
+		<li>
+		<table width="100%">
+				<tr>
+					<td><input type="checkbox" data-role="none" onclick="ok1.style.display=ok1.style.display=='none'?'':'none'" value="on">WDG71n</input></td>
+				</tr>
+			</table>
+		<div id="ok1" style="display:none" data-theme="d">
+		<div>
+			<h2>警報方式</h2> 
+			<br>
+			<p name="alert_message" style="display:none;">事件觸發後，警報器將持續聲響，可於雲訊息通知中關閉警報器</p>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>連續警報聲響</option>
+					<option>設定警報聲響</option>	
+				</select>
+			</fieldset>
+			</div>
+		<div name="alert_manual" style="display:none;">
+			<h2>警報聲響持續</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside" >
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+				</select>
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>1 秒</option>
+					<option>2 秒</option>
+					<option>3 秒</option>
+					<option selected>4 秒</option>
+					<option>5 秒</option>
+					<option>6 秒</option>
+					<option>7 秒</option>
+					<option>8 秒</option>
+					<option>9 秒</option>
+					<option>10 秒</option>
+					<option>11 秒</option>
+					<option>12 秒</option>
+					<option>13 秒</option>
+					<option>14 秒</option>
+					<option>15 秒</option>
+					<option>16 秒</option>
+					<option>17 秒</option>
+					<option>18 秒</option>
+					<option>19 秒</option>
+					<option>20 秒</option>
+					<option>21 秒</option>
+					<option>22 秒</option>
+					<option>23 秒</option>
+					<option>24 秒</option>
+					<option>25 秒</option>
+					<option>26 秒</option>
+					<option>27 秒</option>
+					<option>28 秒</option>
+					<option>29 秒</option>
+					<option>30 秒</option>
+					<option>31 秒</option>
+					<option>32 秒</option>
+					<option>33 秒</option>
+					<option>34 秒</option>
+					<option>35 秒</option>
+					<option>36 秒</option>
+					<option>37 秒</option>
+					<option>38 秒</option>
+					<option>39 秒</option>
+					<option>40 秒</option>
+					<option>41 秒</option>
+					<option>42 秒</option>
+					<option>43 秒</option>
+					<option>44 秒</option>
+					<option>45 秒</option>
+					<option>46 秒</option>
+					<option>47 秒</option>
+					<option>48 秒</option>
+					<option>49 秒</option>
+					<option>50 秒</option>
+					<option>51 秒</option>
+					<option>52 秒</option>
+					<option>53 秒</option>
+					<option>54 秒</option>
+					<option>55 秒</option>
+					<option>56 秒</option>
+					<option>57 秒</option>
+					<option>58 秒</option>
+					<option>59 秒</option>
+				</select>
+			</fieldset>
+			<br>
+		</div>
+		<div>
+			<h2>鈴聲</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>聲音警報音</option>
+					<option>光線警報音</option>
+					<option selected>溫度警報音</option>
+					<option>移動警報音</option>
+					<option>門窗警報音</option>
+				</select>
+			</fieldset>
+		</div>
+		</div>
+		</li>			
+	</ul>
+  </div>
+  </div>
+ <!-- /alarm_set_end -->
+ 
+ 
+ <!-- /alarm_set_2 -->
+ <div data-role="page" id="alarm_set_2" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>		
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">   
+	<li data-role="list-divider" class="a">感測器列表:</li>
+		<li class="a">
+			<table>
+					<tr>
+					<td width="30px"><input type="checkbox" data-role="none" ></td>
+					<td>聲音感測</td>
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+						<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+							<option value="#" selected>高於</option>
+							<option value="#">低於</option>
+						</select>
+				      <select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option value="1">0 dB</option>
+								<option value="2">5 dB</option>
+								<option value="1">10 dB</option>
+								<option value="2">15 dB</option>
+								<option value="1">20 dB</option>
+								<option value="2">25 dB</option>
+								<option value="1">30 dB</option>
+								<option value="2">35 dB</option>
+								<option value="1">40 dB</option>
+								<option value="2">45 dB</option>
+								<option value="1">50 dB</option>
+								<option value="2">55 dB</option>
+								<option value="1" selected>60 dB</option>
+								<option value="2">65 dB</option>
+								<option value="1">70 dB</option>
+								<option value="2">75 dB</option>
+								<option value="1">80 dB</option>
+								<option value="2">85 dB</option>
+								<option value="1">90 dB</option>
+								<option value="2">95 dB</option>
+								<option value="1">100 dB</option>
+								<option value="2">105 dB</option>
+								<option value="1">110 dB</option>
+							</select>
+						</fieldset>
+					</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table>
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>光線感測</td>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+								<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+									<option value="#" selected>高於</option>
+									<option value="#">低於</option>
+								</select>
+								<select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+									<option value="#">0</option>
+										<option value="#">50</option>
+										<option value="#">100</option>
+										<option value="#">150</option>
+										<option value="#">200</option>
+										<option value="#">250</option>
+										<option value="#">300</option>
+										<option value="#">400</option>
+										<option value="#">500</option>
+										<option value="#">600</option>
+										<option value="#">700</option>
+										<option value="#">800</option>
+										<option value="#">900</option>
+										<option value="#" selected>1000</option>
+										<option value="#">1100</option>
+										<option value="#">1200</option>
+										<option value="#">1300</option>
+										<option value="#">1400</option>
+										<option value="#">1500</option>
+										<option value="#">1600</option>
+										<option value="#">1700</option>
+										<option value="#">1800</option>
+										<option value="#">1900</option>
+										<option value="#">2000</option>
+									</select>
+								</fieldset>
+							</tr>
+					</table>
+			</li>
+			<li class="a">
+				<table>
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>溫度感測</td>
+									<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+						<option value="1">0 °C</option>
+						<option value="2">1 °C</option>
+						<option value="1">2 °C</option>
+						<option value="2">3 °C</option>
+						<option value="1">4 °C</option>
+						<option value="2">5 °C</option>
+						<option value="1">6 °C</option>
+						<option value="2">7 °C</option>
+						<option value="1">8 °C</option>
+						<option value="2">9 °C</option>
+						<option value="1">10 °C</option>
+						<option value="2">12 °C</option>
+						<option value="1">13 °C</option>
+						<option value="2">14 °C</option>
+						<option value="1">15 °C</option>
+						<option value="2">16 °C</option>
+						<option value="1">17 °C</option>
+						<option value="2">18 °C</option>
+						<option value="1">19 °C</option>
+						<option value="2">20 °C</option>
+						<option value="1">21 °C</option>
+						<option value="2">22 °C</option>
+						<option value="1">23 °C</option>
+						<option value="2">24 °C</option>
+						<option value="1">25 °C</option>
+						<option value="2">26 °C</option>
+						<option value="1">27 °C</option>
+						<option value="2">28 °C</option>
+						<option value="1">29 °C</option>
+						<option value="2" selected>30 °C</option>
+						<option value="1">31 °C</option>
+						<option value="2">32 °C</option>
+						<option value="1">33 °C</option>
+						<option value="2">34 °C</option>
+						<option value="1">35 °C</option>
+						<option value="2">36 °C</option>
+						<option value="1">37 °C</option>
+						<option value="2">38 °C</option>
+						<option value="1">39 °C</option>
+						<option value="2">40 °C</option>
+						<option value="1">41 °C</option>
+						<option value="2">42 °C</option>
+						<option value="1">43 °C</option>
+						<option value="2">44 °C</option>
+						<option value="1">45 °C</option>
+						<option value="2">46 °C</option>
+						<option value="1">47 °C</option>
+						<option value="2">48 °C</option>
+						<option value="1">49 °C</option>
+						<option value="2">50 °C</option>
+				</select>
+			</fieldset>
+						</tr>
+					</table>
+			</li>
+			<li class="a">
+				<table>
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>移動感測</td>
+						<fieldset data-mini="true" class="ui-li-aside">
+							<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option>開啟</option>
+								<option selected>關閉</option>
+							</select>
+						</fieldset>
+						</tr>
+					</table>
+			</li>
+			<li class="a">
+				<table>
+						<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>門窗感測</td>
+						<fieldset data-mini="true" class="ui-li-aside">
+							<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+								<option>開啟</option>
+								<option selected>關閉</option>
+							</select>
+						</fieldset>
+						</tr>
+					</table>
+			</li>
+	</ul>
+ </div>
+ </div>
+ <!-- alarm_set_2 -->
+ 
+<!-- switch_set -->
+<div data-role="page" id="switch_set" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>		
+ </div><!--/header -->
+ 
+<div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">   
+		<li>
+		<table width="100%">
+				<tr>
+					<td><input type="checkbox" data-role="none" onclick="switch1.style.display=switch1.style.display=='none'?'':'none'" value="on">電扇</input></td>
+				</tr>
+			</table>
+		<div id="switch1" style="display:none" data-theme="d">
+		<div>
+			<h2>開關狀態</h2>
+			<br>
+			<p class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="switch_type(this)" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="off">開啟</option>
+					<option value="on" selected>關閉</option>
+					<option value="on">循環</option>
+				</select>
+			</p>
+			</div>
+		<div name="switch_sec" style="display:none">
+			<h2>開啟</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>0 時</option>
+					<option selected>1 時</option>
+					<option>2 時</option>
+					<option>3 時</option>
+					<option>4 時</option>
+					<option>5 時</option>
+					<option>6 時</option>
+					<option>7 時</option>
+					<option>8 時</option>
+					<option>9 時</option>
+					<option>10時</option>
+					<option>11時</option>
+					<option>12時</option>
+				</select>
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+			<br>
+		</div>
+		<div name="switch_sec" style="display:none">
+			<h2>關閉</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>0 時</option>
+					<option>1 時</option>
+					<option selected>2 時</option>
+					<option>3 時</option>
+					<option>4 時</option>
+					<option>5 時</option>
+					<option>6 時</option>
+					<option>7 時</option>
+					<option>8 時</option>
+					<option>9 時</option>
+					<option>10時</option>
+					<option>11時</option>
+					<option>12時</option>
+				</select>
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</div>
+		<br>
+		<div name="switch_sec" style="display:none">
+			<h2>循環時間</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>0 時</option>
+					<option>1 時</option>
+					<option>2 時</option>
+					<option selected>3 時</option>
+					<option>4 時</option>
+					<option>5 時</option>
+					<option>6 時</option>
+					<option>7 時</option>
+					<option>8 時</option>
+					<option>9 時</option>
+					<option>10時</option>
+					<option>11時</option>
+					<option>12時</option>
+					<option>13時</option>
+					<option>14時</option>
+					<option>15時</option>
+					<option>16時</option>
+					<option>17時</option>
+					<option>18時</option>
+					<option>19時</option>
+					<option>21時</option>
+					<option>22時</option>
+					<option>23時</option>
+					<option>24時</option>
+				</select>
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</div>
+		</div>
+		</li>
+		<li>
+		<table width="100%">
+				<tr>
+					<td><input type="checkbox" data-role="none" onclick="switch0.style.display=switch0.style.display=='none'?'':'none'" value="on">WSG70n</input></td>
+				</tr>
+			</table>
+		<div id="switch0" style="display:none" data-theme="d">
+		<div>
+			<h2>開關狀態</h2>
+			<br>
+			<p class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="switch_type(this)" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="off">開啟</option>
+					<option value="on" selected>關閉</option>
+					<option value="on">循環</option>
+				</select>
+			</p>
+			</div>
+		<div name="switch_sec" style="display:none">
+			<h2>開啟</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>0 時</option>
+					<option selected>1 時</option>
+					<option>2 時</option>
+					<option>3 時</option>
+					<option>4 時</option>
+					<option>5 時</option>
+					<option>6 時</option>
+					<option>7 時</option>
+					<option>8 時</option>
+					<option>9 時</option>
+					<option>10時</option>
+					<option>11時</option>
+					<option>12時</option>
+				</select>
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+			<br>
+		</div>
+		<div name="switch_sec" style="display:none">
+			<h2>關閉</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>0 時</option>
+					<option>1 時</option>
+					<option selected>2 時</option>
+					<option>3 時</option>
+					<option>4 時</option>
+					<option>5 時</option>
+					<option>6 時</option>
+					<option>7 時</option>
+					<option>8 時</option>
+					<option>9 時</option>
+					<option>10時</option>
+					<option>11時</option>
+					<option>12時</option>
+				</select>
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</div>
+		<br>
+		<div name="switch_sec" style="display:none">
+			<h2>循環時間</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>0 時</option>
+					<option>1 時</option>
+					<option>2 時</option>
+					<option selected>3 時</option>
+					<option>4 時</option>
+					<option>5 時</option>
+					<option>6 時</option>
+					<option>7 時</option>
+					<option>8 時</option>
+					<option>9 時</option>
+					<option>10時</option>
+					<option>11時</option>
+					<option>12時</option>
+					<option>13時</option>
+					<option>14時</option>
+					<option>15時</option>
+					<option>16時</option>
+					<option>17時</option>
+					<option>18時</option>
+					<option>19時</option>
+					<option>21時</option>
+					<option>22時</option>
+					<option>23時</option>
+					<option>24時</option>
+				</select>
+				<select class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</div>
+		</div>
+		</li>
+	</ul>
+  </div>
+  </div>
+ <!-- /switch_set_end -->
+ 
+ 
+<!-- /record_set -->
+<div data-role="page" id="record_set" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>		
+ </div><!--/header -->
+ 
+<div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">   
+		<li>
+		<table width="100%">
+				<tr>
+					<td><input type="checkbox" data-role="none" onclick="record0.style.display=record0.style.display=='none'?'':'none'" value="on">IPJC2_11aadd</input></td>
+				</tr>
+			</table>
+		<div id="record0" style="display:none" data-theme="d">
+		<div>
+			<h2>儲存位置</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">  
+					<option>自動</option>
+					<option value="OFF">IPJC1n</option>
+			        <option value="ON">WD091n</option>
+			        <option value="ON">BR261c</option>			   
+				</select>
+			</fieldset>		
+		</div>
+		</div>
+		</li>
+		<li>
+		<table width="100%">
+				<tr>
+					<td><input type="checkbox" data-role="none" onclick="record1.style.display=record1.style.display=='none'?'':'none'" value="on">IPJC1_df6900</input></td>
+				</tr>
+			</table>
+		<div id="record1" style="display:none" data-theme="d">
+		<div>
+			<h2>儲存位置</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">  
+					<option>自動</option>
+					<option value="OFF">IPJC1n</option>
+			        <option value="ON">WD091n</option>
+			        <option value="ON">BR261c</option>			   
+				</select>
+			</fieldset>		
+		</div>
+		</div>
+		</li>
+		</ul>
+  </div>
+  </div>
+
+
+<!-- /function_group_v1 -->
+<div data-role="page" id="function_group_v1" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">帳號設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" class="a">完成</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+			<ul data-role="listview" data-divider-theme="d">
+				<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked onclick="click_option(this)"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enable</td>
+					</tr>
+				</table>
+			</li>
+			<li data-role="fieldcontain"  id="s1">
+				<h2 style="margin-right:20px;display:inline;">帳號:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;副管理者</h2>
+				<!--<input type="text" value="副管理者" data-clear-btn="true" style="width:200px;display:inline;" disabled="disabled">-->
+			</li>
+			<li data-role="fieldcontain" id="s2">
+				<h2 style="margin-right:20px;display:inline;" >密碼:</h2>
+				<input type="password" value="123456" data-clear-btn="true" style="width:200px;display:inline;">
+			</li>
+			<li data-role="list-divider" id="s3" class="a">權限設定</li>
+			<li id="s4" class="a">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>上網設定</td>
+					</tr>
+				</table>
+			</li>
+			<li id="s5" class="a"> 
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲訊息</td>
+					</tr>
+				</table>
+			</li>	
+			<li id="s6" >
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲播放</td>
+					</tr>
+				</table>
+			</li>
+			<li id="s7">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲上傳</td>
+					</tr>
+				</table>
+			</li>
+			<li id="s8">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲下載</td>
+					</tr>
+				</table>
+			</li>	
+			<li id="s9">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲電視</td>
+					</tr>
+				</table>
+			</li>
+			<li id="s10">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲投影</td>
+					</tr>
+				</table>
+			</li>
+			<li id="s11">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲音響</td>
+					</tr>
+				</table>
+			</li>			
+			<li id="s12">				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td><a href="#cam_set" style="color:#333333;">雲監控</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li id="s13">				
+	<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲保全</td>
+					</tr>
+				</table>		
+			</li>
+			<li id="s14">				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td><a href="#cam_set" style="color:#333333;">雲感測</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li id="s15">				
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲插座</td>
+					</tr>
+				</table>		
+			</li>
+			<li id="s16">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>雲網管</td>
+					</tr>
+				</table>
+			</li>
+			<li id="s17">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>本機檔案</td>
+					</tr>
+				</table>
+			</li>
+			<li id="s18">
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>Pdnet網路狀態圖</td>
+					</tr>
+				</table>	
+			</li>
+			
+		</ul>
+	</div><!-- /content -->
+</div>
+
+
+<!-- /function_group_v2 -->
+<div data-role="page" id="function_group_v2" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">帳號設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" class="a">完成</a>
+			</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked onclick="click_option(this)"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enable</td>
+					</tr>
+				</table>
+			</li>
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">帳號:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一般使用者</h2>
+				<!--<input type="text" value="一般使用者" data-clear-btn="true" id="user_field" style="width:200px;display:inline;" disabled="disabled">-->
+			</li>
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">密碼:</h2>
+				<input type="password" value="123456" data-clear-btn="true" style="width:200px;display:inline;">
+			</li>
+			<li data-role="list-divider">權限設定</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" ></td>
+						<td>上網設定</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>雲訊息</td>
+					</tr>
+				</table>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>雲播放</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>雲上傳</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>雲下載</td>
+					</tr>
+				</table>
+			</li>	
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>雲電視</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>雲投影</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>雲音響</td>
+					</tr>
+				</table>
+			</li>				
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td><a href="#cam_set_1" style="color:#333333;">雲監控</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li>				
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" ></td>
+						<td>雲保全</td>
+					</tr>
+				</table>			
+			</li>
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none"></td>
+						<td><a href="#cam_set_1" style="color:#333333;">雲感測</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li>				
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>雲插座</td>
+					</tr>
+				</table>				
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none"></td>
+						<td>雲網管</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none" checked></td>
+						<td>本機檔案</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px">
+						<input type="checkbox" data-role="none"></td>
+						<td>Pdnet網路狀態圖</td>
+					</tr>
+				</table>				
+			</li>
+		</ul>
+	</div><!-- /content -->
+	</div>	
+</div><!-- /page popup -->
+
+
+<!-- /function_group_v3 -->
+<div data-role="page" id="function_group_v3" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">帳號設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" class="a">完成</a>
+			</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked onclick="click_option(this)"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enable</td>
+					</tr>
+				</table>
+			</li><li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">帳號:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;訪客</h2>
+				<!--<input type="text" value="訪客" data-clear-btn="true" id="user_field" style="width:200px;display:inline;" disabled="disabled">-->
+			</li>
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">密碼:</h2>
+				<input type="password" value="123456" data-clear-btn="true" style="width:200px;display:inline;">
+			</li>
+			<li data-role="list-divider">權限設定</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>上網設定</td>
+					</tr>
+				</table>
+			</li>		
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>雲訊息</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲播放</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>雲上傳</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>雲下載</td>
+					</tr>
+				</table>
+			</li>	
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲電視</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲投影</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲音響</td>
+					</tr>
+				</table>
+			</li>
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td><a href="#cam_set_2" style="color:#333333;">雲監控</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li>				
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>雲保全</td>
+					</tr>
+				</table>			
+			</li>
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td><a href="#cam_set_2" style="color:#333333;">雲感測</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li>				
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>雲插座</td>
+					</tr>
+				</table>				
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>雲網管</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>本機檔案</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>物聯網網路狀態圖</td>
+					</tr>
+				</table>				
+			</li>
+		</ul>
+	</div><!-- /content -->
+
+</div><!-- /page popup -->
+
+
+<!-- /cam_set -->
+<div data-role="page" id="cam_set" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>僅可觀看</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>可觀看/設定</td>
+					</tr>
+				</table>
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- /cam_set_1 -->
+<div data-role="page" id="cam_set_1" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>僅可觀看</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>可觀看/設定</td>
+					</tr>
+				</table>
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- /cam_set_2 -->
+<div data-role="page" id="cam_set_2" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>僅可觀看</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" ></td>
+						<td>可觀看/設定</td>
+					</tr>
+				</table>
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- /manage_function -->
+<!-- Start of third page: #email -->
+<div data-role="page" id="email" data-theme="f">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">雲訊息通知信箱</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<h4>輸入電子郵件帳號</h4>
+		<input id="doc_name" data-theme="d" placeholder="sample@sample.com.tw" >		
+		<a href="#deviceall_manage" data-role="button" data-theme="g" data-inline="true" data-mini="true" style="float:right;">確定</a>
+	</div><!-- /content -->
+	<div style="color:#8f8f8f;text-align:center;font-size:14px;">設定完成後，雲訊息通知將會寄送到此郵件。</div>
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #rename -->
+<div data-role="page" id="rename" data-theme="a" style="margin:0 auto;text-align:center;">
+
+	<div data-role="content" data-theme="a">
+		<h4>重新命名</h4>
+		<input id="doc_name" data-theme="d"  class="a">
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true" > 取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true"  >確定</a><br>
+	</div><!-- /content -->
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #login_delete -->
+<div data-role="page" id="login_delete" data-theme="a">
+
+	<div data-role="content">
+	
+		<div style="text-align:center;">
+		<h4>刪除裝置<br>確定要刪除此裝置嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- #finnished_setting -->
+<div data-role="page" id="finnished_setting" data-theme="a">
+	
+	<div data-role="content" style="text-align:center;" >
+		<h4>完成設定<br>是否更改設定?</h4>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true">是</a>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">否</a>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #stop_rec -->
+<div data-role="page" id="stop_rec" data-theme="a">
+	
+	<div data-role="content" style="text-align:center;" >
+		<h3>
+		更改錄音名稱<input type="text" placeholder="10221318_錄音"  data-theam="a" data-inline="true" data-mini="true"></h4>
+		<h4>錄音完成...</h4>
+		<h5>是否上傳至各監視器資料夾?</h5>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a href="#stop_upload"  data-role="button" class="che_but" data-inline="true">確定</a>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- /upload_record -->
+<div data-role="page" id="stop_upload" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>上傳進行中..</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#recording_alert" data-role="button"  data-theme="g" >取消</a>
+ </div><!--/header -->
+ 	
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li>
+			<img src="image/mus.png" class="ui-li-icon">
+			IPJC1n A <img src="image/load.gif">
+			</li>
+			<li>
+			<img src="image/mus.png" class="ui-li-icon">			
+			IPJC1n B <img src="image/load.gif">
+			</li>
+			<li>	
+			<img src="image/mus.png" class="ui-li-icon">
+			IPJC1n C <img src="image/load.gif">
+			</li>
+			<li>	
+			<img src="image/mus.png" class="ui-li-icon">
+			IPJC1n D <img src="image/load.gif">
+			</li>
+			<li>	
+			<img src="image/mus.png" class="ui-li-icon">
+			IPJC1n E <img src="image/load.gif">
+			</li>
+		</ul>
+	</div>
+	
+<!--/content_end --> 
+</div><!-- /page7_end -->
+
+
+<!-- Start of third page: #stop_upload -->
+<div data-role="page" id=" " data-theme="a">
+	
+	<div data-role="content" style="text-align:center;" >
+		<h3>上傳進行中...</h3>
+		<h5> 
+		IPCAM A<img src="image/load.gif">
+		IPCAM B<img src="image/load.gif">
+		IPCAM C<img src="image/load.gif">
+		IPCAM D<img src="image/load.gif">
+		IPCAM E<img src="image/load.gif">
+		</h5>
+		<a href="#recording_alert" data-role="button" class="can_but" data-inline="true">取消</a>
+			</div><!-- /content -->
+</div><!-- /page popup -->
+
+ </body>
+ </html> 

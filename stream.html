@@ -1,0 +1,905 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body>
+
+<!-- /media_device -->
+<div data-role="page" id="media_device" data-mini="true" data-theme="f">
+ <input type="hidden" value="" id="">
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>雲播放<!--選擇播放檔案--></h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d" ><!--/content -->
+
+	<ul data-role="listview" data-dividertheme="d">
+		<li><a href="#storage_file">
+			<img src="image/usb_stick.png" class="ui-li-icon">
+			GR267c_dd12ac
+		</a></li>
+		<li><a href="#storage_file">
+			<img src="image/usb_stick.png" class="ui-li-icon">
+			IPJC1n
+		</a></li>
+		<li><a href="#storage_file">
+			<img src="image/usb_stick.png" class="ui-li-icon">
+			IPJC2n
+		</a></li>
+		<li><a href="#play_files">
+			<img src="image/nas.png" class="ui-li-icon">
+			WD091n_ad1212
+		</a></li>
+		<li><a href="#play_list">
+			<img src="image/nas.png" class="ui-li-icon">
+			WD091n
+		</a></li>
+		<li data-role="list-divider">我的最愛</li>		
+		<li><a href="#ftp_delete">
+			<img src="image/document2.png" class="ui-li-icon">
+			GR267c_dd12ac/照片
+		</a></li>	
+		<li><a href="#ftp_delete">
+			<img src="image/document2.png" class="ui-li-icon">
+			WD091n_ad1212/雲音響播放清單
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+
+
+<!-- /storage_file -->
+<div data-role="page" id="storage_file" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>GR267c_dd12ac<!--選擇播放檔案--></h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#play_media_2">
+			<img src="image/document2.png" class="ui-li-icon">
+			admin
+			<p class="ui-li-aside">
+				<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+			</p>
+		</a></li>
+		<li><a href="#play_picture_2">
+			<img src="image/document2.png" class="ui-li-icon">
+			webcam
+			<p class="ui-li-aside">
+				<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+			</p>
+		</a></li>
+		<li><a href="#play_picture_2">
+			<img src="image/document2.png" class="ui-li-icon">
+			照片
+			<p class="ui-li-aside">
+				<img src="image/stars.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+			</p>
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mus.png" class="ui-li-icon">
+			Let me go.mp3
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+
+
+<!-- /media_file -->
+<div data-role="page" id="media_file" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>WD091n_ad1212<!--選擇播放檔案--></h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#play_media_2">
+			<img src="image/document2.png" class="ui-li-icon">
+			我的影片
+		</a></li>
+		<li><a href="#play_music_2">
+			<img src="image/document2.png" class="ui-li-icon">
+			我的音樂
+		</a></li>
+		<li><a href="#play_picture_2">
+			<img src="image/document2.png" class="ui-li-icon">
+			我的照片
+		</a></li>
+		<li><a href="#play_files">
+			<img src="image/document2.png" class="ui-li-icon">
+			檔案總覽
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+
+
+<!-- /media_download -->
+<div data-role="page" id="media_download" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>雲投影<!--選擇播放檔案--></h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#play_media">
+			<img src="image/document2.png" class="ui-li-icon">
+			影片
+		</a></li>
+		<li><a href="#play_music">
+			<img src="image/document2.png" class="ui-li-icon">
+			音樂
+		</a></li>
+		<li><a href="#play_picture">
+			<img src="image/document2.png" class="ui-li-icon">
+			照片
+		</a></li>
+		<!--
+		<li><a href="#play_media">
+			<img src="image/document2.png" class="ui-li-icon">
+			文件
+		</a></li>
+		<li><a href="#play_media">
+			<img src="image/document2.png" class="ui-li-icon">
+			其他
+		</a></li>
+		-->
+		<li><a href="#ablum">
+			<img src="image/document2.png" class="ui-li-icon">
+			相機膠卷
+		</a></li>
+		<!--
+		<li><a href="#play_media">
+			<img src="image/document2.png" class="ui-li-icon">
+			雲監控
+		</a>
+		</li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			SD卡(檔案總管)
+		</a></li>
+		<li>
+			<a href="" id="link">
+			<img src="image/document2.png" class="ui-li-icon" >
+			專案
+			</a>
+		</li>
+		-->
+	</ul>
+				
+ </div><!--/content_end --> 
+ <!--
+ <div data-role="footer" data-position="fixed" data-theme="c" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">多媒體播放器</span><br>
+	
+	<img src="image/cm790.png" style="width:30px;height:30px;margin-bottom:10px;">
+	
+	<div style="font-size:14px;margin:-35px 40px;">/客廳</div>
+	
+	<a href="#player_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+	
+ </div>
+-->
+</div><!-- /page7_end -->
+ 
+ 
+<!-- /files -->
+<div data-role="page" id="files" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<!--
+		<a href="#player" data-role="button" class="og_but" data-theme="g">播放</a>
+		-->
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			A Team.avi 
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			sapido.mp4
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mus.png" class="ui-li-icon">
+			I wanna go home.mp3
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mus.png" class="ui-li-icon">
+			Let me go.mp3
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/pic.png" class="ui-li-icon">
+			DC111.png
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/pic.png" class="ui-li-icon">
+			DC011.png
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+ 
+ 
+<!-- /play_media -->
+<div data-role="page" id="play_media" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<!--
+		<a href="#player" data-role="button" class="og_but" data-theme="g">播放</a>
+		-->
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player">
+			<img src="image/mov.png" class="ui-li-icon">
+			A Team.avi 
+		</a></li>
+		<li><a href="#player">
+			<img src="image/mov.png" class="ui-li-icon">
+			不倒翁的奇幻旅程.avi
+		</a></li>
+		<li><a href="#player">
+			<img src="image/mov.png" class="ui-li-icon">
+			不倒翁的奇幻旅程.avi
+		</a></li>
+		<li><a href="#player">
+			<img src="image/mov.png" class="ui-li-icon">
+			逆光飛翔.avi
+		</a></li>
+		<li><a href="#player">
+			<img src="image/mov.png" class="ui-li-icon">
+			男朋友 女朋友.avi
+		</a></li>
+	</ul>
+	<!--
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label>
+		<input type="checkbox"/>
+		<img src="image/document2.png" style="margin-right:10px;width:30px;height:24px;">
+		國片</label>
+		<label><input type="checkbox"/> <img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		A Team.avi </label>
+		<label><input type="checkbox"/> <img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		不倒翁的奇幻旅程.avi </label>
+		<label><input type="checkbox"/> <img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		逆光飛翔.avi </label>
+		<label><input type="checkbox"/> <img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		男朋友 女朋友.avi </label>
+	</fieldset>
+	-->
+				
+ </div><!--/content_end --> 
+ 
+ <div data-role="footer" data-position="fixed" data-theme="c" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">多媒體播放器</span><br>
+	
+	<img src="image/cm790.png" style="width:30px;height:30px;margin-bottom:10px;">
+	
+	<div style="font-size:14px;margin:-35px 40px;">/客廳</div>
+	
+	<a href="#player_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+	
+ </div><!--/footer -->
+</div>
+ 
+ 
+<!-- /play_media_2 -->
+<div data-role="page" id="play_media_2" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>選擇檔案</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<!--
+		<a href="#player" data-role="button" class="og_but" data-theme="g">播放</a>
+    <a href="#sort" data-role="button" data-icon="bars" data-theme="g" data-iconpos="notext" onclick="sorting('video')"></a>
+		-->
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			A Team.avi 
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			sapido.mp4
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			不倒翁的奇幻旅程.avi
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			逆光飛翔.avi
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			男朋友 女朋友.avi
+		</a></li>
+	</ul>				
+ </div><!--/content_end --> 
+ 
+</div><!-- /page7_end -->
+
+ 
+<!-- /play_music -->
+<div data-role="page" id="play_music" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player">
+			<img src="image/mus.png" class="ui-li-icon">
+			 Give me some sunshine.mp3
+		</a></li>
+		<li><a href="#player">
+			<img src="image/mus.png" class="ui-li-icon">
+			I surrender.mp3
+		</a></li>
+		<li><a href="#player">
+			<img src="image/mus.png" class="ui-li-icon">
+			I wanna go home.mp3
+		</a></li>
+		<li><a href="#player">
+			<img src="image/mus.png" class="ui-li-icon">
+			Let me go.mp3
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+ 
+ <div data-role="footer" data-position="fixed" data-theme="c" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">多媒體播放器</span><br>
+	
+	<img src="image/cm790.png" style="width:30px;height:30px;margin-bottom:10px;">
+	
+	<div style="font-size:14px;margin:-35px 40px;">/客廳</div>
+	
+	<a href="#player_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+	
+ </div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+ 
+<!-- /play_music_2 -->
+<div data-role="page" id="play_music_2" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  <!--  <a href="#sort" data-role="button" data-icon="bars" data-theme="g" data-iconpos="notext" onclick="sorting('music')"></a>-->
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_2">
+			<img src="image/mus.png" class="ui-li-icon">
+			 Give me some sunshine.mp3
+		</a></li>
+		<li><a href="#player_2">
+			<img src="image/mus.png" class="ui-li-icon">
+			I surrender.mp3
+		</a></li>
+		<li><a href="#player_2">
+			<img src="image/mus.png" class="ui-li-icon">
+			I wanna go home.mp3
+		</a></li>
+		<li><a href="#player_2">
+			<img src="image/mus.png" class="ui-li-icon">
+			Let me go.mp3
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+ 
+<!-- /play_picture -->
+<div data-role="page" id="play_picture" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player">
+			<img src="image/picture.png" class="ui-li-icon">
+			001.png
+		</a></li>
+		<li><a href="#player">
+			<img src="image/picture.png" class="ui-li-icon">
+			002.png
+		</a></li>
+		<li><a href="#player">
+			<img src="image/picture.png" class="ui-li-icon">
+			003.png
+		</a></li>
+		<li><a href="#player">
+			<img src="image/picture.png" class="ui-li-icon">
+			004.png
+		</a></li>
+		<li><a href="#player">
+			<img src="image/picture.png" class="ui-li-icon">
+			005.jpg
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">多媒體播放器</span><br>
+	
+	<img src="image/cm790.png" style="width:30px;height:30px;margin-bottom:10px;">
+	
+	<div style="font-size:14px;margin:-35px 40px;">/客廳</div>
+	
+	<a href="#player_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+	
+ </div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+ 
+<!-- /play_picture_2 -->
+<div data-role="page" id="play_picture_2" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+   <!-- <a href="#sort" data-role="button" data-icon="bars" data-theme="g" data-iconpos="notext" onclick="sorting('picture')"></a>-->
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_pic">
+			<img src="image/picture.png" class="ui-li-icon">
+			sapido.jpg
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/picture.png" class="ui-li-icon">
+			002.png
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/picture.png" class="ui-li-icon">
+			003.png
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/picture.png" class="ui-li-icon">
+			004.png
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/picture.png" class="ui-li-icon">
+			005.jpg
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+ 
+<!-- /play_files -->
+<div data-role="page" id="play_files" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			admin
+			<p class="ui-li-aside">
+				<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+			</p>
+		</a></li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			DVB-T
+			<p class="ui-li-aside">
+				<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+			</p>
+		</a></li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			Public
+			<p class="ui-li-aside">
+				<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+			</p>
+		</a></li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			雲音響播放清單
+			<p class="ui-li-aside">
+				<img src="image/stars.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+			</p>
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			A Team.avi 
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			sapido.mp4
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			不倒翁的奇幻旅程.avi
+		</a></li>		
+		<li><a href="#player_2">
+			<img src="image/mus.png" class="ui-li-icon">
+			 Give me some sunshine.mp3
+		</a></li>
+		<li><a href="#player_2">
+			<img src="image/mus.png" class="ui-li-icon">
+			I surrender.mp3
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/picture.png" class="ui-li-icon">
+			sapido.jpg
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/picture.png" class="ui-li-icon">
+			002.png
+		</a></li>
+		<li><a href="#player_pic">
+			<img src="image/picture.png" class="ui-li-icon">
+			003.png
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+<!-- /play_list -->
+<div data-role="page" id="play_list" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>熱門影音</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			熱門電影
+		</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			電視影集
+			</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			綜藝集錦
+			</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			卡通動漫
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+<!-- /player_room -->
+<div data-role="page" id="player_room" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>影廳選擇</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#movie_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			最愛廳
+		</a></li>
+		<li><a href="#movie_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			A廳
+			</a></li>
+		<li><a href="#movie_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			B廳
+			</a></li>
+		<li><a href="#movie_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			C廳
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+<!-- /movie_list -->
+<div data-role="page" id="movie_list" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>選擇檔案</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<!--
+		<a href="#player" data-role="button" class="og_but" data-theme="g">播放</a>
+    <a href="#sort" data-role="button" data-icon="bars" data-theme="g" data-iconpos="notext" onclick="sorting('video')"></a>
+		-->
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			神鵰俠侶
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			愛情公寓
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			吸血鬼日記
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			逆光飛翔
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			男朋友 女朋友
+		</a></li>
+	</ul>				
+ </div><!--/content_end --> 
+ 
+</div><!-- /page7_end -->
+
+
+<!-- /sort -->
+<div data-role="page" id="sort" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>搜尋</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+	<a data-rel="back" data-role="button" class="og_but" data-theme="g">完成</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li id="mov_rule">
+			<h2>規則</h2>
+			<fieldset class="ui-li-aside">
+				<select data-inline="true" data-mini="true">
+					<option value="#">全部</option>
+					<option value="#">我的最愛</option>
+					<option value="#">錄影</option>
+					<option value="#">DVD</option>
+					<option value="#">今日</option>
+					<option value="#">本周</option>
+					<option value="#">本月</option>
+				</select>
+			</fieldset>
+		</li> 
+		<li id="mus_rule" style="display:none">
+			<h2>規則</h2>
+			<fieldset class="ui-li-aside">
+				<select data-mini="true" data-inline="true">
+					<option value="#">全部</option>
+					<option value="#">我的最愛</option>
+					<option value="#">歌手</option>
+					<option value="#">專輯</option>
+					<option value="#">年份</option>
+					<option value="#">今日</option>
+					<option value="#">本周</option>
+					<option value="#">本月</option>
+					<option value="#">今年</option>
+				</select>
+			</fieldset>
+		</li>
+		<li id="pic_rule" style="display:none">
+			<h2>規則</h2>
+			<fieldset class="ui-li-aside">
+				<select data-mini="true" data-inline="true">
+					<option value="#">全部</option>
+					<option value="#">我的最愛</option>
+					<option value="#">相簿</option>					
+					<option value="#">今日</option>
+					<option value="#">本周</option>
+					<option value="#">本月</option>
+					<option value="#">今年</option>
+				</select>
+			</fieldset>
+		</li>
+		<li>
+			<h2>排序</h2>
+			<fieldset class="ui-li-aside">
+				<select data-mini="true" data-inline="true">
+					<option value="#">全部</option>
+					<option value="#">名稱</option>
+					<option value="#">日期</option>
+					<option value="#">大小</option>
+				</select>
+			</fieldset>
+		</li>  
+	</ul>
+				
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+
+
+
+<!-- player_list -->
+<div data-role="page" id="player_list" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>請選擇多媒體播放器</h1>
+	<a data-rel="back"" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 
+	<ul data-role="listview">
+		<li><a href="#player">
+			<img src="image/cm790.png" class="ui-li-icon">
+			本機
+		</a></li>
+		<li><a href="#player">
+			<img src="image/cm790.png" class="ui-li-icon">
+			客廳
+		</a></li>
+		<li><a href="#player">
+			<img src="image/cm790.png" class="ui-li-icon">
+			WD091n_ad1212
+		</a></li>
+	</ul>
+ </div><!-- /page7_end -->
+</div>
+
+
+<!-- /player_2 -->
+<div data-role="page" id="player_2" data-mini="true" data-theme="a">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>Give me some sunshine.mp3</h1>
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;">結束</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->  
+	<img src="image/player_b.gif" style="width:100%;" height="500px">
+	<audio controls id="musics">
+	  <source src="image/Through the Viewfinder.mp3" type="audio/mpeg">
+	</audio>	
+ </div><!--/content_end -->  
+ 
+ <div data-role="footer" data-position="fixed" style="text-align:center;" data-theme="z">
+	
+	<div> 3/5</div>
+	<div class="ios_player" >
+		<a href="#" data-role="button" data-theme="z" data-inline="true" onclick="play_style('circle_style')"><img src="image/normal.png" id="circle_style" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/back.png" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true" onclick="play_bar('play_icon','musics')"><img src="image/play.png" id="play_icon" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/next.png" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true" onclick="airplay('airplay2')"><img src="image/airplay.png" width="20px" height="16px"></a>
+		<input type="range" data-mini="true" data-theme="c" data-track-theme="a" data-highlight="true" min="0" max="100" value="50">
+	</div>
+ </div>
+ 
+<div data-role="footer" data-position="fixed" data-theme="a" style="margin:0 auto;text-align:center;display:none;" id="airplay2">	
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_pc.png" style="float:left" width="16px">iPhone</a><br><br>
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_sp.png" style="float:left" width="16px">BR476n_cd0060</a><br><br>
+	<a data-role="button" class="can_but_long" data-theme="a" onclick="air_cancel(this)">取消</a>
+</div><!--/footer -->
+
+</div>
+
+
+<!-- /player_pic -->
+<div data-role="page" id="player_pic" data-mini="true" data-theme="a">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>sapido.jpg</h1>
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;">結束</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->  
+	<img src="image/sapido.jpg" style="width:100%;height:100%">
+ </div><!--/content_end -->  
+ 
+ <div data-role="footer" data-position="fixed" style="text-align:center;" data-theme="z">
+	
+	<div> 1/5</div>
+	<div class="ios_player_else" >
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/back.png" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true" onclick="play_bar('play_icon1')"><img src="image/play.png" id="play_icon1" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/next.png" width="16px" height="16px"></a>
+	</div>
+ </div>
+
+</div>
+
+
+<!-- /player_mov -->
+<div data-role="page" id="player_mov" data-mini="true" data-theme="a">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>car.jpg</h1>
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;">結束</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->  
+	<!--<video width="100%" height="100%" id="movies" >
+	  <source src="image/sapido.webm" type="video/webm">
+	</video>-->
+	<img src="image/car.jpg" style="width:100%;height:100%">
+ </div>
+
+ <!--/content_end -->  
+ 
+ <div data-role="footer" data-position="fixed" style="text-align:center;" data-theme="z">
+	
+
+	<div class="ios_player" >
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/back.png" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true" onclick="play_bar('play_icon2','movies')"><img src="image/play.png" id="play_icon2" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/next.png" width="16px" height="16px"></a>
+		<input type="range" data-mini="true" data-theme="c" data-track-theme="a" data-highlight="true" min="0" max="100" value="50">
+	</div>
+ </div>
+
+</div>
+
+ </body>
+ </html> 

@@ -1,0 +1,871 @@
+﻿<!--- modify message format & define --->
+
+<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+	<script>
+		function alert_off(field){
+			field.style.display = "none";
+		}
+	</script>	
+ </head>
+
+ <body>
+<!-- /infor -->
+<div data-role="page" id="infor" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>雲訊息</h1>
+		<a href="../index.html#wireframe" data-role="button" class="back" style="color:#fff;" rel="external"> 首頁 </a>
+		<a data-role="button" data-theme="g" onclick="edit_message(this)" class="a">編輯</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d" id="message_list">		
+		<li>
+			<a href="#player" style="color:#000" onclick="infor_type('sound')">
+				<h2>門口偵測到移動</h2>
+				<p class="ui-li-aside">05/07 10:09:08</p>
+			</a>
+        </li>		
+		<li>
+			<a href="#infor_dd" style="color:#000" onclick="infor_type('sound')">
+				<h2>右側入口門窗開啟</h2>
+				<p class="ui-li-aside">05/07 10:09:08</p>
+			</a>
+        </li>	
+		<li>
+			<h2>展示架更換電池</h2>
+			<p class="ui-li-aside">05/07 05:09:08</p>
+        </li>	
+		<li>
+			<a href="#infor_md" style="color:#000" onclick="infor_type('sound')">
+				<h2>展示架有人靠近</h2>
+				<p class="ui-li-aside">05/06 13:22:31</p>
+			</a>
+        </li>	
+		<li>
+			<a href="#player" style="color:#000" onclick="infor_type('sound')">
+				<h2>門口偵測到聲音</h2>
+				<p class="ui-li-aside">05/06 10:09:08</p>
+			</a>
+        </li>
+		<li>
+			<a href="#infor_vd" style="color:#000" onclick="infor_type('sound')">
+				<h2>窗前聲音異常</h2>
+				<p class="ui-li-aside">05/06 10:09:08</p>
+			</a>
+        </li>
+		<li>
+			<a href="#infor_td" style="color:#000" onclick="infor_type('temp')">
+				<h2>窗前溫度異常</h2>
+				<p class="ui-li-aside">05/06 10:09:08</p>
+			</a>
+        </li>
+		<li>
+			<a href="#infor_ld" style="color:#000" onclick="infor_type('light')">
+				<h2>窗前光線異常</h2>
+				<p class="ui-li-aside">05/05 18:09:08</p>
+			</a>
+        </li>
+	</ul>
+	
+ 	<ul data-role="listview" data-divider-theme="d" name="edit_message" style="display:none;">		
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td><a href="#player" style="color:#000">門口偵測到移動</a></td>
+					<td style="font-size:12px;" align=right>05/07 10:09:08</td>
+					<td class="next_page" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>		
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td><a href="#infor_dd" style="color:#000" onclick="infor_type('door')">右側入口門窗開啟</a></td>
+					<td style="font-size:12px;" align=right>05/07 10:09:08</td>
+					<td class="next_page" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>	
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td><a href="" style="color:#000">展示架更換電池</a></td>
+					<td style="font-size:12px;" align=right>05/07 05:09:08</td>
+				</tr>
+			</table>	
+        </li>	
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td><a href="#infor_md" style="color:#000" onclick="infor_type('motion')">展示架有人靠近</a></td>
+					<td style="font-size:12px;" align=right>05/06 13:22:31</td>
+					<td class="next_page" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>	
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td><a href="#player" style="color:#000">門口偵測到聲音</a></td>
+					<td style="font-size:12px;" align=right>05/06 10:09:08</td>
+					<td class="next_page" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td><a href="#infor_vd" style="color:#000" onclick="infor_type('sound')">窗前聲音異常</a></td>
+					<td style="font-size:12px;" align=right>05/06 10:09:08</td>
+					<td class="next_page" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td><a href="#infor_td" style="color:#000" onclick="infor_type('temp')">窗前溫度異常</a></td>
+					<td style="font-size:12px;" align=right>05/06 10:09:08</td>
+					<td class="next_page" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td><a href="#infor_ld" style="color:#000" onclick="infor_type('light')">窗前光線異常</a></td>
+					<td style="font-size:12px;" align=right>05/05 18:09:08</td>
+					<td class="next_page" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>
+	</ul>
+ </div>
+ 
+ <div data-role="footer" data-position="fixed" data-theme="c" name="edit_message" style="display:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#delete" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;">刪除</a>
+		<a href="#delete" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;">全部刪除</a>
+		</div>
+ </div>
+</div>
+
+
+<!-- /infor_read -->
+<div data-role="page" id="infor_read" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>雲訊息</h1>
+		<a href="../index.html#wireframe" data-role="button" class="back" style="color:#fff;" rel="external"> 首頁 </a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">	
+		<li>
+			<a href="#player" style="color:#000" onclick="infor_type('sound')">
+				<h2>門口偵測到移動</h2>
+				<p class="ui-li-aside">05/07 10:09:08</p>
+			</a>
+        </li>		
+		<li>
+			<a href="#infor_dd" style="color:#000" onclick="infor_type('sound')">
+				<h2>右側入口門窗開啟</h2>
+				<p class="ui-li-aside">05/07 10:09:08</p>
+			</a>
+        </li>	
+		<li>
+			<h2>展示架更換電池</h2>
+			<p class="ui-li-aside">05/07 05:09:08</p>
+        </li>	
+		<li>
+			<a href="#infor_md" style="color:#000" onclick="infor_type('sound')">
+				<h2>展示架有人靠近</h2>
+				<p class="ui-li-aside">05/06 13:22:31</p>
+			</a>
+        </li>	
+		<li>
+			<a href="#player" style="color:#000" onclick="infor_type('sound')">
+				<h2>門口偵測到聲音</h2>
+				<p class="ui-li-aside">05/06 10:09:08</p>
+			</a>
+        </li>
+		<li>
+			<a href="#infor_vd" style="color:#000" onclick="infor_type('sound')">
+				<h2>窗前聲音異常</h2>
+				<p class="ui-li-aside">05/06 10:09:08</p>
+			</a>
+        </li>
+		<li>
+			<a href="#infor_td" style="color:#000" onclick="infor_type('temp')">
+				<h2>窗前溫度異常</h2>
+				<p class="ui-li-aside">05/06 10:09:08</p>
+			</a>
+        </li>
+		<li>
+			<a href="#infor_ld" style="color:#000" onclick="infor_type('light')">
+				<h2>窗前光線異常</h2>
+				<p class="ui-li-aside">05/05 18:09:08</p>
+			</a>
+        </li>
+	</ul>
+	
+ </div>
+ 
+</div>
+
+ 
+ 
+<!-- /infor_dd -->
+<div data-role="page" id="infor_dd" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+    <h1>門窗感測通知</h1>
+    <a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-mini="true" id="voice_alert" data-divider-theme="d">
+		<li data-role="list-divider" class="a">觸發條件</li>
+		<li>
+			<h2>右側入口門窗開啟</h2>
+			<p>05/07 10:09:08</p>
+		</li>
+		<li data-role="list-divider" class="a">觸發動作</li>
+		<li>
+			<h2>窗前</h2>
+			<p>警報恆響</p>
+			<p class="ui-li-aside">
+				<img src="image/siren.png" style="width:36px;height:36px;">
+			</p>
+		</li>		
+		<li>
+			<h2>電燈</h2>
+			<p>開啟</p>
+		</li>		
+		<li>
+			<h2>門口</h2>
+			<p>響鈴開啟1秒</p>
+			<p class="ui-li-aside">
+				<img src="image/siren.png" style="width:36px;height:36px;">
+			</p>
+		</li>
+		<li><a href="#player">
+			<h2>IPJC2n</h2>
+			<p>影像紀錄</p>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+ 
+</div>
+
+ 
+<!-- /infor_md -->
+<div data-role="page" id="infor_md" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+    <h1>移動感測通知</h1>
+    <a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-mini="true" id="voice_alert" data-divider-theme="d">
+		<li data-role="list-divider" class="a">觸發條件</li>
+		<li>
+			<h2>展示架有人靠近</h2>
+			<p>05/07 10:09:08</p>
+		</li>
+		<li data-role="list-divider" class="a">觸發動作</li>
+		<li>
+			<h2>窗前</h2>
+			<p>警報恆響</p>
+			<p class="ui-li-aside">
+				<img src="image/siren.png" style="width:36px;height:36px;">
+			</p>
+		</li>		
+		<li>
+			<h2>電燈</h2>
+			<p>開啟</p>
+		</li>		
+		<li>
+			<h2>門口</h2>
+			<p>響鈴恆響</p>
+			<p class="ui-li-aside">
+				<img src="image/siren.png" style="width:36px;height:36px;">
+			</p>
+		</li>
+		<li><a href="#player">
+			<h2>IPJC2n</h2>
+			<p>影像紀錄</p>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+ 
+</div>
+
+ 
+<!-- /infor_vd -->
+<div data-role="page" id="infor_vd" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+    <h1>聲音感測通知</h1>
+    <a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-mini="true" id="voice_alert" data-divider-theme="d">
+		<li data-role="list-divider" class="a">觸發條件</li>
+		<li>
+			<h2>窗前聲音異常</h2>
+			<p class="ui-li-aside">100dB</p>
+			<p>05/06 10:09:08</p>
+		</li>
+		<li data-role="list-divider" class="a">觸發動作</li>
+		<li>
+			<h2>窗前</h2>
+			<p>警報3秒</p>
+			<p class="ui-li-aside">高於60db<br>
+				<img src="image/siren.png" style="width:36px;height:36px;"></p>
+		</li>	
+		<li>
+			<h2>電燈</h2>
+			<p>循環3小時</p>
+			<p class="ui-li-aside">高於80db</p>
+		</li>	
+		<li>
+			<h2>門口</h2>
+			<p>響鈴50秒</p>
+			<p class="ui-li-aside">高於70db<br>
+				<img src="image/siren.png" style="width:36px;height:36px;"></p>
+		</li>	
+		<li><a href="#player">
+			<h2>IPJC2n</h2>
+			<p>影像紀錄</p>
+			<p class="ui-li-aside">高於70db</p>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+ 
+</div>
+
+ 
+<!-- /infor_ld -->
+<div data-role="page" id="infor_ld" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+    <h1>光線感測通知</h1>
+    <a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-mini="true" id="voice_alert" data-divider-theme="d">
+		<li data-role="list-divider" class="a">觸發條件</li>
+		<li>
+			<h2>窗前光線異常</h2>
+			<p class="ui-li-aside">500Lm</p>
+			<p>05/05 18:09:08</p>
+		</li>
+		<li data-role="list-divider" class="a">觸發動作</li>
+		<li>
+			<h2>電燈</h2>
+			<p>開啟</p>
+			<p class="ui-li-aside">低於1000Lm</p>
+		</li>	
+		<li><a href="#player">
+			<h2>IPJC2n</h2>
+			<p>影像紀錄</p>
+			<p class="ui-li-aside">低於600Lm</p>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+ 
+</div>
+
+ 
+<!-- /infor_td -->
+<div data-role="page" id="infor_td" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+    <h1>溫度感測通知</h1>
+    <a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<ul data-role="listview" data-mini="true" id="voice_alert" data-divider-theme="d">
+		<li data-role="list-divider" class="a">觸發條件</li>
+		<li>
+			<h2>窗前溫度異常</h2>
+			<p class="ui-li-aside">30℃</p>
+			<p>05/05 18:09:08</p>
+		</li>
+		<li data-role="list-divider" class="a">觸發動作</li>
+		<li>
+			<h2>電扇</h2>
+			<p>開啟</p>
+			<p class="ui-li-aside">高於26℃</p>
+		</li>	
+		<li><a href="#player">
+			<h2>IPJC2n</h2>
+			<p>影像紀錄</p>
+			<p class="ui-li-aside">高於29℃</p>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+ 
+</div>
+
+
+<!-- buzzer -->
+<div data-role="page" id="buzzer" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>雲訊息</h1>
+		<a href="../index.html#alert_wireframe" data-role="button" class="back" style="color:#fff;" rel="external"> 首頁 </a>		
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true" id="alert">
+			<li data-theme="b" style="text-align:center;">警報已解除!請檢察環境是否異常!</li>
+			<li><a href="#webcam">
+			<img src="image/document2.png" class="ui-li-icon">
+			雲監控通知
+			 <span class="alert"></span>
+			</a></li>
+			<li><a href="#detect">
+			<img src="image/document2.png" class="ui-li-icon">
+			雲感測通知
+			 <span class="alert"></span>
+			</a></li>
+			<!--
+			<li><a href="#disconnect">
+			<img src="image/document2.png" class="ui-li-icon">
+			連線異常通知
+			 <span class="alert">1</span>
+			</a></li>
+			-->
+		</ul>
+ </div>
+</div>
+ 
+ 
+<!-- /webcam -->
+<div data-role="page" id="webcam" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+    	<h1>雲監控通知</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true" id="sensor_alert" data-split-icon="alertoff" data-split-theme="c" >
+			<li><a href="#motion">
+			<img src="image/document2.png" class="ui-li-icon">
+			移動偵測
+			 <span class="alert">2</span>
+			</a></li>
+			<li><a href="#audio">
+			<img src="image/document2.png" class="ui-li-icon">
+			聲音偵測
+			 <span class="alert">2</span>
+			</a></li>
+		</ul>	
+ </div><!--/content_end --> 
+ 
+</div>
+ 
+ 
+<!-- /motion -->
+<div data-role="page" id="motion" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>移動偵測</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#" data-role="button" data-theme="g" onclick="upload_edit('alert_delete','motion_edit','motion_alert')">編輯</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true" id="motion_alert">
+			<li><a href="#detect_pic">
+			偵測到物體移動<br>
+				<span style="font-weight:normal;font-size:12px;">Webcam: 1F
+				<span style="float:right;">05/07 10:09:08</span>
+				</span> 
+			</a></li>
+			<li><a href="#detect_pic">
+				偵測到物體移動<br>
+				<span style="font-weight:normal;font-size:12px;">Webcam: 2F
+				<span style="float:right;">05/06 18:30:51</span>
+				</span> 
+			</a></li>
+		</ul>
+				
+		<fieldset data-role="controlgroup" id="motion_edit" style="width:120%;height:120%;margin:-15px -20px;display:none;">
+			<label>
+				<input type="checkbox"/>
+				偵測到物體移動<br>
+				<span style="font-weight:normal;font-size:12px;">Webcam: 1F
+				<span style="float:right;">05/07 10:09:08</span>
+				</span> 	
+			</label>
+			<label>
+				<input type="checkbox"/>
+				偵測到物體移動<br>
+				<span style="font-weight:normal;font-size:12px;">Webcam: 2F
+				<span style="float:right;">05/06 18:30:51</span>
+				</span>
+			</label>
+	
+		</fieldset>
+		
+ </div><!--/content_end --> 
+ 
+ <div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;display:none;" id="alert_delete">
+		<a href="#" rel="external" data-role="button" data-theme="f" style="border:3px #808080 solid;font-size:15px;width:250px;height:30px;margin:0 auto;">刪除</a>
+		</div>
+	</div>
+ </div>
+ 
+ 
+<!-- /audio -->
+<div data-role="page" id="audio" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>聲音偵測</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#" data-role="button" data-theme="g" onclick="upload_edit('alert_delete2','audio_edit','audio_alert')">編輯</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true" id="audio_alert">
+			<li><a href="#detect_pic">
+				偵測到聲音<br>
+				<span style="font-weight:normal;font-size:12px;">Webcam: 1F
+				<span style="float:right;">05/07 10:09:08</span>
+				</span> 
+			</a></li>
+			<li><a href="#detect_pic">
+				偵測到聲音<br>
+				<span style="font-weight:normal;font-size:12px;">Webcam: 2F
+				<span style="float:right;">05/06 18:30:51</span>
+				</span> 
+			</a></li>
+		</ul>
+				
+		<fieldset data-role="controlgroup" id="audio_edit" style="width:120%;height:120%;margin:-15px -20px;display:none;">
+			<label>
+				<input type="checkbox"/>
+				偵測到聲音<br>
+				<span style="font-weight:normal;font-size:12px;">Webcam: 1F
+				<span style="float:right;">05/07 10:09:08</span>
+				</span> 	
+			</label>
+			<label>
+				<input type="checkbox"/>
+				偵測到聲音<br>
+				<span style="font-weight:normal;font-size:12px;">Webcam: 2F
+				<span style="float:right;">05/06 18:30:51</span>
+				</span>
+			</label>
+	
+		</fieldset>
+		
+ </div><!--/content_end --> 
+ 
+ <div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;display:none;" id="alert_delete2">
+		<a href="#" rel="external" data-role="button" data-theme="f" style="border:3px #808080 solid;font-size:15px;width:250px;height:30px;margin:0 auto;">刪除</a>
+		</div>
+	</div>
+ </div>
+ 
+ 
+<!-- /detect -->
+<div data-role="page" id="detect" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+    	<h1>雲感測通知</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true" id="sensor_alert" data-split-icon="alertoff" data-split-theme="c" >
+			<li><a href="#low_battery">
+			<img src="image/document2.png" class="ui-li-icon">
+			低電量通知
+			 <span class="alert">2</span>
+			</a></li>
+			<li><a href="#voice_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			聲音感測
+			 <span class="alert">2</span>
+			</a></li>
+			<li><a href="#temp_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			溫度感測
+			 <span class="alert">2</span>
+			</a></li>
+			<li><a href="#light_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			光線感測
+			 <span class="alert">2</span>
+			</a></li>
+			<li><a href="#motion_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			移動感測
+			 <span class="alert">2</span>
+			</a></li>
+			<li><a href="#door_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			門窗感測
+			 <span class="alert">2</span>
+			</a></li>
+		</ul>	
+ </div><!--/content_end --> 
+ 
+</div>
+ 
+<!-- /disconnect -->
+<div data-role="page" id="disconnect" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>連線異常通知</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true" id="alert">
+			<li>
+				IPJC1n_ac12ad<br>
+				<span style="font-weight:normal;font-size:12px;">4/1 13:00
+				</span>
+			</li>
+		</ul>
+ </div><!--/content_end --> 
+ 
+ </div>
+
+ 
+<!-- /detect_pic -->
+<div data-role="page" id="detect_pic" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<!--	<h1>Motion_detect</h1>-->
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1>選擇檔案</h1>
+		
+		<a href="#waiting" data-role="button" data-theme="g" data-inline="true" onclick="wait4(this)">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+    <ul data-role="listview">
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/mov.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#player" data-role="none" style="color:#4f4f4f;" >201405261220.avi</a>
+		</td>
+		</tr></table>
+		</a></li>	
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/mov.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#player" data-role="none" style="color:#4f4f4f;" >201405251323.avi</a>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/mov.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#player" data-role="none" style="color:#4f4f4f;" >201405251130.avi</a>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/mov.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#player" data-role="none" style="color:#4f4f4f;" >201405250900.avi</a>
+		</td>
+		</tr></table>
+		</a></li>
+	</ul>
+					
+ </div><!--/content_end --> 
+<!--
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ -->
+</div><!-- /page7_end -->
+
+
+<!-- /firmware_update -->
+<div data-role="page" id="firmware_update" data-mini="true" data-theme="f">
+ 
+ <div data-role="content" data-theme="f"><!--/content -->
+	<div style="margin:30% auto;text-align:center;">
+		<img src="image/connect.png" style="height:64px;width:80px;"><br>
+		<span style="font-size:16px;">韌體更新中...</span>
+		<div style="color:#ff6900;font-size:12px;">
+			更新過程中請勿關閉電源或程式，<br>否則將導致設備毀損!
+		</div>
+ 	</div>
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+
+<!-- /player -->
+<div data-role="page" id="player" data-mini="true" data-theme="a">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>201408041031.avi</h1>
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;">結束</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->  
+	<div class="player_mov">
+	</div> 
+ </div><!--/content_end -->  
+ 
+ <div data-role="footer" data-position="fixed" style="text-align:center;" data-theme="z">
+	<div class="ios_player_else" >
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/back.png" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/stop.png" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/next.png" width="16px" height="16px"></a>
+	</div>
+ </div>
+
+</div><!-- /page3_end -->
+ 
+ 
+<!-- Start of third page: #waiting -->
+<div data-role="page" id="waiting" data-theme="d">
+	<div data-role="header" data-theme="f">
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1>下載中</h1>
+		<a data-role="button" data-rel="back" class="og_but" data-theme="g" >取消</a>
+	</div><!-- 
+/header -->
+
+	<div data-role="content" data-theme="d" data-dividertheme="d">
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/> <img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">05_06_18_30_51.jpg <br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">04_23_11_23_10.jpg<br>
+			<img src="image/load.gif"></label>
+	</fieldset>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #download -->
+<div data-role="page" id="download" data-theme="f">
+
+	<div data-role="header"  data-theme="f">
+		<a href="../index.html#wireframe" rel="external" data-role="button" data-inline="true" data-theme="g">首頁</a>
+		<h1>下載成功</h1>
+		<a href="" data-role="button" data-inline="true" data-theme="g">播放</a>
+	</div><!-- /header -->
+
+	<div data-role="content"  data-theme="d" data-dividertheme="d">	
+		<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/><img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">A 05_06_18_30_51.jpg</label>
+		<label><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">04_23_11_23_10.jpg</label>
+		</fieldset>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="h">	
+		<div style="width:280px;margin:0 auto;">
+			<a href="#infor" data-role="button" data-theme="f" class="but">下載其他檔案</a>
+		</div>	
+	</div>
+
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #alert_off -->
+<div data-role="page" id="alert_off" data-theme="a">
+
+	<div data-role="content">	
+		<div style="text-align:center;">
+		<input type="hidden" id="alert_option" value="">
+		<h4>關閉警報器鈴聲</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" onclick="alert_off_check('off_icon')" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #delete -->
+<div data-role="page" id="delete" data-theme="a">
+
+	<div data-role="content">	
+		<div style="text-align:center;">
+		<h4>刪除<br>確定要刪除嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+</body>
+</html> 

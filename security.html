@@ -1,0 +1,980 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body> 
+
+<!-- /info -->
+<div data-role="page" id="info" data-mini="true"  data-theme="d"  data-dividertheme="d">
+
+ <div data-role="header"  data-theme="f">
+	
+	<h1><span id="title_name">雲網管</span></h1>
+		<a href="../index.html#wireframe" rel="external" data-role="button" class="back" style="color:#fff">首頁</a>	
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="d"><!--/content --> 
+			
+		<ul data-role="listview" data-theme="d">
+			<li><a href="#client"><img src="image/macfilter.png" class="ui-li-icon">兒童上網時間控管</a></li>
+			<li><a href="#wclient"><img src="image/wlfilter.png" class="ui-li-icon">無線上網時間管控</a></li>
+			<li><a href="#keywor_block"><img src="image/block.png" class="ui-li-icon">關鍵字封鎖</a></li>
+			<li><a href="#url_filter"><img src="image/block.png" class="ui-li-icon">網頁過濾</a></li>
+			<li><a href="#dos"><img src="image/dos.png" class="ui-li-icon">網路攻擊</a></li>
+			<li><a href="#log"><img src="image/remote.png" class="ui-li-icon">登入記錄</a></li>
+		</ul>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+ 
+<!-- /Client -->
+<div data-role="page" id="client" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1>兒童上網時間控管</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<ul data-role="listview" data-theme="d" >
+		<li>
+			<img src="image/client.png" class="ui-li-icon">
+			<h3>Home PC </h3>
+			<p class="ui-li-aside">
+			<select data-role="slider" data-theme="c">
+				<option value="off">Off</option>
+				<option value="on" selected>On</option>
+			</select>
+			<a href="#schedule" data-role="none"><img src="image/schedule_on.png" style="width:36px;height:36px;"></a>
+			</p>
+		</li>
+		<li>
+			<img src="image/device_unknow.png" class="ui-li-icon">
+			<h3>192.168.0.100</h3>
+			<p class="ui-li-aside">
+			<select data-role="slider" data-theme="c">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			<a href="#schedule" data-role="none"><img src="image/schedule_off.png" style="width:36px;height:36px;"></a>
+			</p>
+		</li>
+		<li>
+			<img src="image/phone.png" class="ui-li-icon">
+			<h3>iPhone</h3>
+			<p class="ui-li-aside">
+			<select data-role="slider">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			<a href="#schedule" data-role="none"><img src="image/schedule_off.png" style="width:36px;height:36px;"></a>
+			</p>
+		</li>
+		<li>
+			<img src="image/pad.png" class="ui-li-icon">
+			<h3>iPad</h3>
+			<p class="ui-li-aside">
+			<select data-role="slider" data-theme="c">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			<a href="#schedule" data-role="none"><img src="image/schedule_off.png" style="width:36px;height:36px;"></a>
+			</p>
+		</li>
+		<li>
+			<img src="image/ap_map.png" class="ui-li-icon">
+			<h3>BRB72n_ddaa22</h3>			
+			<p class="ui-li-aside">
+			<select data-role="slider" data-theme="c">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			<a href="" data-role="none" data-rel="dialog"><img src="image/schedule_off.png" style="width:36px;height:36px;"></a>
+			</p>
+		</li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+
+ 
+ <!-- Start of third page: #schedule -->
+<div data-role="page" id="schedule" data-theme="d">
+
+	<div data-role="header"  data-theme="f">
+		<h1 id="schedule_title">上網排程</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>	
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		
+		<fieldset class="ui-grid-a">   		
+			<legend class="ui-block-a">起始時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			
+			</fieldset>
+		</fieldset>
+			<br>
+		<fieldset class="ui-grid-a">  
+			<legend class="ui-block-a">結束時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			</fieldset>
+		</fieldset>
+			<br>
+		<fieldset class="ui-grid-a">     
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-a">
+				<label data-inline="true" style="border:none;"><input name="days" id="Monday" type="checkbox" onclick="chooseOne(this,'days')"/>星期一</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Tuesday" type="checkbox" onclick="chooseOne(this,'days')"/>星期二</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Wednesday" type="checkbox" onclick="chooseOne(this,'days')">星期三</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Thursday" type="checkbox" onclick="chooseOne(this,'days')"/>星期四</label>
+		    </fieldset>
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-b">
+				<label data-inline="true" style="border:none;"><input name="days" id="Friday" type="checkbox" onclick="chooseOne(this,'days')"/>星期五</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Saturday" type="checkbox" onclick="chooseOne(this,'days')"/>星期六</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="Sunday" type="checkbox" onclick="chooseOne(this,'days')"/>星期日</label>
+				<label data-inline="true" style="border:none;"><input name="days" id="everyday" type="checkbox" onclick="chooseOne(this,'days')"/>每日</label>
+		    </fieldset>
+		</fieldset>
+	
+	</div><!-- /content -->
+	 
+	<div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-role="button" data-theme="f" data-mini="true" class="but">儲存設定</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+
+ 
+ <!-- Start of third page: #wclient -->
+<div data-role="page" id="wclient" data-theme="d">
+
+	<div data-role="header"  data-theme="f">
+		<h1 id="schedule_title">開放上網時間清單</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>	
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		
+		<fieldset class="ui-grid-a">   		
+			<legend class="ui-block-a">起始時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			
+			</fieldset>
+		</fieldset>
+			<br>
+		<fieldset class="ui-grid-a">  
+			<legend class="ui-block-a">結束時間:</legend>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-block-b">
+			<select name="select-choice-month" id="select-choice-month" data-theme="a" data-icon="false">
+			<option value="Hour">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			</select>
+			<select name="select-choice-day" id="select-choice-day" data-theme="a" data-icon="false">
+			<option value="Minute">00</option>
+			<option value="0">00</option>
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			</select>
+			</fieldset>
+		</fieldset>
+			<br>
+		<fieldset class="ui-grid-a">     
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-a">
+				<label data-inline="true" style="border:none;"><input name="days2" id="Monday" type="checkbox" onclick="chooseOne(this,'days2')"/>星期一</label>
+				<label data-inline="true" style="border:none;"><input name="days2" id="Tuesday" type="checkbox" onclick="chooseOne(this,'days2')"/>星期二</label>
+				<label data-inline="true" style="border:none;"><input name="days2" id="Wednesday" type="checkbox" onclick="chooseOne(this,'days2')">星期三</label>
+				<label data-inline="true" style="border:none;"><input name="days2" id="Thursday" type="checkbox" onclick="chooseOne(this,'days2')"/>星期四</label>
+		    </fieldset>
+			<fieldset data-role="controlgroup" data-mini="true" class="ui-block-b">
+				<label data-inline="true" style="border:none;"><input name="days2" id="Friday" type="checkbox" onclick="chooseOne(this,'days2')"/>星期五</label>
+				<label data-inline="true" style="border:none;"><input name="days2" id="Saturday" type="checkbox" onclick="chooseOne(this,'days2')"/>星期六</label>
+				<label data-inline="true" style="border:none;"><input name="days2" id="Sunday" type="checkbox" onclick="chooseOne(this,'days2')"/>星期日</label>
+				<label data-inline="true" style="border:none;"><input name="days2" id="everyday" type="checkbox" onclick="chooseOne(this,'days2')"/>每日</label>
+		    </fieldset>
+		</fieldset>
+			<p style="font-style:italic;">註:首次設定(未建立schedule)直接導至排程設定<br>一次設定一個</p>
+	</div><!-- /content -->
+	 
+	<div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#allow_list" data-role="button" data-theme="f" data-mini="true" class="but">儲存設定</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+
+
+<!-- /allow_list -->
+<div data-role="page" id="allow_list" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>無線上網時間管控</h1>
+		<a href="#info" data-role="button" class="back" style="color:#fff">上一頁</a>	
+		<a href="#wclient" data-role="button" data-theme="g">新增</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true">
+			<li>
+				<h2>每天</h2>
+				<p>18:00-22:00</p>
+				<table class="ui-li-aside" style="margin-right:-40px;"><tr>
+					<td align=right>
+					<a data-role="button" href="#wclient" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a>
+					</td>
+					<td align=left>
+					<a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a>
+					</td>
+				</tr></table>
+			</li>
+			<li>
+				<h2>星期一</h2>
+				<p>09:00-18:00</p>
+				<table class="ui-li-aside" style="margin-right:-40px;"><tr>
+					<td align=right>
+					<a data-role="button" href="#wclient" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a>
+					</td>
+					<td align=left>
+					<a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a>
+					</td>
+				</tr></table>
+			</li>
+			<li>
+				<h2>星期日</h2>
+				<p>09:00-18:00</p>
+				<table class="ui-li-aside" style="margin-right:-40px;"><tr>
+					<td align=right>
+					<a data-role="button" href="#wclient" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a>
+					</td>
+					<td align=left>
+					<a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a>
+					</td>
+				</tr></table>
+			</li>
+		</ul>
+ </div><!--/content_end --> 
+ 
+ </div>
+ 
+ 
+<!-- /URL Filter -->
+<div data-role="page" id="url_filter" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1 style="text-align:center">網頁過濾</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>	
+		<a data-role="button" class="og_but" data-theme="g" id="unlock">解鎖</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-dividertheme="d">
+		<li><a href="#url" onClick="pass_name(this,'url_title')">Home PC</a></li>	
+		<li><a href="#url" onClick="pass_name(this,'url_title')">Public PC
+			<!--<p>00:e0:4c:46:23:10</p>
+			<p>192.168.1.120</p>
+			<p class="ui-li-aside"><strong>2012/10/13</strong>11:59</p>-->
+		</a></li>	
+		<li><a href="#url" onClick="pass_name(this,'url_title')">192.168.0.125</a></li>	
+		<li data-role="list-divider" id="url_locked">封鎖清單</li>
+		<li><fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-12px -20px;">
+			<label><input type="checkbox"/>www.yahoo.com.tw</label>
+		</fieldset></li>
+		<li><fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-12px -20px;">
+			<label><input type="checkbox"/>Facebook</label>
+		</fieldset></li>
+		</ul>				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+
+<!-- /Keyword Block -->
+<div data-role="page" id="keywor_block" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1 style="text-align:center">關鍵字封鎖</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>	
+		<a data-role="button" class="og_but" data-theme="g" id="unlock">解鎖</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-dividertheme="d">
+        <li data-role="fieldcontain">
+            <label for="name2">關鍵字:
+            <input type="text" id="name2" value="" style="width:150px;display:inline;">
+			<a data-role="button" data-theme="g" data-inline="true" data-mini="true" style="float:right;">新增</a></label>
+		</li>
+		<li data-role="list-divider" id="url_locked">封鎖清單</li>
+		<li><fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-12px -20px;">
+			<label><input type="checkbox"/>www.yahoo.com.tw</label>
+		</fieldset></li>
+		<li><fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-12px -20px;">
+			<label><input type="checkbox"/>Facebook</label>
+		</fieldset></li>
+		</ul>				
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+
+ 
+<!-- /DoS -->
+<div data-role="page" id="dos" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>網路攻擊</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true">
+			<li><h3>PortScan Attack</h3><p>01/30 09:30:20</p></li>
+			<li><h3>PortScan Attack</h3><p>01/29 13:20:35</p></li>
+			<li><h3>PortScan Attack</h3><p>01/28 18:02:03</p></li>
+			<li><h3>PortScan Attack</h3><p>01/12 22:30:45</p></li>
+			<li><h3>PortScan Attack</h3><p>01/03 12:23:36</p></li>
+		</ul>
+ </div><!--/content_end --> 
+ 
+ </div>
+ 
+ 
+<!-- /Log -->
+<div data-role="page" id="log" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>登入記錄</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true">
+			<li><h3>192.168.0.102</h3><p>01/30 09:30:20</p></li>
+			<li><h3>192.168.0.122</h3><p>01/29 13:20:35</p></li>
+			<li><h3>192.168.0.112</h3><p>01/28 18:02:03</p></li>
+			<li><h3>192.168.0.102</h3><p>01/12 22:30:45</p></li>
+			<li><h3>192.168.0.102</h3><p>01/03 12:23:36</p></li>
+		</ul>
+ </div><!--/content_end --> 
+ 
+ </div>
+ 
+ 
+<!-- /URL -->
+<div data-role="page" id="url" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1 id="url_title">URL History</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>	
+		<a data-role="button" class="og_but" data-theme="g" >預覽</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;" data-mini="true">
+		<label><input type="checkbox"/>www.sapido.com.tw<br><span style="color:#808080;font-weight:normal;">Jan 30 18:10:25</span> </label>
+		<label><input type="checkbox"/>www.espn.com<br><span style="color:#808080;font-weight:normal;">Jan 30 15:10:45</span> </label>
+		<label><input type="checkbox"/>www.facebook.com<br><span style="color:#808080;font-weight:normal;">Jan 30 12:30:11</span> </label>
+		<ul data-role="listview"><li style="margin-left:10px;margin-top:5px;">
+				<img src="image/lock.png" class="ui-li-icon">
+				<h3>www.yahoo.com.tw</h3>
+				<p>Jan 30 09:30:20</p>
+		</li></ul><br>
+	</fieldset>
+				
+ </div><!--/content_end --> 	
+
+ <div data-role="footer" data-position="fixed" data-theme="h" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-rel="dialog" data-role="button" data-theme="f" data-mini="true" class="but">封鎖</a>
+		</div>
+ </div>
+
+ </div><!-- /page7_end -->
+
+ 
+
+<!-- Start of third page: #delete -->
+<div data-role="page" id="delete" data-theme="a">
+
+	<div data-role="content">	
+		<div style="text-align:center;">
+		<h4>刪除排程<br>確定要刪除此排程嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+ <!----------------Others--------------------->
+ 
+<!-- /MAC Filter Schedule -->
+<div data-role="page" id="mac_filter" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="d" data-dividertheme="d">
+		
+		<h1 style="text-align:center">Mac Filter Schedule</h1>
+		<a data-rel="back" data-role="button" data-icon="back"  data-iconpos="notext" data-mini="true" data-inline="true" data-theme="d"></a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<img src="html/image/schedule.png" class="ui-li-icon">
+			<h3>Home PC</h3>
+			<!--<p>00:e0:4c:46:23:10</p>-->
+			<p>192.168.1.131</p>
+				<a href="" data-rel="dialog" data-role="button" data-icon="lock" data-theme="c" data-iconpos="notext" data-inline="true">封鎖</a>
+				<a href="#schedule" data-role="button" data-icon="schedule"  data-iconpos="notext" data-inline="true" data-rel="dialog" >上網排程</a>	
+			<p ><strong>2012/10/13</strong> 12:01</p>
+			<p><strong style="color:red">Lock: Mon~Fri,19:00~21:00</strong></p>
+		</li>		
+		<li>
+			<img src="html/image/lock.png" class="ui-li-icon">
+			<h3>Public PC</h3>
+			<!--<p>00:e0:4c:46:23:10</p>-->
+			<p>192.168.1.120</p>
+				<a href="" data-role="button" data-icon="unlock"  data-iconpos="notext" data-inline="true">解鎖</a>
+				<a href="#schedule" data-role="button" data-icon="schedule"  data-iconpos="notext" data-inline="true" data-rel="dialog" >上網排程</a>
+			<p><strong>2012/10/13</strong> 12:10</p>
+			<p><strong style="color:red">Lock:Everyday</strong></p>
+		</li>
+		<li>
+			<img src="" class="ui-li-icon">
+			<h3>Child's PC</h3>
+			<!--<p>00:e0:4c:46:23:10</p>-->
+			<p>192.168.1.100</p>
+				<a href="" data-role="button" data-icon="lock"  data-iconpos="notext" data-inline="true">封鎖</a>
+				<a href="#schedule" data-role="button" data-icon="schedule"  data-iconpos="notext" data-inline="true" data-rel="dialog" >上網排程</a>	
+			<p><strong>2012/07/20 </strong>13:21</p>
+		</li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+ 
+ 
+<!-- /Multip SSID -->
+<div data-role="page" id="ssids" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="d" data-dividertheme="d">
+		
+		<h1 style="margin-right:70px">Multip SSSID</h1>
+		<a data-rel="back" data-role="button" data-icon="back"  data-iconpos="notext" data-mini="true" data-inline="true" data-theme="d"></a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+	<div data-role="collapsible-set">
+		<div data-role="collapsible" data-collapsed="true" data-theme="c" data-mini="true">
+		<h3>Guest_1
+			<ul data-role="listview" data-divider-theme="c" data-mini="true">
+			<li data-theme="none"><br>
+				<p>LAN/WAN</p>
+				<p class="ui-li-aside"><strong>100Mbps</strong></p>
+				<span class="ui-li-count">2</span>
+			</li>
+			</ul><br>
+		</h3>	
+		<ul data-role="listview" data-theme="d" data-divider-theme="d">
+			<li><a href="">
+				<h3>iphone</h3>
+				<p>00:e0:4c:46:55:ba</p>
+				<p class="ui-li-aside">00:30:10</p>
+			</a></li>
+			<li><a href="">
+				<h3>HTC one</h3>
+				<p>30:e0:4c:46:55:ba</p>
+				<p class="ui-li-aside">01:01:55</p>
+			</a></li>
+		</ul>
+		</div>
+		<div data-role="collapsible" data-collapsed="true" data-theme="c" data-mini="true">
+		<h3>Guest_2
+			<ul data-role="listview" data-divider-theme="c" data-mini="true">
+			<li data-theme="none"><br>
+				<p>LAN</p>
+				<p class="ui-li-aside"><strong>100Mbps</strong></p>
+				<span class="ui-li-count">3</span>
+			</li>
+			</ul><br>
+		</h3>	
+		<ul data-role="listview" data-theme="d" data-divider-theme="d">
+			<li><a href="">
+				<h3>iphone</h3>
+				<p>e1:e0:4c:46:55:da</p>
+				<p class="ui-li-aside">00:30:10</p>
+			</a></li>
+			<li><a href="">
+				<h3>HTC one</h3>
+				<p>00:e0:4c:46:55:ba</p>
+				<p class="ui-li-aside">01:01:55</p>
+			</a></li>
+			<li><a href="">
+				<h3>AcerNB</h3>
+				<p>33:e5:4c:46:55:11</p>
+				<p class="ui-li-aside">03:43:46</p>
+			</a></li>
+		</ul>
+		</div>
+		<div data-role="collapsible" data-collapsed="true" data-theme="c" data-mini="true">
+		<h3>Guest_3
+			<ul data-role="listview" data-divider-theme="c" data-mini="true">
+			<li data-theme="none"><br>
+				<p>WAN</p>
+				<p class="ui-li-aside"><strong>10Mbps</strong></p>
+				<span class="ui-li-count">0</span>
+			</li>
+			</ul><br>
+		</h3>	
+		<ul data-role="listview" data-theme="d" data-divider-theme="d">
+			<li><h3>none</h3></li>
+		</ul>
+		</div>
+		<div data-role="collapsible" data-collapsed="true" data-theme="c" data-mini="true">
+		<h3>Guest_4
+			<ul data-role="listview" data-divider-theme="c" data-mini="true">
+			<li data-theme="none"><br>
+				<p>WAN</p>
+				<p class="ui-li-aside"><strong>10Mbps</strong></p>
+				<span class="ui-li-count">1</span>
+			</li>
+			</ul><br>
+		</h3>	
+		<ul data-role="listview" data-theme="d" data-divider-theme="d">
+			<li><a href="">
+				<h3>IPAD</h3>
+				<p>00:e0:4c:46:55:ba</p>
+				<p class="ui-li-aside">00:30:10</p>
+			</a></li>
+		</ul>
+		</div>
+	</div>
+				
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+
+
+<!-- /New Client -->
+<div data-role="page" id="new_client" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="d" data-dividertheme="d">
+		
+		<h1 style="margin-right:70px">New Client</h1>
+		<a data-rel="back" data-role="button" data-icon="back"  data-iconpos="notext" data-mini="true" data-inline="true" data-theme="d"></a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<ul data-role="listview" data-theme="d" data-divider-theme="d">
+		<li><a href="">
+			<h3>XXXX</h3>
+			<p>00:e0:4c:46:55:ba</p>
+			<p class="ui-li-aside"><strong>2012/07/18 </strong>06:24</p>
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+ 
+
+<!-- /IP Filter -->
+<div data-role="page" id="ip_filter" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="d" data-dividertheme="d">
+		
+		<h1 style="margin-right:70px">IP Filter</h1>
+		<a data-rel="back" data-role="button" data-icon="back"  data-iconpos="notext" data-mini="true" data-inline="true" data-theme="d"></a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview" data-theme="d" data-divider-theme="d">
+		<li data-icon="delete"><a href="">
+			<h3>192.168.50.123</h3>
+			<p><strong>TCP</strong></p>
+			<p class="ui-li-aside"><strong>2012/06/30</strong> 6:24</p> 
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+ 
+ </body>
+ </html> 

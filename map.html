@@ -1,0 +1,1259 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body> 
+<!-- /map_css -->
+<div data-role="page" id="map_css" data-mini="true"  data-theme="f">
+
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		<a href="../index.html#wireframe" rel="external" data-role="button" class="back" style="color:#fff">首頁</a>	
+	<h1>網路狀態圖</h1>
+	<a href="#map_css"  data-role="button" class="og_but" data-theme="g">更新</a>	
+ </div><!--/header -->
+
+ <div id="map_content" data-role="content"  data-mini="true" style="text-align:center"><!--/content -->
+	<div class="map_range">
+		<!--wan-->
+		<a href="#wan" data-role="button" data-inline="true" data-theme="z">
+			<img src="image/wan_map.png" class="map_image">
+			<div class="map_name">ADSL</div>
+		</a>
+		<div class="line"></div>		
+		<!--main_router-->
+		<a href="#info_lan" data-role="button" data-inline="true" data-theme="z">
+			<img src="image/router_map.png" class="map_image">
+			<div class="map_name">BR297n_ad121d</div>
+		</a>
+		<div class="main_router_usb">
+			<div class="line_main"></div>
+			<div class="line_main_r"></div>
+			<a href="#airstorage" data-role="button" data-inline="true" data-theme="z" class="main_usb1">
+				<img src="image/usb.png" class="map_image">
+			</a>
+			<a href="camera.html#webcam" rel="external" data-role="button" data-inline="true" data-theme="z" class="main_usb2">
+				<img src="image/webcam_map.png" class="map_image">
+			</a>
+		</div>			
+		<!--device_left-->
+		<div class="line2"></div>
+		<div class="device_left">
+			<div class="line_left"></div>
+			<a href="../index.html#wireframe_map" rel="external" data-role="button" data-inline="true" data-theme="z" class="router_left">
+				<img src="image/router_map.png" class="map_image">
+				<div class="map_name">1F</div>
+			</a>
+			<div class="line_left_long"></div>
+			<!--
+			<a href="music.html#music_download_map" rel="external" data-role="button" data-inline="true" data-theme="z" class="usb_left1">
+				<img src="image/speaker.png" class="map_image">			
+			</a>-->
+			<a href="printer.html#printer_map" rel="external" data-role="button" data-inline="true" data-theme="z" class="usb_left">
+				<img src="image/printer_map.png" class="map_image">
+			</a>
+		</div>		
+		<!--device_right-->		
+		<div class="line2"></div>
+		<div class="device_right">
+			<div class="line_right"></div>
+			<a href="../index.html#wireframe_map" rel="external" data-role="button" data-inline="true" data-theme="z" class="router_right">
+				<img src="image/router_map.png" class="map_image">
+				<div class="map_name">2F</div>
+			</a>
+			<div class="line_right_2"></div>
+			<a href="#airstorage" data-role="button" data-inline="true" data-theme="z" class="usb_right1">
+				<img src="image/usb.png" class="map_image">	
+			</a>
+			<a href="camera.html#webcam" rel="external" data-role="button" data-inline="true" data-theme="z" class="usb_right2">
+				<img src="image/webcam_map.png" class="map_image">	
+			</a>
+		</div>	
+		<!--device_left-->
+		<div class="line2"></div>
+		<div class="device_left">
+			<div class="line_left_long"></div>
+			<a href="#info_ap" data-role="button" data-inline="true" data-theme="z" class="router_left">
+				<img src="image/ap_map.png" class="map_image">
+				<div class="map_name">車庫</div>
+			</a>
+			<a href="camera.html#webcam" rel="external" data-role="button" data-inline="true" data-theme="z" class="usb_left">
+				<img src="image/webcam_map.png" class="map_image">
+			</a>
+		</div>		
+		<!--device_right-->		
+		<div class="line2"></div>
+		<div class="device_right">
+			<div class="line_right_long"></div>
+			<a href="#info_wifiap" data-role="button" data-inline="true" data-theme="z" class="router_right">
+				<img src="image/wifiap.png" class="map_image">
+				<div class="map_name">廚房</div>
+			</a>
+			<a href="music.html#music_download_map" rel="external" data-role="button" data-inline="true" data-theme="z" class="usb_right">
+				<img src="image/speaker.png" class="map_image">	
+			</a>
+		</div>	
+		<!--device_left-->
+		<div class="line2"></div>
+		<div class="device_left">
+			<div class="line_left_long"></div>
+			<a href="#info_media" data-role="button" data-inline="true" data-theme="z" class="router_left">
+				<img src="image/cm790.png" class="map_image">
+				<div class="map_name">CM790x</div>
+			</a>
+			<a href="#" data-role="button" data-inline="true" data-theme="z" class="usb_left">
+				<img src="image/disk.png" class="map_image">
+			</a>
+		</div>		
+		<!--device_right-->		
+		<div class="line2"></div>
+		<div class="device_right">
+			<div class="line_right_long"></div>
+			<a href="#pc" data-role="button" data-inline="true" data-theme="z" class="router_right">
+				<img src="image/client.png" class="map_image">
+				<div class="map_name">Home PC</div>
+			</a>
+			<a href="#manage_disk" data-role="button" data-inline="true" data-theme="z" class="usb_right">
+				<img src="image/disk.png" class="map_image">	
+			</a>
+		</div>
+		<!--device_left-->
+		<div class="line2"></div>
+		<div class="device_left">
+			<div class="line_left"></div>
+			<a href="camera.html#webcam_mic" rel="external" data-role="button" data-inline="true" data-theme="z" class="router_left">
+				<img src="image/webcam_map.png" class="map_image">
+				<div class="map_name">IPJC1n</div>
+			</a>
+		</div>		
+		<!--device_right-->		
+		<div class="line2"></div>
+		<div class="device_right">
+			<div class="line_right"></div>
+			<a href="switch.html#switch_edit" rel="external" data-role="button" data-inline="true" data-theme="z" class="router_right">
+				<img src="image/wifi_switch.png" class="map_image">
+				<div class="map_name">WSG70n</div>
+			</a>
+		</div>
+		<!--device_left-->
+		<div class="line2"></div>
+		<div class="device_left">
+			<div class="line_left"></div>
+			<a href="sensor.html#sensor_infor" rel="external" data-role="button" data-inline="true" data-theme="z" class="router_left">
+				<img src="image/wifi_sensor.png" class="map_image">
+				<div class="map_name">WDG71n</div>
+			</a>
+		</div>
+	</div>
+</div> <!--/content_end --> 
+ 
+</div><!-- /page2_end -->
+ 
+ 
+<!-- /wan -->
+<div data-role="page" id="wan" data-mini="true"  data-theme="f">
+
+ <div data-role="header" data-position="fixed"  data-theme="f">
+	
+	<h1>網際網路資訊</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="f" style="border:none;"><!--/content --> 
+	<img src="image/wan_map.png" width="36px" height="36px" style="margin:20px 0;"><br>
+	<div style="font-weight:bold;line-height:200%;">	
+		連線類型: <span style="color:#808080;">ADSL</span><!--WAN Type:PPPoE--></br>
+		網際網路IP: <span style="color:#808080;">192.168.2.24</span><!--IP Address:192.168.2.24--><br>
+		名稱伺服器: <span style="color:#808080;">168.95.1.1</span><br>
+		閘道器: <span style="color:#808080;">192.168.2.2</span><!--Gateway:192.168.2.2--><br>
+	</div>
+ </div>	
+ <div data-role="footer" data-position="fixed" data-theme="h">
+	<div style="width:280px;margin:0 auto;">
+		<a href="#menu" data-role="button" data-theme="f" class="but">前往網路設定<!--WAN Type Setting--></a>
+	</div>
+ </div>
+</div>
+
+
+<!-- /menu -->
+<div data-role="page" id="menu" data-mini="true"  data-theme="d">
+ 
+ <div data-role="header"  data-theme="f">
+	
+	<h1>網路設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+  </div>
+  <div data-role="content">
+	<div class="ui-grid-b" style="text-align:center;">
+		<div class="ui-block-a"><a href="#pppoe" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/adsl.jpg"><br>PPPoE</div></a></div>
+		
+		<div class="ui-block-b"><a href="#dhcp" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/cable.jpg"><br>DHCP</div></a></div>
+	
+		<div class="ui-block-c"><a href="#staticip" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/staticip.jpg"><br>Static IP</div></a></div>
+		
+		<div class="ui-block-a"><a href="#isp" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/wifi.jpg"><br>WiFi ISP</div></a></div>
+		
+		<div class="ui-block-b"><a href="#35g" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/35g.jpg"><br>3.5G</div></a></div>
+		
+		<div class="ui-block-c"><a href="#phone" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/phone.jpg"><br>Smartphone</div></a></div>
+		
+		<div class="ui-block-a"><a href="#pptp" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/pptp.jpg"><br>PPTP</div></a></div>
+		
+		<div class="ui-block-b"><a href="#l2tp" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/l2tp.jpg"><br>L2TP</div></a></div>
+		
+		<div class="ui-block-c"><a href="#lte" style="text-decoration: none;color:#808080;">
+		<div style="font-size:12px;height:110px;background-color:white;">
+		<img src="image/lte.jpg"><br>LTE</div></a></div>
+		
+	</div><!-- /grid-a -->
+ </div><!--/header -->
+ 
+</div><!-- /page8_end -->
+
+
+<!-- /pppoe -->
+<div data-role="page" id="pppoe" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+			
+	<h1>PPPoE</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true"  data-theme="d"  data-dividertheme="d">
+		<li data-role="list-divider" class="a">Basic Setting</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Username:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Password:</label>
+	         <input type="password" name="name" id="name" value=""/>
+		</li>
+		<li data-role="list-divider" class="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true"  >
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" name="name" id="name" value="Sapido_11N_2.4GHz"/>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst1')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst1" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- /dhcp -->
+<div data-role="page" id="dhcp" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		
+		<h1>DHCP</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true"  data-theme="d"  data-dividertheme="d">
+		<li data-role="list-divider" class="a">Basic Setting</li>
+		<li data-role="fieldcontain">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+			<legend>DHCP Type:</legend>
+				<input type="radio" name="radio-choice-b" id="radio-choice-c" value="on" checked="checked" onclick="mac(this)"/>
+				<label for="radio-choice-c" data-mini="true" class="a">Universal</label>
+				<input type="radio" name="radio-choice-b" id="radio-choice-d" value="off" onclick="mac(this)" />
+				<label for="radio-choice-d" data-mini="true" class="a">Specific</label>
+				
+			</fieldset>
+		</li>
+		<li data-role="fieldcontain" id="mac" style="display:none">
+	        MAC Address: 0A1023456F223F
+		</li>
+		<li data-role="list-divider" class="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" class="a" name="name" id="name" value="Sapido_11N_2.4GHz" />
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst2')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst2" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- /staticip -->
+<div data-role="page" id="staticip" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		
+		<h1>Static IP</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true"  data-theme="d"  data-dividertheme="d">
+		<li data-role="list-divider" class="a">Network Setting</li>
+		<li data-role="fieldcontain">
+	         <label for="name">IP Address:</label>
+	         <input type="text" name="name" id="name" value="172.1.1.1"/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Subnet:</label>
+	         <input type="text" name="name" id="name" value="255.255.255.0"/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Gateway:</label>
+	         <input type="text" name="name" id="name" value="172.1.1.254"/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">DNS:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="list-divider" class="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" name="name" id="name" value="Sapido_11N_2.4GHz"/>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst3')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst3" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- /ISP -->
+<div data-role="page" id="isp" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		
+		<h1>WiFi ISP</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true"  data-theme="d"  data-dividertheme="d" data-split-icon="search">
+		<li data-role="list-divider" class="a">Basic Setting</li>
+		<li data-role="fieldcontain" data-theme="f">Select Hotshop:
+			<a data-role="button" data-rel="dialog" data-inline="true" data-mini="true" data-icon="search" id="ssid_name" href="#site_survey" class="a">Survey</a>
+		</li><!--
+		<li data-role="fieldcontain"  id="site_pass" style="display:none">
+	         Password:
+	         <input type="password" name="sitepwd" id="sitepwd"/>
+		</li>-->
+		<li data-role="list-divider" class="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" name="name" id="name" value="Sapido_11N_2.4GHz"/>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst4')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst4" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- Start of third page: #site_survey -->
+<div data-role="page" id="site_survey"  data-theme="d"  data-dividertheme="d">
+
+	<div data-role="header"   data-theme="d"  data-dividertheme="d">
+		<h1 style="margin-left:60px;">Site Survey</h1>
+	</div><!-- /header -->
+
+	<div data-role="content"  data-theme="d"  data-dividertheme="d">	
+	<div data-role="fieldcontain">
+		<fieldset data-role="controlgroup">
+         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="Sapido_wall_router" onclick="sitesurvey(this)"/>
+         	<label for="radio-choice-1">Sapido_wall_router<img src="../images/signal.png" align="right"></label>
+
+         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="Xin1_Router_LAN" onclick="sitesurvey(this)"  />
+         	<label for="radio-choice-2">Xin1_Router_LAN<img src="html/images/signal1.png" align="right"></label>
+
+         	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="Navi_R626g_5" onclick="sitesurvey(this)"  />
+         	<label for="radio-choice-3">Navi_R626g_5<img src="html/images/signal2.png" align="right"></label>
+
+         	<input type="radio" name="radio-choice-1" id="radio-choice-4" value="home_router" onclick="sitesurvey(this)"/>
+         	<label for="radio-choice-4">home_router<img src="html/images/signal3.png" align="right"></label>
+			
+			<input type="password"  placeholder="Password" id="site_pass" style="display:none">
+		</fieldset>
+		<a href="#isp" rel="external" data-role="button"  data-icon="check" data-theme="d"  data-mini="true" data-inline="true">Finish</a>
+	</div>
+	</div><!-- /content -->
+</div><!-- /page popup -->
+
+
+<!-- /3.5G -->
+<div data-role="page" id="35g" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		
+		<h1>3.5G</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true" data-mini="true"  data-theme="d"  data-dividertheme="d">
+		<li data-role="list-divider" class="a">Network Setting</li>
+		<li data-role="fieldcontain">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+			<legend>Mode:</legend>
+				<input type="radio" name="35mode" id="35gauto" value="on" checked="checked" onclick="dongle(this)"/>
+				<label for="35gauto" data-mini="true" class="a">Auto</label>
+				<input type="radio" name="35mode" id="35gmanual" value="off" onclick="dongle(this)" />
+				<label for="35gmanual" data-mini="true" class="a">Manual</label>
+			</fieldset>
+		</li>
+	<div data-role="none" id="35gmanual_1" style="display:none">
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Region:</label>
+			<select name="region" id="region" data-native-menu="false" onchange="region(this)">
+				<option>Region</option>
+				<option value="other">Other</option>
+				<option value="india">India</option>
+				<option value="taiwan">Taiwan</option>
+				<option value="pakistan">Pakistan</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">ISP:</label>
+			<select name="isp" id="isp" data-native-menu="false" onchange="isp(this)">
+				<option>ISP</option>
+				<option value="other">Chunghwa</option>
+				<option value="india">Taiwan Mobile</option>
+				<option value="taiwan">APTW</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Service:</label>
+			<select name="service" id="service" data-native-menu="false" onchange="service(this)">
+				<option>Service</option>
+				<option value="other">UMTS/HSPA/HSDPA/HSUPA</option>
+				<option value="india">CDMA/DCMA 2000</option>
+				<option value="taiwan">TD-SCDMA</option>
+			</select>
+		</li>
+	</div>
+		<li data-role="fieldcontain">
+	         <label for="name">SIM PIN:</label>
+	         <input type="password" name="name" id="name" value=""/>
+			 <input type="checkbox" id="noneps"><label for="noneps">None</label>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Retype SIM PIN:</label>
+	         <input type="password" name="name" id="name" value=""/>
+		</li>
+	<div data-role="none" id="35gmanual_2" style="display:none">
+		<li data-role="fieldcontain">
+	         <label for="apn">APN:</label>
+	         <input type="text" name="apn" id="apn" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="35gusername">Username:</label>
+	         <input type="text" name="35gusername" id="35gusername" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="35gps">Password:</label>
+	         <input type="password" name="35gps" id="35gps" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="35gphone">Phone:</label>
+	         <input type="text" name="35gphone" id="35gphone" value=""/>
+		</li>
+	</div>
+		<li data-role="list-divider" class="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" name="name" id="name" value="Sapido_11N_2.4GHz"/>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst5')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst5" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- /Smartphone -->
+<div data-role="page" id="phone" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		
+		<h1>Smartphone</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true"  data-theme="d"  data-dividertheme="d">
+		<li data-role="list-divider" class="a">Basic Setting</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Phone:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="mobile(this)">
+				<option>Select</option>
+				<option value="nokia">Nokia Smart Phone</option>
+				<option value="samsung">Samsung Bada</option>
+				<option value="blackberry">BlackBerry</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="unlock" style="display:none">
+	         <label for="name">Screen Unlock:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">APN:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Username:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Password:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Phone Number:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="list-divider" class="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" name="name" id="name" value="Sapido_11N_2.4GHz"/>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst6')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst6" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- /PPTP -->
+<div data-role="page" id="pptp" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		
+		<h1>PPTP</h1>		
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true"  data-theme="d"  data-dividertheme="d">
+		<li data-role="list-divider" class="a">Network Setting</li>
+		<li data-role="fieldcontain">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+			    <legend>Mode:</legend>
+			    <input type="radio" name="pptp" id="pptp_dy" value="on" checked="checked"  data-mini="true" onclick="pptp(this)"/>
+			    <label for="pptp_dy" class="a">Dymatic</label>
+			    <input type="radio" name="pptp" id="pptp_st" value="off"  data-mini="true" onclick="pptp(this)"/>
+			    <label for="pptp_st" class="a">Static</label>
+			</fieldset>
+		</li>
+		<div id="pptp_static" style="display:none">
+		<li data-role="fieldcontain">
+	         <label for="name">IP Address:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Subnet:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Gateway:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		</div>
+		<li data-role="fieldcontain">
+	         <label for="name">Server:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Username:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Password:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">MTU Size:(1400-1460 bytes)</label>
+	         <input type="text" name="name" id="name" value="1460"/>
+		</li>			
+		<li data-role="fieldcontain">
+			<fieldset data-role="controlgroup">
+			    <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+				<label for="checkbox-6" data-mini="true" >Enable MPPE Ecyption</label>
+	
+				<input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+				<label for="checkbox-7" data-mini="true" >Enable MPPC </label>
+	
+			 </fieldset>
+		</li>
+		<li data-role="list-divider" clas="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" name="name" id="name" value="Sapido_11N_2.4GHz"/>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst7')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst7" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- /L2TP -->
+<div data-role="page" id="l2tp" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		
+		<h1>L2TP</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true"  data-theme="d"  data-dividertheme="d">
+		<li  data-role="list-divider">Network Setting</li>
+		<li data-role="fieldcontain">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+			    <legend>Mode:</legend>
+			    <input type="radio" name="l2tp" id="l2tp_dy" value="on" checked="checked"  data-mini="true" onclick="l2tp(this)"/>
+			    <label for="l2tp_dy">Dymatic</label>
+			    <input type="radio" name="l2tp" id="l2tp_st" value="off"  data-mini="true" onclick="l2tp(this)"/>
+			    <label for="l2tp_st">Static</label>
+			</fieldset>
+		</li>
+		<div id="l2tp_static" style="display:none">
+		<li data-role="fieldcontain">
+	         <label for="name">IP Address:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Subnet:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Gateway:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		</div>
+		<li data-role="fieldcontain">
+	         <label for="name">Server:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Username:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Password:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">MTU Size:(1400-1460 bytes)</label>
+	         <input type="text" name="name" id="name" value="1460"/>
+		</li>
+		<li data-role="list-divider" class="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" name="name" id="name" value="Sapido_11N_2.4GHz"/>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst8')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst8" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- /LTE -->
+<div data-role="page" id="lte" data-mini="true"  data-theme="d"  data-dividertheme="d">
+ 
+ <div data-role="header" data-position="fixed"  data-theme="f">
+		
+		<h1>LTE</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-mini="true"  data-theme="d"  data-dividertheme="d"><!--/content -->
+			
+	<ul data-role="listview" data-inset="true" data-mini="true"  data-theme="d"  data-dividertheme="d">
+		<li data-role="list-divider" class="a">Network Setting</li>
+		<li data-role="fieldcontain">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+			<legend>Mode:</legend>
+				<input type="radio" name="ltemode" id="lteauto" value="on" checked="checked" onclick="lte(this)"/>
+				<label for="lteauto" data-mini="true" class="a">Auto</label>
+				<input type="radio" name="ltemode" id="ltemanual" value="off" onclick="lte(this)" />
+				<label for="ltemanual" data-mini="true" class="a">Manual</label>
+			</fieldset>
+		</li>
+	<div data-role="none" id="ltemanual_1" style="display:none">
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Region:</label>
+			<select name="region" id="region" data-native-menu="false" onchange="region(this)">
+				<option>Region</option>
+				<option value="other">Other</option>
+				<option value="india">India</option>
+				<option value="taiwan">Taiwan</option>
+				<option value="pakistan">Pakistan</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">ISP:</label>
+			<select name="isp" id="isp" data-native-menu="false" onchange="isp(this)">
+				<option>ISP</option>
+				<option value="other">Chunghwa</option>
+				<option value="india">Taiwan Mobile</option>
+				<option value="taiwan">APTW</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Service:</label>
+			<select name="service" id="service" data-native-menu="false" onchange="service(this)">
+				<option>Service</option>
+				<option value="other">UMTS/HSPA/HSDPA/HSUPA</option>
+				<option value="india">CDMA/DCMA 2000</option>
+				<option value="taiwan">TD-SCDMA</option>
+			</select>
+		</li>
+	</div>
+		<li data-role="fieldcontain">
+	         <label for="name">SIM PIN:</label>
+	         <input type="password" name="name" id="name" value=""/>
+			 <input type="checkbox" id="noneps"><label for="noneps">None</label>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">Retype SIM PIN:</label>
+	         <input type="password" name="name" id="name" value=""/>
+		</li>
+	<div data-role="none" id="ltemanual_2" style="display:none">
+		<li data-role="fieldcontain">
+	         <label for="apn">APN:</label>
+	         <input type="text" name="apn" id="apn" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="35gusername">Username:</label>
+	         <input type="text" name="35gusername" id="35gusername" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="35gps">Password:</label>
+	         <input type="password" name="35gps" id="35gps" value=""/>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="35gphone">Phone:</label>
+	         <input type="text" name="35gphone" id="35gphone" value=""/>
+		</li>
+	</div>
+		<li data-role="list-divider" class="a">Wireless Setting</li>
+		<li data-role="fieldcontain" class="a">
+	        Wireless AP:
+			<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain">
+	         <label for="name">SSID:</label>
+	         <input type="text" name="name" id="name" value="Sapido_11N_2.4GHz"/>
+		</li>
+		<li data-role="fieldcontain">
+			<label for="select-choice-a" class="select">Ecryption:</label>
+			<select name="select-choice-a" id="select-choice-a" data-native-menu="false" onchange="pass(this,'passst9')">
+				<option>Select</option>
+				<option value="none">None</option>
+				<option value="standard">WEP</option>
+				<option value="rush">WAP</option>
+				<option value="express">WAP2</option>
+				<option value="overnight">WAP2 Mixed</option>
+			</select>
+		</li>
+		<li data-role="fieldcontain" id="passst9" style="display:none">
+	         <label for="name">Password Setting:</label>
+	         <input type="text" name="name" id="name" value=""/>
+		</li>
+		<li class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="a" data-mini="true">Cancel</button></div>
+				<div class="ui-block-b"><button type="submit"  data-theme="d"   data-mini="true">Finish</button></div>
+		</fieldset>
+		</li>
+	</ul>
+	
+ </div><!--/content_end --> 
+
+</div><!-- /page4_end -->
+
+
+<!-- /airstorage -->
+<div data-role="page" id="airstorage" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1>BR270n_81990a</h1>
+		<a data-rel="back"" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="f" style="text-align:center"><!--/content -->
+
+		<a href="upload.html#upload_folder_map" rel="external"><img src="image/upload.png" style="margin-top:70px;"></a><br>
+		<a href="download.html#ftp_delete_map" rel="external"><img src="image/download.png" style="margin-top:30px;"></a>
+	
+ </div><!--/content_end --> 
+ 
+</div><!-- /page4_end -->
+
+
+<!-- /manage_disk -->
+<div data-role="page" id="manage_disk" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1>Home PC</h1>
+		<a data-rel="back"" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="f" style="text-align:center"><!--/content -->
+		<a href="upload.html#upload_folder" rel="external"><img src="image/upload.png" style="margin-top:70px;"></a><br>
+		<a href="download.html#download_select_disk" rel="external"><img src="image/download.png" style="margin-top:30px;"></a>
+	
+ </div><!--/content_end upload_disk--> 
+ 
+</div><!-- /page4_end -->
+ 
+
+
+<!-- /info_lan -->
+<div data-role="page" id="info_lan" data-mini="true"  data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	
+	<h1>BR270n_120093</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+	<!--	
+	<div data-role="navbar" data-mini="true" style="display:none" id="update_alert">
+		<ul  data-mini="true">
+		<li>
+			<a href="#update" data-theme="e" data-rel="dialog" data-transition="pop" onClick="firmware(this)">
+			<img src="html/image/new.png" style="margin-top:-10px">
+			New Firmware!</a>
+		</li>
+		</ul>
+	</div>-->
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="f"><!--/content --> 
+		
+		<ul data-role="listview" data-theme="d">
+			<li><a href="#lan"><img src="image/map.png" class="ui-li-icon">內部網路資訊</a></li>
+			<li><a href="security.html#url_filter" rel="external"><img src="image/block.png" class="ui-li-icon">網頁瀏覽記錄</a></li>
+			<li><a href="security.html#keywor_block" rel="external"><img src="image/block.png" class="ui-li-icon">關鍵字封鎖</a></li>
+			<li><a href="security.html#client" rel="external"><img src="image/url.png" class="ui-li-icon">連線裝置清單</a></li>
+			<li><a href="security.html#dos" rel="external"><img src="image/dos.png" class="ui-li-icon">網路攻擊</a></li>
+			<li><a href="security.html#log" rel="external"><img src="image/remote.png" class="ui-li-icon">登入記錄</a></li>
+		</ul>
+ 
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /lan -->
+<div data-role="page" id="lan" data-mini="true"  data-theme="f">
+
+ <div data-role="header" data-position="fixed"  data-theme="f">
+	
+	<h1>內部網路資訊</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="f" style="border:none;"><!--/content --> 
+	<table style="margin:10px 0;"><tr><td><img src="image/router_map.png" width="36px"></td>
+			   <td><input type="text" data-mini="true" style="width:200px;" value="GR297n_81190a"></td></tr></table>
+	<br>
+	<div style="font-weight:bold;line-height:200%;">	
+		內部網路IP: <span style="color:#808080;">192.168.0.1</span><!--WAN Type:PPPoE--></br>
+		MAC位址: <span style="color:#808080;">00:e3:c1:a0:22:aa</span><!--IP Address:192.168.2.24--><br>
+		網際網路名稱(SSID): <span style="color:#808080;">Sapido_Office</span><br>
+		加密模式: <span style="color:#808080;">WPA2</span><!--Gateway:192.168.2.2--><br>
+	</div>
+ </div>	
+ 
+ <div data-role="footer" data-position="fixed" data-theme="h">
+	<div style="width:270px;margin:0 auto;">
+		<a href="#lan" data-role="button" data-theme="f" class="but">確定<!--WAN Type Setting--></a>
+	</div>
+ </div>
+</div>
+
+
+<!-- /info_ap -->
+<div data-role="page" id="info_ap" data-mini="true"  data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	
+	<h1><span id="title_nameap">BRE71n_c3a200</span></h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="f">
+ 	<table style="margin:10px 0;"><tr><td><img src="image/ap_map.png" width="36px"></td>
+			   <td><input type="text" data-mini="true" style="width:200px;" value="BRE71n_c3a200"></td></tr></table>
+	<br>
+	<div style="font-weight:bold;line-height:200%;">	
+		內部網路IP: <span style="color:#808080;">192.168.0.101</span><!--WAN Type:PPPoE--></br>
+		MAC位址: <span style="color:#808080;">00:12:a3:d4:c3:52</span><!--IP Address:192.168.2.24--><br>
+		網際網路名稱(SSID): <span style="color:#808080;">Sapido_home</span><br>
+		加密模式: <span style="color:#808080;">WPA2</span><!--Gateway:192.168.2.2--><br>
+	</div>
+ </div> <!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="h">
+	<div style="width:270px;margin:0 auto;">
+		<a href="#info_ap" data-role="button" data-theme="f" class="but">確定<!--WAN Type Setting--></a>
+	</div>
+ </div>
+
+</div><!-- /page2_end -->
+
+
+<!-- /info_wifiap -->
+<div data-role="page" id="info_wifiap" data-mini="true"  data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	
+	<h1><span id="title_namewifiap">BR071n_465543</span></h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="f"><!--/content --> 
+ 	<table style="margin:10px 0;">
+		<tr>
+			<td><img src="image/wifiap.png" width="36px"></td>
+			<td>
+			<input type="text" data-mini="true" style="width:200px;" value="BR071n_465543">
+			</td>
+		</tr>
+	</table>
+	<br>
+	<div style="font-weight:bold;line-height:200%;">	
+		內部網路IP: <span style="color:#808080;">192.168.0.101</span><!--WAN Type:PPPoE--></br>
+		MAC位址: <span style="color:#808080;">00:12:a3:d4:c3:52</span><!--IP Address:192.168.2.24--><br>
+		網際網路名稱(SSID): <span style="color:#808080;">Sapido_home</span><br>
+		加密模式: <span style="color:#808080;">WPA2</span><!--Gateway:192.168.2.2--><br>
+	</div>
+ </div> <!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="h">
+	<div style="width:270px;margin:0 auto;">
+		<a href="#info_wifiap" data-role="button" data-theme="f" class="but">確定<!--WAN Type Setting--></a>
+	</div>
+ </div>
+</div><!-- /page2_end -->
+
+
+<!-- /info_media -->
+<div data-role="page" id="info_media" data-mini="true"  data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	<h1>CM790x_ad3120a</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="f"><!--/content --> 
+ 	<table style="margin:10px 0;">
+		<tr>
+			<td><img src="image/cm790.png" width="36px"></td>
+			<td>
+			<input type="text" data-mini="true" style="width:200px;" value="CM790x">
+			</td>			
+		</tr>
+	</table>
+	<br>
+	<div style="font-weight:bold;line-height:200%;">	
+		內部網路IP: <span style="color:#808080;">192.168.0.101</span><!--WAN Type:PPPoE--></br>
+		MAC位址: <span style="color:#808080;">00:12:a3:d4:c3:52</span><!--IP Address:192.168.2.24--><br>
+	</div>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+
+<!-- /pc -->
+<div data-role="page" id="pc" data-mini="true"  data-theme="f">
+
+ <div data-role="header"  data-theme="f">
+	
+	<h1><span id="title_nameap">Home PC</span></h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+
+ </div><!--/header -->
+
+ <div data-role="content" data-mini="true"  data-theme="f"><!--/content --> 
+ 	<table style="margin:10px 0;"><tr><td><img src="image/client.png" width="36px"></td></tr></table>
+	<br>
+	<div style="font-weight:bold;line-height:200%;">	
+		內部網路IP: <span style="color:#808080;">192.168.0.101</span><!--WAN Type:PPPoE--></br>
+		MAC位址: <span style="color:#808080;">00:12:a3:d4:c3:52</span><!--IP Address:192.168.2.24--><br>
+	</div>
+ </div> <!--/content_end --> 
+
+</div><!-- /page2_end -->
+
+ </body>
+ </html> 

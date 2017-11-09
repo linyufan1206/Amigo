@@ -1,0 +1,1336 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+	<script>			
+		$( "#tesst" ).click(function() {
+			$("#tested").show();
+		});
+	</script>
+</head>
+
+ <body>
+<!-- /storageall -->
+<div data-role="page" id="storageall" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1 id="tesst">選擇來源</h1>
+		<a href="../index.html#wireframe" rel="external" data-role="button" class="back" style="color:#fff">首頁</a>
+		<a href="#wol_list" data-rel="dialog" dtat-role="button" data-inline="true" data-theme="g" id="tested" style="display:none">編輯</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<ul data-role="listview" data-theme="d" data-dividertheme="d">
+		<li><a href="#ftp_delete">
+			<img src="image/usb_stick.png" class="ui-li-icon">
+			GR297n_135da0
+		</a></li>
+		<li><a href="#ftp_delete">
+			<img src="image/usb_stick.png" class="ui-li-icon">
+			BR270n_c32d01
+		</a></li>
+		<li><a href="#download_select_disk">
+			<img src="image/desktop.png" class="ui-li-icon">
+			Home PC
+		</a></li>
+		<li><a href="#wol_wait" data-rel="dialog">
+			<img src="image/desktop_off.png" class="ui-li-icon">
+			Public PC
+		</a></li>
+		<li><a href="#">
+			<img src="image/hard_drive.png" class="ui-li-icon">
+			CM790x_ad3120a
+		</a></li>
+		<li><a href="#">
+			<img src="image/nas.png" class="ui-li-icon">
+			WD091n_dd1221
+		</a></li>		
+
+		<li data-role="list-divider">我的最愛</li>		
+		<li><a href="#ftp_delete">
+			<img src="image/document2.png" class="ui-li-icon">
+			GR297n_135da0/admin
+		</a></li>	
+		<li><a href="#ftp_delete">
+			<img src="image/document2.png" class="ui-li-icon">
+			CM790x_ad3120a/music
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+
+ 
+<!-- /ftp -->
+<div data-role="page" id="ftp" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">		
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#waiting" data-role="button" class="og_but" data-theme="g" onclick="wait(this)">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<div data-role="collapsible-set" data-theme="d" style="width:115%;height:120%;margin:-15px -20px;" >
+		<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-theme="d">
+			<h2>
+				<img src="image/checkbox2.png" style="height:24px;width:24px;margin-right:3px;float:left;"> 
+				<img src="image/document2.png" style="width:24px;height:20px;margin:0 5px 0 0;">共享
+				<img src="image/stars.png" style="float:right;"></h2>
+			<ul data-role="controlgroup" style="width:120%;height:120%;margin:-15px -15px;">
+				<li data-role="controlgroup" data-mini="true" data-theme="d">   					
+					<label><input type="checkbox"/><img src="image/file1.png">Hanging Around.mp3</label>
+					<label><input type="checkbox"/><img src="image/file1.png">不倒翁奇幻旅程.mov</label>
+					<label><input type="checkbox"/><img src="image/file1.png">DC12346.jpg</label>
+				</li>
+			</ul>
+		</div>
+		<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+			<h2>
+				<img src="image/checkbox2.png" style="height:24px;width:24px;margin-right:3px;float:left;"> 
+				<img src="image/document2.png" style="width:24px;height:20px;margin:0 5px 0 0;">個人
+				<img src="image/star.png" style="float:right;"></h2>
+			<ul data-role="controlgroup" style="width:120%;height:120%;margin:-15px -15px;">
+				<li data-role="controlgroup" data-mini="true" data-inset="none" data-theme="d">  
+					<label><input type="checkbox"/><img src="image/file1.png">Kiss me.mp3</label>
+					<label><input type="checkbox"/><img src="image/file1.png">A Team.mov</label>
+					<label><input type="checkbox"/><img src="image/file1.png">DC12312.jpg</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+ </div>
+ 
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">	
+	
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">下載儲存資料夾</span><br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">自動分類<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">Sapido's iPhone</div></div>
+	<a href="#local" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+ 
+</div><!-- /page4_end -->
+
+ 
+<!-- /ftp_delete -->
+<div data-role="page" id="ftp_delete" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" style="height:40px;padding-top:10px;">
+		
+		<a href="#storageall" data-role="button" class="back" style="margin-top:5px;color:#fff">上一頁</a>
+		<h1>選擇檔案</h1>
+    	<a href="#waiting" data-role="button" data-theme="g" onclick="wait(this)">下載</a>
+		<!--
+		<div style="margin-left:100px;margin-right:20px;width:100px;display:inline;">選擇檔案</div>
+	
+		<div data-role="controlgroup" data-type="horizontal" style="float:right;margin: -45px 5px;">
+		<a href="#player" data-role="button" data-theme="g">播放</a>
+		<a href="#waiting" data-role="button" data-theme="g" onclick="wait(this)">下載</a>
+		</div>    -->
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	
+    <ul data-role="listview" style="margin-left:-30px;height:500px;">
+        <li data-mini="true" style="height:30px;">
+		<table style="margin-top:-10px;">
+		<tr>
+		<td width="10%">
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td width="50%">
+		<a href="#webcam_list" data-role="none" style="color:#4f4f4f;" >Webcam</a>
+		</td>
+		<td width="30%">
+		<img src="image/stars.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		<td width="10%">
+		<img id="arrow" class="arrow" src="image/right.png">
+		</td>
+		</tr></table>
+		</li>
+        <li data-mini="true" style="height:30px;">
+		<table style="margin-top:-10px;">
+		<tr>
+		<td width="10%">
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td width="50%" onclick="show_list('list','arrow')">
+		<a href="#" data-role="none" style="color:#4f4f4f;" >公共</a>
+		</td>
+		<td width="30%">
+		<img src="image/stars.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		<td width="10%">
+		<img id="arrow" class="arrow" src="image/right.png">
+		</td>
+		</tr></table>
+		</li>
+		<li id="list" style="display:none;">
+		<table class="list">
+		<tr>
+		<td width="10%">
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/mus.png" style="width:24px;height:24px;"></label>
+		</td>
+		<td width="50%">Sorry Sorry.mp3</td>
+		</tr>
+		<tr>
+		<td width="10%">
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/mus.png" style="width:24px;height:24px;"></label>
+		</td>
+		<td width="50%">Sorry Sorry.mp3</td>
+		</tr>
+		</table>
+		</li>
+		<li style="height:30px;">
+		<table style="margin-top:-10px;">
+		<tr>
+		<td width="10%">
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td width="50%">
+		<a href="#" data-role="none" style="color:#4f4f4f;" onclick="show_list('list2','arrow2')">個人</a>
+		</td>
+		<td width="30%"><a href="#favor_full" data-rel="dialog">
+		<img src="image/star.png" name="0" onclick="favor(this)"  style="float:right;cursor:pointer;" />
+		</a></td>
+		<td width="10%">
+		<img id="arrow2" class="arrow" src="image/right.png">
+		</td>
+		</tr>
+		</table>
+		</li>
+    	<li id="list2" style="display:none;">
+		<table class="list">
+		<tr>
+		<td width="10%">
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/mus.png" style="width:24px;height:24px;"></label>
+		</td>
+		<td width="50%">Sorry Sorry.mp3</td>
+		</tr>
+		<tr>
+		<td width="10%">
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/mus.png" style="width:24px;height:24px;"></label>
+		</td>
+		<td width="50%">Sorry Sorry.mp3</td>
+		</tr>
+		</table>
+		</li>
+	
+	</ul>
+ 
+ </div>
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+</div><!-- /page4_end -->
+ 
+
+<!-- /webcam_list -->
+<div data-role="page" id="webcam_list" data-mini="true" data-theme="d" data-dividertheme="d">
+
+ <div data-role="header" data-theme="f">
+		
+		<a data-rel="back" data-role="button" class="back" style="margin-top:5px;color:#fff">上一頁</a>
+		
+		<h1>Webcam</h1>
+		
+		<a href="#waiting_duc" data-role="button" data-theme="g" onclick="wait5(this)" data-inline="true">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+    <ul data-role="listview">
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#webcam" data-role="none" style="color:#4f4f4f;" >IPJC1n</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#webcam" data-role="none" style="color:#4f4f4f;" >BR297n</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>	
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#webcam" data-role="none" style="color:#4f4f4f;" >BR476n</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+ </div><!-- /page7_end -->
+
+ 
+<!-- /webcam -->
+<div data-role="page" id="webcam" data-mini="true" data-theme="d" data-dividertheme="d">
+
+ <div data-role="header" data-theme="f">
+		
+		<a data-rel="back" data-role="button" class="back" style="margin-top:5px;color:#fff">上一頁</a>
+		
+		<h1>IPJC1n</h1>
+		
+		<a href="#waiting_duc" data-role="button" data-theme="g" onclick="wait5(this)" data-inline="true">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+    <ul data-role="listview">
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#motion" data-role="none" style="color:#4f4f4f;" >Montion_Detect</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#record" data-role="none" style="color:#4f4f4f;" >Record</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>
+		<!--
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#screenshot" data-role="none" style="color:#4f4f4f;" >ScreenShot</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>
+		-->
+	</ul>		
+ </div><!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+ </div><!-- /page7_end -->
+ 
+
+<!-- /motion -->
+<div data-role="page" id="motion" data-mini="true" data-theme="d" data-dividertheme="d">
+
+ <div data-role="header" data-theme="f">
+		
+		<a data-rel="back" data-role="button" class="back" style="margin-top:5px;color:#fff">上一頁</a>
+		
+		<h1>Montion_Detect</h1>
+		
+		<a href="#waiting_duc" data-role="button" data-theme="g" onclick="wait5(this)" data-inline="true">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+    <ul data-role="listview">
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#time" data-role="none" style="color:#4f4f4f;" >2013_04_01_11</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>	
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#time" data-role="none" style="color:#4f4f4f;" >2013_04_01_09</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+ </div><!-- /page7_end -->
+ 
+
+<!-- /record -->
+<div data-role="page" id="record" data-mini="true" data-theme="d" data-dividertheme="d">
+
+ <div data-role="header" data-theme="f">
+		
+		<a data-rel="back" data-role="button" class="back" style="margin-top:5px;color:#fff">上一頁</a>
+		
+		<h1>Record</h1>
+		
+		<a href="#waiting_duc" data-role="button" data-theme="g" onclick="wait5(this)" data-inline="true">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+    <ul data-role="listview">
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#record_pic" data-role="none" style="color:#4f4f4f;" >2013_04_01_11</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>	
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#record_pic" data-role="none" style="color:#4f4f4f;" >2013_04_01_09</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+ </div><!-- /page7_end -->
+ 
+
+<!-- /record_pic -->
+<div data-role="page" id="record_pic" data-mini="true" data-theme="d" data-dividertheme="d">
+
+ <div data-role="header" data-theme="f">
+		
+		<a data-rel="back" data-role="button" class="back" style="margin-top:5px;color:#fff">上一頁</a>
+		
+		<h1>2013_04_01_11</h1>
+		
+		<a href="#waiting_duc" data-role="button" data-theme="g" onclick="wait5(this)" data-inline="true">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+    <ul data-role="listview">
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#" data-role="none" style="color:#4f4f4f;" >11_20_50_00004.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>	
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#" data-role="none" style="color:#4f4f4f;" >11_20_49_00003.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#" data-role="none" style="color:#4f4f4f;" >11_20_49_00002.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#time_pic" data-role="none" style="color:#4f4f4f;" >11_20_49_00001.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#" data-role="none" style="color:#4f4f4f;" >11_20_49_00000.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+ </div><!-- /page7_end -->
+ 
+
+
+<!-- /time -->
+<div data-role="page" id="time" data-mini="true" data-theme="d" data-dividertheme="d">
+
+ <div data-role="header" data-theme="f">
+		
+		<a data-rel="back" data-role="button" class="back" style="margin-top:5px;color:#fff">上一頁</a>
+		
+		<h1>2013_04_01_11</h1>
+		
+		<a href="#waiting_duc" data-role="button" data-theme="g" onclick="wait5(this)" data-inline="true">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+    <ul data-role="listview">
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#time_pic" data-role="none" style="color:#4f4f4f;" >2013_04_01_11_20_50</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>	
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#time_pic" data-role="none" style="color:#4f4f4f;" >2013_04_01_11_20_45</a>
+		</td>
+		<td width=100%>
+		<img src="image/star.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+		</td>
+		</tr></table>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+ </div><!-- /page7_end -->
+ 
+
+<!-- /time_pic -->
+<div data-role="page" id="time_pic" data-mini="true" data-theme="d" data-dividertheme="d">
+
+ <div data-role="header" data-theme="f">
+		
+		<a data-rel="back" data-role="button" class="back" style="margin-top:5px;color:#fff">上一頁</a>
+		
+		<h1>2013_04_01_11</h1>
+		
+		<a href="#waiting_duc" data-role="button" data-theme="g" onclick="wait5(this)" data-inline="true">下載</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+    <ul data-role="listview">
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#" data-role="none" style="color:#4f4f4f;" >11_20_50_00004.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>	
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#" data-role="none" style="color:#4f4f4f;" >11_20_49_00003.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#" data-role="none" style="color:#4f4f4f;" >11_20_49_00002.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#time_pic" data-role="none" style="color:#4f4f4f;" >11_20_49_00001.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>
+        <li data-mini="true"><a>
+		<table style="margin-left:-20px;"><tr>
+		<td>
+		<label style="border:none;display:inline;">
+		<input type="checkbox" style="display:none;"/>
+		<img src="image/picture.png" style="width:20px;height:24px;"></label>
+		</td>
+		<td>
+		<a href="#" data-role="none" style="color:#4f4f4f;" >11_20_49_00000.jpg</a>
+		</td>
+		</tr></table>
+		</a></li>
+	</ul>		
+ </div><!--/content_end --> 
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+ </div><!-- /page7_end -->
+ 
+ 
+<!-- /ftp_delete_map -->
+<div data-role="page" id="ftp_delete_map" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" style="height:40px;padding-top:10px;">
+		
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		
+		<div style="margin-left:100px;margin-right:20px;width:100px;display:inline;">選擇檔案</div>
+		
+		<div data-role="controlgroup" data-type="horizontal" style="display:inline;">
+		<a href="#player" data-role="button" data-theme="g" data-inline="true">播放</a>
+		<a href="#waiting" data-role="button" data-theme="g" onclick="wait(this)" data-inline="true">下載</a>
+		</div>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	
+    <ul data-role="listview" style="margin-left:-30px;height:500px;">
+		<li><a href="#webcam">
+			Webcam
+		</a></li>
+        <li data-mini="true" style="height:30px;">
+	    	<table style="margin-top:-10px;">
+    		<tr>
+        		<td width="10%">
+            		<label style="border:none;display:inline;">
+                		<input type="checkbox" style="display:none;"/>
+                		<img src="image/document2.png" style="width:30px;height:24px;">
+            		</label>
+        		</td>
+        		<td width="50%" onclick="show_list('list','arrow')">
+        	    	<a href="#" data-role="none" style="color:#4f4f4f;" >公共</a>
+        		</td>
+        		<td width="30%">
+        		    <img src="image/stars.png" name="1" onclick="favor(this)" style="float:right;cursor:pointer"/>
+        		</td>
+        		<td width="10%">
+        	    	<img id="arrow" class="arrow" src="image/right.png">
+        		</td>
+		    </tr>    	        
+		    </table>
+		</li>
+		<li id="list" style="display:none;">
+    		<table class="list">
+    		<tr>
+        		<td width="10%">
+            		<label style="border:none;display:inline;">
+                		<input type="checkbox" style="display:none;"/>
+                		<img src="image/mus.png" style="width:24px;height:24px;">                	    
+            		</label>
+        		</td>
+        		<td width="50%">Sorry Sorry.mp3</td>
+    		</tr>
+    		<tr>
+        		<td width="10%">
+            		<label style="border:none;display:inline;">
+                		<input type="checkbox" style="display:none;"/>
+                		<img src="image/mus.png" style="width:24px;height:24px;">                	    
+            		</label>
+        		</td>
+        		<td width="50%">Sorry Sorry.mp3</td>
+    		</tr>
+    		</table>
+		</li>
+		<li style="height:30px;">
+    		<table style="margin-top:-10px;">     
+   	        	<tr>
+            		<td width="10%">
+                		<label style="border:none;display:inline;">
+                		<input type="checkbox" style="display:none;"/>
+                		<img src="image/document2.png" style="width:30px;height:24px;"></label>
+            		</td>
+            		<td width="50%">
+            		    <a href="#" data-role="none" style="color:#4f4f4f;" onclick="show_list('list2','arrow2')">個人</a>
+            		</td>
+            		<td width="30%">
+            		    <img src="image/star.png" name="0" onclick="favor(this)"  style="float:right;cursor:pointer;" />
+            		</td>
+            		<td width="10%">
+            		    <img id="arrow2" class="arrow" src="image/right.png">
+            		</td>
+        		</tr>
+    		</table>
+		</li>
+    	<li id="list2" style="display:none;">
+    		<table class="list">
+				<tr>
+            		<td width="10%">
+                		<label style="border:none;display:inline;">
+                		<input type="checkbox" style="display:none;"/>
+                		<img src="image/mus.png" style="width:24px;height:24px;"></label>
+            		</td>
+            		<td width="50%">Sorry Sorry.mp3</td>
+            	</tr>
+            	<tr>
+            		<td width="10%">
+                		<label style="border:none;display:inline;">
+                		<input type="checkbox" style="display:none;"/>
+                		<img src="image/mus.png" style="width:24px;height:24px;"></label>
+            		</td>
+            		<td width="50%">Sorry Sorry.mp3</td>    
+        		</tr>
+    		</table>
+		</li>
+	</ul> 
+ </div>
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#del_file" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" class="but">刪除</a>
+		</div>
+ </div>
+ 
+</div><!-- /page4_end -->
+ 
+ 
+<!-- /download_select_disk -->
+<div data-role="page" id="download_select_disk" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1>選擇磁碟</h1>
+		<a data-rel="back"" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<ul data-role="listview" data-theme="d" data-divider-theme="e">
+		<li><a href="#ftp_delete">
+			<img src="image/document2.png" class="ui-li-icon">
+			C:
+		</a></li>
+		<li><a href="#ftp_delete">
+			<img src="image/document2.png" class="ui-li-icon">
+			D:
+		</a></li>
+		<li><a href="#ftp_delete">
+			<img src="image/document2.png" class="ui-li-icon">
+			E:
+		</a></li>
+		<li><a href="#ftp_delete">
+			<img src="image/document2.png" class="ui-li-icon">
+			Webcam
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+ </div><!-- /page7_end -->
+ 
+ 
+<!-- /save_folder -->
+<div data-role="page" id="save_folder" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1>選擇路徑</h1>
+		<a data-rel="back"  data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<ul data-role="listview" data-theme="d" data-divider-theme="d">
+		<li><a href="#upload_movie">
+			<img src="image/document2.png" class="ui-li-icon">
+			work
+		</a></li>
+		<li><a href="#upload_music">
+			<img src="image/document2.png" class="ui-li-icon">
+			download
+		</a></li>
+		<li><a href="#upload_picture">
+			<img src="image/document2.png" class="ui-li-icon">
+			movive
+		</a></li>
+		<li><a href="#upload_file">
+			<img src="image/document2.png" class="ui-li-icon">
+			音樂
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="text-align:center;">	
+	<a href="#document" data-rel="dialog" data-role="button" data-theme="d" style="width:120px;" class="but">新增資料夾</a>
+	<a href="#waiting2" data-role="button" data-theme="d" style="width:120px;" class="but" onclick="wait2(this)">上傳</a>
+</div><!--/footer -->
+
+</div><!-- /page5_end -->
+
+
+<!-- /download_folder -->
+<div data-role="page" id="download_folder" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		
+		<h1>選擇分類</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="" data-role="button" class="og_but" data-theme="g" onclick="upload_edit('download_edit')">編輯</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#download_movie">
+			<img src="image/document2.png" class="ui-li-icon">
+			影片
+		</a></li>
+		<li><a href="#download_music">
+			<img src="image/document2.png" class="ui-li-icon">
+			音樂
+		</a></li>
+		<li><a href="#download_picture">
+			<img src="image/document2.png" class="ui-li-icon">
+			照片
+		</a></li>
+		<li><a href="#download_file">
+			<img src="image/document2.png" class="ui-li-icon">
+			文件
+		</a></li>
+		<li><a href="#download_else">
+			<img src="image/document2.png" class="ui-li-icon">
+			其他
+		</a></li>
+		<li><a href="#album">
+			<img src="image/document2.png" class="ui-li-icon">
+			相機膠卷
+		</a></li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			SD卡(檔案總管)
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="f" id="download_edit" style="display:none">	
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#delete" data-icon="del">刪除</a></li>
+			<li><a href="#rename" data-icon="star">重新命名</a></li>
+			<li><a href="#document" data-icon="add">新資料夾</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+</div><!--/footer -->
+</div><!-- /page7_end -->
+
+
+<!-- /download_music -->
+<div data-role="page" id="download_music" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="" data-role="button" class="og_but" data-theme="g" onclick="upload_edit('download_edit1')">編輯</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Payphone.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Sorry Sorry.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Kiss me.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">青花瓷.mp3 </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="f" id="download_edit1" style="display:none">	
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#delete" data-icon="del">刪除</a></li>
+			<li><a href="#rename" data-icon="star">重新命名</a></li>
+			<li><a href="#document" data-icon="add">新資料夾</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!--/footer -->
+</div><!-- /page7_end -->
+
+
+<!-- /download_movie -->
+<div data-role="page" id="download_movie" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="" data-role="button" class="og_but" data-theme="g" onclick="upload_edit('download_edit2')">編輯</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;">
+		<label><input type="checkbox"/><img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">A Team.avi </label>
+		<label><input type="checkbox"/><img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">不倒翁的奇幻旅程.avi</label>
+		<label><input type="checkbox"/><img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">逆光飛翔.avi </label>
+		<label><input type="checkbox"/><img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">男朋友 女朋友.avi </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="f" id="download_edit2" style="display:none">	
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#delete" data-icon="del">刪除</a></li>
+			<li><a href="#rename" data-icon="star">重新命名</a></li>
+			<li><a href="#document" data-icon="add">新資料夾</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!--/footer -->
+</div><!-- /page7_end -->
+
+
+<!-- /download_picture -->
+<div data-role="page" id="download_picture" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="" data-role="button" class="og_but" data-theme="g" onclick="upload_edit('download_edit3')">編輯</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;">
+		<label><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000103.jpg </label>
+		<label><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000102.jpg</label>
+		<label><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000101.jpg</label>
+		<label><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000100.jpg</label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="f" id="download_edit3" style="display:none">	
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#delete" data-icon="del">刪除</a></li>
+			<li><a href="#rename" data-icon="star">重新命名</a></li>
+			<li><a href="#document" data-icon="add">新資料夾</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!--/footer -->
+</div><!-- /page7_end -->
+
+
+<!-- /download_file -->
+<div data-role="page" id="download_file" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="" data-role="button" class="og_but" data-theme="g" onclick="upload_edit('download_edit4')">編輯</a>
+
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;">
+		<label><input type="checkbox"/><img src="image/ducu.png" style="margin-right:10px;width:24px;height:24px;">PI.pdf</label>
+		<label><input type="checkbox"/><img src="image/ducu.png" style="margin-right:10px;width:24px;height:24px;">Introduction.ppt</label>
+		<label><input type="checkbox"/><img src="image/ducu.png" style="margin-right:10px;width:24px;height:24px;">Product.xls</label>
+		<label><input type="checkbox"/><img src="image/ducu.png" style="margin-right:10px;width:24px;height:24px;">IPv6.doc</label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="f" id="download_edit4" style="display:none">	
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#delete" data-icon="del">刪除</a></li>
+			<li><a href="#rename" data-icon="star">重新命名</a></li>
+			<li><a href="#document" data-icon="add">新資料夾</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!--/footer -->
+</div><!-- /page7_end -->
+
+
+<!-- /download_else -->
+<div data-role="page" id="download_else" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="" data-role="button" class="og_but" data-theme="g" onclick="upload_edit('download_edit5')">編輯</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+ 
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;">
+		<label><input type="checkbox"/><img src="image/else.png" style="margin-right:10px;width:24px;height:24px;">design.ai</label>
+		<label><input type="checkbox"/><img src="image/else.png" style="margin-right:10px;width:24px;height:24px;">router.dwg</label>
+		<label><input type="checkbox"/><img src="image/else.png" style="margin-right:10px;width:24px;height:24px;">pic.zip</label>
+		<label><input type="checkbox"/><img src="image/else.png" style="margin-right:10px;width:24px;height:24px;">demo.exe</label>
+	</fieldset>
+	
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="f" id="download_edit5" style="display:none">	
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#delete" data-icon="del">刪除</a></li>
+			<li><a href="#rename" data-icon="star">重新命名</a></li>
+			<li><a href="#document" data-icon="add">新資料夾</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!--/footer -->
+</div><!-- /page7_end -->
+
+
+<!-- Start of third page: #wol_wait -->
+<div data-role="page" id="wol_wait" data-theme="a">
+
+	<div data-role="content">
+	
+		<div id="wol_checking" style="text-align:center;">
+		<h4>你確定要喚醒"Public PC"嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-role="button" class="che_but" data-inline="true" onclick="wol_sure('wol_checking','wol_starting')">確定</a>
+		</div>
+		
+		<div id="wol_starting" style="text-align:center;display:none;">
+		
+		<h4><img src="image/connect.png" width="72px" height="58px"><br>電腦啟動中!<br>請稍候!</h4>
+		<a data-rel="back" data-role="button" class="can_but_long">取消</a>
+		</div>
+		
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+ 
+<!-- Start of third page: #waiting -->
+<div data-role="page" id="waiting" data-theme="d" data-dividertheme="d">
+	<div data-role="header" data-theme="f">
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1>下載中</h1>
+		<a data-role="button" data-rel="back" class="og_but" data-theme="g" >取消</a>
+	</div><!-- 
+/header -->
+
+	<div data-role="content" data-theme="d" data-dividertheme="d">
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Payphone.mp3 <br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Sorry Sorry.mp3<br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Kiss me.mp3<br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">青花瓷.mp3<br>
+			<img src="image/load.gif"></label>
+	</fieldset>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #download -->
+<div data-role="page" id="download" data-theme="f">
+
+	<div data-role="header"  data-theme="f">
+		<a href="../index.html#wireframe" rel="external" data-role="button" data-inline="true" data-theme="g">首頁</a>
+		<h1>下載成功</h1>
+		<a href="" data-role="button" data-inline="true" data-theme="g">播放</a>
+	</div><!-- /header -->
+
+	<div data-role="content"  data-theme="d" data-dividertheme="d">	
+		<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/><img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">A Team.avi</label>
+		<label><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000103.avi</label>
+		<label><input type="checkbox"/><img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">payphone.mp3</label>
+		<label><input type="checkbox"/><img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">product.xls</label>
+		</fieldset>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="h">	
+		<div style="width:280px;margin:0 auto;">
+			<a href="#ftp_delete" data-role="button" data-theme="f" class="but">下載其他檔案</a>
+		</div>	
+	</div>
+
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #delete -->
+<div data-role="page" id="delete" data-theme="d" data-dividertheme="d">
+
+	<div data-role="header"  data-theme="d" data-dividertheme="d">
+		<h1>Delete</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d" data-dividertheme="d">	
+		<h4>Do you want to delete these files?</h4>		
+		<a href="#" data-rel="back" data-role="button" data-inline="true" data-icon="check">Yes</a>
+	</div><!-- /content -->
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #del_file -->
+<div data-role="page" id="del_file" data-theme="a">
+
+	<div data-role="content">
+	
+		<div style="text-align:center;">
+		<h4>刪除檔案<br>確定要刪除嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #favor_full -->
+<div data-role="page" id="favor_full" data-theme="a">
+
+ <div data-role="content">
+    <legend style="margin:0 auto;">我的最愛列表已滿<br>請選擇欲取代的項目:</legend>
+	<a data-rel="back" data-role="button" class="device_option">BRF71n_123456/test</a>
+	<a data-rel="back" data-role="button" class="device_option">Office_297/報表</a>
+	<a data-rel="back" data-role="button" class="device_option">業務電腦/C:/Document</a>
+	<a data-rel="back" data-role="button" class="device_option">多媒體機上盒/Movies</a>
+	<a data-rel="back" data-role="button" class="device_option">BR071n_c22553/Public</a>
+	<a data-rel="back" data-role="button" class="can_but_long">取消</a>
+ </div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #document -->
+<div data-role="page" id="document" data-theme="a" style="margin:0 auto;text-align:center;">
+	<div data-role="content">
+		<h4>新增資料夾</h4>
+		請輸入資料夾名稱
+		<input id="doc_name" data-theme="d">
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true">確定</a><br>
+	</div><!-- /content -->
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #rename -->
+<div data-role="page" id="rename" data-theme="a" style="margin:0 auto;text-align:center;">
+
+
+	<div data-role="content" data-theme="a">
+		<h4>重新命名</h4>
+		<input id="doc_name" data-theme="d">
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true">確定</a><br>
+	</div><!-- /content -->
+</div><!-- /page popup -->
+
+
+<!-- /player -->
+<div data-role="page" id="player" data-mini="true" data-theme="a">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>Pay phone.mp3</h1>
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;">結束</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->  
+	<div class="player">
+	<div id="mic_rec"></div>
+	</div> 
+ </div><!--/content_end -->  
+ 
+ <div data-role="footer" data-position="fixed" style="text-align:center;" data-theme="z">
+ 
+	<div> 5/10</div>
+	<div data-role="controlgroup" data-type="horizontal">
+    <a href="#" data-role="button" data-iconpos="notext" data-icon="back" data-theme="a">Add</a>
+    <a href="#" data-role="button" data-iconpos="notext" data-icon="pause" data-theme="a" onclick="player(this)">Delete</a>
+    <a href="#" data-role="button" data-iconpos="notext" data-icon="next" data-theme="a">More</a>
+	</div>
+ </div>
+
+</div><!-- /page3_end -->
+
+ </body>
+ </html> 

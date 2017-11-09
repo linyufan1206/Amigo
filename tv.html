@@ -1,0 +1,729 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>		
+</head>
+
+ <body>
+ 
+<!-- /media_device -->
+<div data-role="page" id="media_device" data-mini="true" data-theme="f">
+ <input type="hidden" value="" id="">
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>雲電視</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d" ><!--/content -->
+
+	<ul data-role="listview" data-dividertheme="d">
+		<li><a href="#channel_list">
+			<img src="image/nas.png" class="ui-li-icon">
+			WD091n_ad1212
+		</a></li>
+		<li><a href="#channel_list">
+			<img src="image/nas.png" class="ui-li-icon">
+			WD091n_ad1213
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+
+<!-- /media_function -->
+<div data-role="page" id="media_function" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>雲電視</h1>
+		<a href="../index.html#wireframe" rel="external" data-role="button" class="back" style="color:#fff">首頁</a></a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#player">
+			<img src="image/document2.png" class="ui-li-icon">
+			影音串流
+		</a></li>
+		<li><a href="#control">
+			<img src="image/document2.png" class="ui-li-icon">
+			遙控器
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+ 
+</div><!-- /page7_end -->
+ 
+ 
+<!-- /play_media -->
+<div data-role="page" id="play_media" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#player" data-role="button" class="og_but" data-theme="g">播放</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label>
+		<input type="checkbox"/>
+		<img src="image/document2.png" style="margin-right:10px;width:30px;height:24px;">
+		國片</label>
+		<label><input type="checkbox"/> <img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		A Team.avi </label>
+		<label><input type="checkbox"/> <img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		不倒翁的奇幻旅程.avi </label>
+		<label><input type="checkbox"/> <img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		逆光飛翔.avi </label>
+		<label><input type="checkbox"/> <img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		男朋友 女朋友.avi </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="c" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">多媒體播放器</span><br>
+	
+	<img src="image/cm790.png" style="width:30px;height:30px;margin-bottom:10px;">
+	
+	<div style="font-size:14px;margin:-35px 40px;">/客廳</div>
+	
+	<a href="#player_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+	
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+<!-- player_list -->
+<div data-role="page" id="player_list" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>請選擇多媒體播放器</h1>
+	<a data-rel="back"" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 
+	<ul data-role="listview">
+		<li><a href="#player">
+			<img src="image/cm790.png" class="ui-li-icon">
+			客廳
+		</a></li>
+		<li><a href="#player">
+			<img src="image/cm790.png" class="ui-li-icon">
+			臥室
+		</a></li>
+	</ul>
+ </div><!-- /page7_end -->
+</div>
+
+
+<!-- /player -->
+<div data-role="page" id="player" data-mini="true" data-theme="a">
+ <!--
+ <div data-role="panel" id="channel_list" data-position="left" data-theme="z" data-display="overlay" >
+	<ul data-role="listview" data-theme="a" data-mini="true">
+		<li><a href="#my-heade" data-rel="close">CH24 中視</a></li>
+		<li><a href="#my-heade" data-rel="close">CH26 公視</a></li>
+		<li><a href="#my-heade" data-rel="close">CH28 民視</a></li>
+		<li><a href="#my-heade" data-rel="close">CH30 公視 HiHD</a></li>
+		<li><a href="#my-heade" data-rel="close">CH32 台視</a></li>
+		<li><a href="#my-heade" data-rel="close">CH34 華視</a></li>
+	</ul>    
+ </div>
+ -->
+ <div data-role="header" data-theme="f" data-position="fixed" >	
+	<h1 id="channel">CH24 中視</h1>	
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;"> 上一頁 </a>
+ 
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+	<img src="image/tv_view.jpg" class="control_pad_1">
+ </div><!--/content_end -->  
+ 
+ <div data-role="footer" data-position="fixed" data-theme="h">	
+	<div class="tv_player" >
+		<a data-role="button" data-theme="z" data-inline="true" onclick="select_ch('back','channel')"><img src="image/back.png" width="16px" height="16px"></a>
+		<a href="#channel_list" data-role="button" data-theme="z" data-inline="true"><img src="image/menu.png" width="20px" height="16px"></a>
+		<a data-role="button" data-theme="z" data-inline="true" onclick="select_ch('next','channel')"><img src="image/next.png" width="16px" height="16px"></a>
+	</div>
+ </div>
+ 
+ <!--
+ <div data-role="footer" data-position="fixed" data-theme="c"> 	
+	 <div data-role="navbar">
+		<ul>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">6</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">7</a></li>
+			<li><a href="#">8</a></li>
+			<li><a href="#">9</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">*</a></li>
+			<li><a href="#">0</a></li>
+			<li><a href="#">record</a></li>
+		</ul>
+	</div>
+ </div>
+-->
+</div><!-- /page3_end -->
+
+<!-- /channel_list -->
+<div data-role="page" id="channel_list" data-mini="true" data-theme="f">
+
+ <div data-role="header" data-theme="f" data-position="fixed" >	
+	<h1 id="channel">節目列表</h1>
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;"> 上一頁 </a>
+ </div><!--/header -->
+ 
+ <div data-role="content">
+	<ul data-role="listview" data-theme="d" data-mini="true">
+		<li>
+			<table width="100%">
+				<tr><td><a href="#player" style="color:#000000">CH24 中視</a></td></tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#player" style="color:#000000">CH26 公視</a></td></tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#player" style="color:#000000">CH28 民視</a></td></tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#player" style="color:#000000">CH30 公視 HiHD</a></td></tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#player" style="color:#000000">CH32 台視</a></td></tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#player" style="color:#000000">CH34 華視</a></td></tr>
+			</table>	
+		<li>
+			<table width="100%">
+				<tr><td><a href="#movie_list" style="color:#000000">熱門電影A廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#movie_list" style="color:#000000">熱門電影B廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#movie_list" style="color:#000000">熱門電影C廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>		
+		<li>
+			<table width="100%">
+				<tr><td><a href="#tv_list" style="color:#000000">電視影集A廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>			
+		<li>
+			<table width="100%">
+				<tr><td><a href="#tv_list" style="color:#000000">電視影集B廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>	
+		<li>
+			<table width="100%">
+				<tr><td><a href="#tv_list" style="color:#000000">電視影集C廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>					
+		<li>
+			<table width="100%">
+				<tr><td><a href="#show_list" style="color:#000000">綜藝集錦A廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>	
+		<li>
+			<table width="100%">
+				<tr><td><a href="#show_list" style="color:#000000">綜藝集錦B廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>	
+		<li>
+			<table width="100%">
+				<tr><td><a href="#show_list" style="color:#000000">綜藝集錦C廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>	
+		<li>
+			<table width="100%">
+				<tr><td><a href="#cartoon_list" style="color:#000000">卡通動漫A廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#cartoon_list" style="color:#000000">卡通動漫B廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr><td><a href="#cartoon_list" style="color:#000000">卡通動漫C廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>	
+        </li>		
+	</ul>    
+ </div><!-- /panel -->
+</div>
+
+<!-- /cartoon_list -->
+<div data-role="page" id="cartoon_list" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>卡通動漫</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			多啦A夢
+		</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			灌籃高手
+			</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			海賊王
+			</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+
+
+<!-- /movie_list -->
+<div data-role="page" id="movie_list" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>熱門電影</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			逆轉勝
+		</a></li>
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			男朋友 女朋友
+			</a></li>
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			極光之愛
+			</a></li>
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			即刻救援3
+		</a></li>
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			相愛的七種設計
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+
+<!-- /tv_list -->
+<div data-role="page" id="tv_list" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>電視影集</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			越獄 第三季
+		</a></li>
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			越獄 第二季
+			</a></li>
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			越獄 第一季
+			</a></li>
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			鹿鼎記
+		</a></li>
+		<li><a href="#play_list">
+			<img src="image/document2.png" class="ui-li-icon">
+			吸血鬼日記 第二季
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+<!-- /show_list -->
+<div data-role="page" id="show_list" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>綜藝集錦</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			爸爸去哪兒第二季
+		</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			爸爸去哪兒第一季
+			</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			食尚玩家-印加四部曲
+			</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+<!-- /play_list -->
+<div data-role="page" id="play_list" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>越獄 第三季</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			越獄 第三季-第五集
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			越獄 第三季-第四集
+			</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			越獄 第三季-第三集
+			</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			越獄 第三季-第二集
+		</a></li>
+		<li><a href="#player_mov">
+			<img src="image/mov.png" class="ui-li-icon">
+			越獄 第三季-第一集
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+<!-- /cartoon_list -->
+<div data-role="page" id="cartoon_list" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>卡通動漫</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+  </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<ul data-role="listview">
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			多啦ㄟ夢
+		</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			灌籃高手
+			</a></li>
+		<li><a href="#player_room">
+			<img src="image/document2.png" class="ui-li-icon">
+			海賊王
+			</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+
+
+
+
+
+
+
+
+
+<!-- /control -->
+<div data-role="page" id="control" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>Controler</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#player" data-role="button" class="og_but" data-theme="g">播放</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+	<p id="voice"></p>
+	<p id="channel"></p>
+	<div class="control_pad">		
+		 <div data-role="navbar">
+			<ul>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">*</a></li>
+				<li><a href="#">0</a></li>
+				<li><a href="#">record</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div>				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+
+
+<!-- Media_Streaming -->
+<div data-role="page" id="media" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>影片&照片</h1>
+	<a data-rel="back"" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+	<div style="height:150px;">
+	<p style="text-align:center;">請選擇欲串流裝置</p>
+	<a href="#play_media" data-role="button" data-theme="f">廚房</a>
+	<a href="#play_media" data-role="button" data-theme="f">臥室</a>
+	</div>		
+ </div><!--/content_end --> 
+ 
+ <div data-role="footer" data-posistion="fixed" data-theme="z">
+	<div style="width:280px;margin:0 auto;">
+	<p style="text-align:center;">檔案傳輸</p>	
+	<a href="download.html#storageall" rel="external" data-role="button"  data-theme="f" data-mini="true" class="but">下載檔案</a>
+	<a href="upload.html#upload_folder" rel="external" data-role="button"  data-theme="f" data-mini="true" class="but">上傳檔案</a>
+	</div>
+ </div>
+
+ </div><!-- /page7_end -->
+
+ 
+<!-- /play_media2 -->
+<div data-role="page" id="play_media2" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#stop_media" data-role="button" class="og_but" data-theme="g">播放</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+
+	<fieldset data-role="controlgroup" id="edit_mov" style="width:120%;height:120%;margin:-15px -20px;">
+		<label>
+		<input type="checkbox"/>
+		<img src="image/document2.png" style="margin-right:10px;width:30px;height:24px;">
+		國片 </label>
+		<label>
+		<input type="checkbox"/>
+		<img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		A Team.avi </label>
+		<label>
+		<input type="checkbox"/>
+		<img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		不倒翁的奇幻旅程.avi</label>
+		<label>
+		<input type="checkbox"/>
+		<img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		逆光飛翔.avi </label>
+		<label>
+		<input type="checkbox"/>
+		<img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+		男朋友 女朋友.avi </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">目前位置</span><br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">/檔案瀏覽/<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">影片</div></div>
+	<a href="#download_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+<!-- /download_list -->
+<div data-role="page" id="download_list" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#stop_music" data-role="button" class="og_but" data-theme="g">播放</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#download_movie">
+			<img src="image/document2.png" class="ui-li-icon">
+			影片
+		</a></li>
+		<li><a href="#download_music">
+			<img src="image/document2.png" class="ui-li-icon">
+			音樂
+		</a></li>
+		<li><a href="#download_picture">
+			<img src="image/document2.png" class="ui-li-icon">
+			照片
+		</a></li>
+		<li><a href="#download_file">
+			<img src="image/document2.png" class="ui-li-icon">
+			文件
+		</a></li>
+		<li><a href="#download_else">
+			<img src="image/document2.png" class="ui-li-icon">
+			其他
+		</a></li>
+		<li><a href="#album">
+			<img src="image/document2.png" class="ui-li-icon">
+			相機膠卷
+		</a></li>
+		<li><a href="#download_camera">
+			<img src="image/document2.png" class="ui-li-icon">
+			雲監控
+		</a>
+		</li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			SD卡(檔案總管)
+		</a></li>
+		<li>
+			<a href="" id="link">
+			<img src="image/document2.png" class="ui-li-icon" >
+			專案
+			</a>
+		</li>
+	</ul>
+				
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+
+
+<!-- stop_music -->
+<div data-role="page" id="stop_media" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>影片&照片</h1>
+	<a data-rel="back"" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+	<div style="height:150px;">
+	<p style="text-align:center;">目前串流至廚房</p>
+	<a href="#music" data-role="button" data-theme="f">停止串流</a>
+	</div>		
+ </div><!--/content_end --> 
+ 
+ <div data-role="footer" data-posistion="fixed" data-theme="z">
+	<div style="width:280px;margin:0 auto;">
+	<p style="text-align:center;">檔案傳輸</p>	
+	<a href="download.html#storageall" rel="external" data-role="button"  data-theme="f" data-mini="true" class="but">下載檔案</a>
+	<a href="upload.html#upload_music" rel="external" data-role="button"  data-theme="f" data-mini="true" class="but">上傳檔案</a>
+	</div>
+ </div>
+
+ </div><!-- /page7_end -->
+
+ </body>
+ </html> 

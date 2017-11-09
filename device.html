@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body>
+ 
+ <!-- /device_infor -->
+<div data-role="page" id="device_infor" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+         <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<h1>雲裝置</h1>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d" data-dividertheme="d"><!--/content -->
+		<ul data-role="listview"  data-dividertheme="d">
+			<li><a href="#speaker_list">
+				<img src="image/speaker_bg.png" class="ui-li-icon">
+				喇叭裝置
+			</a></li>
+			<li><a href="#record_list">
+			<img src="image/cam_bg.png" class="ui-li-icon">
+				錄影裝置
+			</a></li>	
+			<li><a href="#srien_list">
+			<img src="image/alarm_bg.png" class="ui-li-icon">
+				警報裝置
+			</a></li>
+			<li><a href="#switch_list">
+			<img src="image/wifi_switch.png" class="ui-li-icon">
+				插座裝置
+			</a></li>
+			<li data-role="list-divider" class="a">感測群組:</li>			
+			<li><a href="#alldevice_list">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+				全動作
+			</a></li>
+			<li><a href="#alldevice_list_2">
+			<img src="image/wifi_sensor.png" class="ui-li-icon">
+				全動作2
+			</a></li>				
+		</ul>
+ </div><!--/content_end --> 
+ </div><!-- /device_infor_end -->
+<!-- /device_infor end -->
+ 
+<!-- /speaker_list -->
+<div data-role="page" id="speaker_list" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+        <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<h1>喇叭裝置</h1>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview">
+			<li><a href="#speaker_source">
+				<img src="image/speaker_bg.png" class="ui-li-icon">
+				ETOP-1F會議室
+			</a></li>
+			<li><a href="#speaker_source">
+				<img src="image/speaker_bg.png" class="ui-li-icon">
+				Sapido-會議室
+			</a></li>		
+			<li><a href="#speaker_source">
+				<img src="image/speaker_bg.png" class="ui-li-icon">
+				Demo-監視器
+			</a></li>
+		</ul>
+ </div><!--/content_end --> 
+	  
+ </div><!-- /speaker_list_end -->
+<!-- /speaker_list end -->
+  
+<!-- /speaker_source -->
+<div data-role="page" id="speaker_source" data-theme="d">
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">喇叭感測來源</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<!--<a href="#motion_list_end"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">完成</a>-->
+	</div><!-- /header -->
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">		
+			<li class="a">
+			警報設定 :  連續警報聲響
+			</li>
+			<li class="a">
+			鈴聲設定 :  溫度 警報音
+			</li>
+			<li data-role="list-divider" class="a">光線感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+						<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li data-role="list-divider" class="a">溫度感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>					
+					<td><a href="#tem_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider" class="a"> 聲音感測列表:</li>
+			<li class="a"> 
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider" class="a">移動感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td > <a href="#motion_set" style="color:#666666">感測器_小狗</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td>  <a href="#motion_set" style="color:#666666">1F客廳_efgh1</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+						<td> <a href="#motion_set" style="color:#666666"> 1F客廳_efgh03</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider" class="a">門窗感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td ><a href="#door_set" style="color:#666666">感測器_門窗</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td> <a href="#door_set" style="color:#666666">1F客廳_大門</td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>
+						<td> <a href="#door_set" style="color:#666666">1F客廳_efgh1</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!-- speaker_source_end -->
+ 
+<!-- light_set -->
+<div data-role="page" id="light_set" data-mini="true" data-theme="d">
+  <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>		
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">完成</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">   
+		<li>
+			<h2>亮度</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#">0</option>
+					<option value="#">50</option>
+					<option value="#">100</option>
+					<option value="#">150</option>
+					<option value="#">200</option>
+					<option value="#">250</option>
+					<option value="#">300</option>
+					<option value="#">400</option>
+					<option value="#">500</option>
+					<option value="#">600</option>
+					<option value="#">700</option>
+					<option value="#">800</option>
+					<option value="#">900</option>
+					<option value="#" selected>1000</option>
+					<option value="#">1100</option>
+					<option value="#">1200</option>
+					<option value="#">1300</option>
+					<option value="#">1400</option>
+					<option value="#">1500</option>
+					<option value="#">1600</option>
+					<option value="#">1700</option>
+					<option value="#">1800</option>
+					<option value="#">1900</option>
+					<option value="#">2000</option>
+				</select>
+			</fieldset>
+		</li> 
+		<!--<li>
+			<h2>警報方式</h2> 
+			<br>
+			<p name="alert_message" style="display:none;">事件觸發後，警報器將持續聲響，可於雲訊息通知中關閉警報器</p>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>連續警報聲響</option>
+					<option>設定警報聲響</option>	
+				</select>
+			</fieldset>
+		</li>
+		<li name="alert_manual" style="display:none;">
+			<h2>警報聲響持續</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+				</select>
+				<select>
+					<option>1 秒</option>
+					<option>2 秒</option>
+					<option>3 秒</option>
+					<option>4 秒</option>
+					<option selected>5 秒</option>
+					<option>6 秒</option>
+					<option>7 秒</option>
+					<option>8 秒</option>
+					<option>9 秒</option>
+					<option>10 秒</option>
+					<option>11 秒</option>
+					<option>12 秒</option>
+					<option>13 秒</option>
+					<option>14 秒</option>
+					<option>15 秒</option>
+					<option>16 秒</option>
+					<option>17 秒</option>
+					<option>18 秒</option>
+					<option>19 秒</option>
+					<option>20 秒</option>
+					<option>21 秒</option>
+					<option>22 秒</option>
+					<option>23 秒</option>
+					<option>24 秒</option>
+					<option>25 秒</option>
+					<option>26 秒</option>
+					<option>27 秒</option>
+					<option>28 秒</option>
+					<option>29 秒</option>
+					<option>30 秒</option>
+					<option>31 秒</option>
+					<option>32 秒</option>
+					<option>33 秒</option>
+					<option>34 秒</option>
+					<option>35 秒</option>
+					<option>36 秒</option>
+					<option>37 秒</option>
+					<option>38 秒</option>
+					<option>39 秒</option>
+					<option>40 秒</option>
+					<option>41 秒</option>
+					<option>42 秒</option>
+					<option>43 秒</option>
+					<option>44 秒</option>
+					<option>45 秒</option>
+					<option>46 秒</option>
+					<option>47 秒</option>
+					<option>48 秒</option>
+					<option>49 秒</option>
+					<option>50 秒</option>
+					<option>51 秒</option>
+					<option>52 秒</option>
+					<option>53 秒</option>
+					<option>54 秒</option>
+					<option>55 秒</option>
+					<option>56 秒</option>
+					<option>57 秒</option>
+					<option>58 秒</option>
+					<option>59 秒</option>
+				</select>
+			</fieldset>
+		</li>		
+		<li name="srien">
+			<h2>鈴聲</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>聲音警報音</option>
+					<option selected>光線警報音</option>
+					<option>溫度警報音</option>
+					<option >移動警報音</option>
+					<option>門窗警報音</option>
+				</select>
+			</fieldset>
+		</li>-->
+	</ul>
+ </div>
+ </div>
+ <!-- /light_set end -->
+
+<!-- /tem_set -->
+<div data-role="page" id="tem_set" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>		
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">完成</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">   
+		<li>
+		<h2>溫度</h2>
+		<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected >高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+						<option value="1">0 °C</option>
+						<option value="2">1 °C</option>
+						<option value="1">2 °C</option>
+						<option value="2">3 °C</option>
+						<option value="1">4 °C</option>
+						<option value="2">5 °C</option>
+						<option value="1">6 °C</option>
+						<option value="2">7 °C</option>
+						<option value="1">8 °C</option>
+						<option value="2">9 °C</option>
+						<option value="1">10 °C</option>
+						<option value="2">11 °C</option>
+						<option value="1">12 °C</option>
+						<option value="2">13 °C</option>
+						<option value="1">14 °C</option>
+						<option value="2">15 °C</option>
+						<option value="1">16 °C</option>
+						<option value="2">17 °C</option>
+						<option value="1">18 °C</option>
+						<option value="2">19 °C</option>
+						<option value="1">20 °C</option>
+						<option value="2">21 °C</option>
+						<option value="1">22 °C</option>
+						<option value="1">23 °C</option>
+						<option value="2">24 °C</option>
+						<option value="1">25 °C</option>
+						<option value="1">26 °C</option>
+						<option value="2">27 °C</option>
+						<option value="1">28 °C</option>
+						<option value="1">29 °C</option>
+						<option value="2" selected>30 °C</option>
+						<option value="1">31 °C</option>
+						<option value="1">32 °C</option>
+						<option value="2">33 °C</option>
+						<option value="1">34 °C</option>
+						<option value="1">35 °C</option>
+						<option value="2">36 °C</option>
+						<option value="1">37 °C</option>
+						<option value="1">38 °C</option>
+						<option value="2">39 °C</option>
+						<option value="1">40 °C</option>
+						<option value="1">41 °C</option>
+						<option value="2">42 °C</option>
+						<option value="1">43 °C</option>
+						<option value="1">44 °C</option>
+						<option value="2">45 °C</option>
+						<option value="1">46 °C</option>
+						<option value="1">47 °C</option>
+						<option value="2">48 °C</option>
+						<option value="1">49 °C</option>
+						<option value="1">50 °C</option>
+				</select>
+		</fieldset>
+		<!--<li>
+			<h2>警報方式</h2> 
+			<br>
+			<p name="alert_message" style="display:none;">事件觸發後，警報器將持續聲響，可於雲訊息通知中關閉警報器</p>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>連續警報聲響</option>
+					<option>設定警報聲響</option>	
+				</select>
+			</fieldset>
+		</li>
+		<li name="alert_manual" style="display:none;">
+			<h2>警報聲響持續</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+				</select>
+				<select>
+					<option>1 秒</option>
+					<option>2 秒</option>
+					<option>3 秒</option>
+					<option>4 秒</option>
+					<option selected>5 秒</option>
+					<option>6 秒</option>
+					<option>7 秒</option>
+					<option>8 秒</option>
+					<option>9 秒</option>
+					<option>10 秒</option>
+					<option>11 秒</option>
+					<option>12 秒</option>
+					<option>13 秒</option>
+					<option>14 秒</option>
+					<option>15 秒</option>
+					<option>16 秒</option>
+					<option>17 秒</option>
+					<option>18 秒</option>
+					<option>19 秒</option>
+					<option>20 秒</option>
+					<option>21 秒</option>
+					<option>22 秒</option>
+					<option>23 秒</option>
+					<option>24 秒</option>
+					<option>25 秒</option>
+					<option>26 秒</option>
+					<option>27 秒</option>
+					<option>28 秒</option>
+					<option>29 秒</option>
+					<option>30 秒</option>
+					<option>31 秒</option>
+					<option>32 秒</option>
+					<option>33 秒</option>
+					<option>34 秒</option>
+					<option>35 秒</option>
+					<option>36 秒</option>
+					<option>37 秒</option>
+					<option>38 秒</option>
+					<option>39 秒</option>
+					<option>40 秒</option>
+					<option>41 秒</option>
+					<option>42 秒</option>
+					<option>43 秒</option>
+					<option>44 秒</option>
+					<option>45 秒</option>
+					<option>46 秒</option>
+					<option>47 秒</option>
+					<option>48 秒</option>
+					<option>49 秒</option>
+					<option>50 秒</option>
+					<option>51 秒</option>
+					<option>52 秒</option>
+					<option>53 秒</option>
+					<option>54 秒</option>
+					<option>55 秒</option>
+					<option>56 秒</option>
+					<option>57 秒</option>
+					<option>58 秒</option>
+					<option>59 秒</option>
+				</select>
+			</fieldset>
+		</li>		
+		<li name="srien">
+			<h2>鈴聲</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>聲音警報音</option>
+					<option >光線警報音</option>
+					<option selected>溫度警報音</option>
+					<option >移動警報音</option>
+					<option>門窗警報音</option>
+				</select>
+			</fieldset>
+		</li>
+		</li>-->  
+		</ul>
+ </div>
+ </div>
+</div> 
+<!-- /tem_set end --> 
+
+<!-- /sound_set -->
+<div data-role="page" id="sound_set" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>	
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">完成</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">  
+		<li name="status">
+			<h2>分貝</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select name="select-native-14" id="select-native-14"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option value="#" selected>高於</option>
+					<option value="#">低於</option>
+				</select>
+				<select name="select-native-4" id="select-native-4"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+						<option value="1">0 dB</option>
+						<option value="2">5 dB</option>
+						<option value="1">10 dB</option>
+						<option value="2">15 dB</option>
+						<option value="1">20 dB</option>
+						<option value="2">25 dB</option>
+						<option value="1">30 dB</option>
+						<option value="2">35 dB</option>
+						<option value="1">40 dB</option>
+						<option value="2">45 dB</option>
+						<option value="1">50 dB</option>
+						<option value="2">55 dB</option>
+						<option value="1" selected>60 dB</option>
+						<option value="2">65 dB</option>
+						<option value="1">70 dB</option>
+						<option value="2">75 dB</option>
+						<option value="1">80 dB</option>
+						<option value="2">85 dB</option>
+						<option value="1">90 dB</option>
+						<option value="2">95 dB</option>
+						<option value="1">100 dB</option>
+						<option value="2">105 dB</option>
+						<option value="1">110 dB</option>
+				</select>
+			</fieldset>
+		</li>  
+		<!--<li>
+			<h2>警報方式</h2> 
+			<br>
+			<p name="alert_message" style="display:none;">事件觸發後，警報器將持續聲響，可於雲訊息通知中關閉警報器</p>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>連續警報聲響</option>
+					<option>設定警報聲響</option>	
+				</select>
+			</fieldset>
+		</li>
+		<li name="alert_manual" style="display:none;">
+			<h2>警報聲響持續</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+				</select>
+				<select>
+					<option>1 秒</option>
+					<option>2 秒</option>
+					<option>3 秒</option>
+					<option>4 秒</option>
+					<option selected>5 秒</option>
+					<option>6 秒</option>
+					<option>7 秒</option>
+					<option>8 秒</option>
+					<option>9 秒</option>
+					<option>10 秒</option>
+					<option>11 秒</option>
+					<option>12 秒</option>
+					<option>13 秒</option>
+					<option>14 秒</option>
+					<option>15 秒</option>
+					<option>16 秒</option>
+					<option>17 秒</option>
+					<option>18 秒</option>
+					<option>19 秒</option>
+					<option>20 秒</option>
+					<option>21 秒</option>
+					<option>22 秒</option>
+					<option>23 秒</option>
+					<option>24 秒</option>
+					<option>25 秒</option>
+					<option>26 秒</option>
+					<option>27 秒</option>
+					<option>28 秒</option>
+					<option>29 秒</option>
+					<option>30 秒</option>
+					<option>31 秒</option>
+					<option>32 秒</option>
+					<option>33 秒</option>
+					<option>34 秒</option>
+					<option>35 秒</option>
+					<option>36 秒</option>
+					<option>37 秒</option>
+					<option>38 秒</option>
+					<option>39 秒</option>
+					<option>40 秒</option>
+					<option>41 秒</option>
+					<option>42 秒</option>
+					<option>43 秒</option>
+					<option>44 秒</option>
+					<option>45 秒</option>
+					<option>46 秒</option>
+					<option>47 秒</option>
+					<option>48 秒</option>
+					<option>49 秒</option>
+					<option>50 秒</option>
+					<option>51 秒</option>
+					<option>52 秒</option>
+					<option>53 秒</option>
+					<option>54 秒</option>
+					<option>55 秒</option>
+					<option>56 秒</option>
+					<option>57 秒</option>
+					<option>58 秒</option>
+					<option>59 秒</option>
+				</select>
+			</fieldset>
+		</li>		
+		<li name="srien">
+			<h2>鈴聲</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>聲音警報音</option>
+					<option >光線警報音</option>
+					<option>溫度警報音</option>
+					<option >移動警報音</option>
+					<option>門窗警報音</option>
+				</select>
+			</fieldset>
+		</li>-->
+	</ul>
+ </div>
+ </div>
+<!-- /sound_set --> 
+ 
+<!-- /motion_set -->
+<div data-role="page" id="motion_set" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>		
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">完成</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d"> 
+		<li>
+			<h2>移動感測</h2> 
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>開啟</option>
+					<option>關閉</option>
+				</select>
+			</fieldset>
+		</li>
+		<!--<li>
+			<h2>警報方式</h2> 
+			<br>
+			<p name="alert_message" style="display:none;">事件觸發後，警報器將持續聲響，可於雲訊息通知中關閉警報器</p>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>連續警報聲響</option>
+					<option>設定警報聲響</option>	
+				</select>
+			</fieldset>
+		</li>
+		<li name="alert_manual" style="display:none;">
+			<h2>警報聲響持續</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+				</select>
+				<select>
+					<option>1 秒</option>
+					<option>2 秒</option>
+					<option>3 秒</option>
+					<option>4 秒</option>
+					<option selected>5 秒</option>
+					<option>6 秒</option>
+					<option>7 秒</option>
+					<option>8 秒</option>
+					<option>9 秒</option>
+					<option>10 秒</option>
+					<option>11 秒</option>
+					<option>12 秒</option>
+					<option>13 秒</option>
+					<option>14 秒</option>
+					<option>15 秒</option>
+					<option>16 秒</option>
+					<option>17 秒</option>
+					<option>18 秒</option>
+					<option>19 秒</option>
+					<option>20 秒</option>
+					<option>21 秒</option>
+					<option>22 秒</option>
+					<option>23 秒</option>
+					<option>24 秒</option>
+					<option>25 秒</option>
+					<option>26 秒</option>
+					<option>27 秒</option>
+					<option>28 秒</option>
+					<option>29 秒</option>
+					<option>30 秒</option>
+					<option>31 秒</option>
+					<option>32 秒</option>
+					<option>33 秒</option>
+					<option>34 秒</option>
+					<option>35 秒</option>
+					<option>36 秒</option>
+					<option>37 秒</option>
+					<option>38 秒</option>
+					<option>39 秒</option>
+					<option>40 秒</option>
+					<option>41 秒</option>
+					<option>42 秒</option>
+					<option>43 秒</option>
+					<option>44 秒</option>
+					<option>45 秒</option>
+					<option>46 秒</option>
+					<option>47 秒</option>
+					<option>48 秒</option>
+					<option>49 秒</option>
+					<option>50 秒</option>
+					<option>51 秒</option>
+					<option>52 秒</option>
+					<option>53 秒</option>
+					<option>54 秒</option>
+					<option>55 秒</option>
+					<option>56 秒</option>
+					<option>57 秒</option>
+					<option>58 秒</option>
+					<option>59 秒</option>
+				</select>
+			</fieldset>
+		</li>		
+		<li name="srien">
+			<h2>鈴聲</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>聲音警報音</option>
+					<option >光線警報音</option>
+					<option>溫度警報音</option>
+					<option selected>移動警報音</option>
+					<option >門窗警報音</option>
+				</select>
+			</fieldset>
+		</li>-->
+	</ul>
+ </div>
+ </div> 
+<!-- /motion_set -->
+ 
+<!-- /door_set -->
+<div data-role="page" id="door_set" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+	<h1>設定</h1>
+	 <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>	
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">完成</a>	
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">  
+		<li>
+			<h2>門窗感測</h2> 
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>開啟</option>
+					<option>關閉</option>
+				</select>
+			</fieldset>
+		</li>
+		<!--<<li>
+			<h2>警報方式</h2> 
+			<br>
+			<p name="alert_message" style="display:none;">事件觸發後，警報器將持續聲響，可於雲訊息通知中關閉警報器</p>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true" onchange="alert_type(this)"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>連續警報聲響</option>
+					<option>設定警報聲響</option>	
+				</select>
+			</fieldset>
+		</li>
+		li name="alert_manual" style="display:none;">
+			<h2>警報聲響持續</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option selected>0 分</option>
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+				</select>
+				<select>
+					<option>1 秒</option>
+					<option>2 秒</option>
+					<option>3 秒</option>
+					<option>4 秒</option>
+					<option selected>5 秒</option>
+					<option>6 秒</option>
+					<option>7 秒</option>
+					<option>8 秒</option>
+					<option>9 秒</option>
+					<option>10 秒</option>
+					<option>11 秒</option>
+					<option>12 秒</option>
+					<option>13 秒</option>
+					<option>14 秒</option>
+					<option>15 秒</option>
+					<option>16 秒</option>
+					<option>17 秒</option>
+					<option>18 秒</option>
+					<option>19 秒</option>
+					<option>20 秒</option>
+					<option>21 秒</option>
+					<option>22 秒</option>
+					<option>23 秒</option>
+					<option>24 秒</option>
+					<option>25 秒</option>
+					<option>26 秒</option>
+					<option>27 秒</option>
+					<option>28 秒</option>
+					<option>29 秒</option>
+					<option>30 秒</option>
+					<option>31 秒</option>
+					<option>32 秒</option>
+					<option>33 秒</option>
+					<option>34 秒</option>
+					<option>35 秒</option>
+					<option>36 秒</option>
+					<option>37 秒</option>
+					<option>38 秒</option>
+					<option>39 秒</option>
+					<option>40 秒</option>
+					<option>41 秒</option>
+					<option>42 秒</option>
+					<option>43 秒</option>
+					<option>44 秒</option>
+					<option>45 秒</option>
+					<option>46 秒</option>
+					<option>47 秒</option>
+					<option>48 秒</option>
+					<option>49 秒</option>
+					<option>50 秒</option>
+					<option>51 秒</option>
+					<option>52 秒</option>
+					<option>53 秒</option>
+					<option>54 秒</option>
+					<option>55 秒</option>
+					<option>56 秒</option>
+					<option>57 秒</option>
+					<option>58 秒</option>
+					<option>59 秒</option>
+				</select>
+			</fieldset>
+		</li>		
+		<li name="srien">
+			<h2>鈴聲</h2>
+			<fieldset data-mini="true" class="ui-li-aside">
+				<select data-mini="true" data-inline="true"  class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>聲音警報音</option>
+					<option >光線警報音</option>
+					<option>溫度警報音</option>
+					<option >移動警報音</option>
+					<option selected>門窗警報音</option>
+				</select>
+			</fieldset>
+		</li>-->
+	</ul>
+ </div>
+ </div>
+<!-- /door_set end -->
+   
+<!-- /record_list -->
+<div data-role="page" id="record_list" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+         <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<h1>錄影裝置</h1>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview">
+			<li><a href="#record_source">
+				<img src="image/cam_bg.png" class="ui-li-icon">
+				IPJC2n_aa11dd
+			</a></li>
+			<li><a href="#record_source">
+				<img src="image/cam_bg.png" class="ui-li-icon">
+				IPJC1n_df6900
+			</a></li>		
+		
+		</ul>
+ </div><!--/content_end --> 
+	  
+ </div><!-- /record_list_end -->
+<!-- /record_list end-->
+
+<!-- /record_source -->
+<div data-role="page" id="record_source" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">錄影感測來源</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">		
+		<li class="a">
+			儲存設定 :  自動
+			</li>
+		<li data-role="list-divider">光線感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+						<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li data-role="list-divider">溫度感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>					
+					<td><a href="#tem_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+		<li data-role="list-divider">聲音感測列表:</li>
+		<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+		<li data-role="list-divider">移動感測列表:</li>
+		<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td > <a href="#motion_set" style="color:#666666">感測器_小狗</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td>  <a href="#motion_set" style="color:#666666">1F客廳_efgh1</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+						<td> <a href="#motion_set" style="color:#666666"> 1F客廳_efgh03</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider">門窗感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td ><a href="#door_set" style="color:#666666">感測器_門窗</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td> <a href="#door_set" style="color:#666666">1F客廳_大門</td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>
+						<td> <a href="#door_set" style="color:#666666">1F客廳_efgh1</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!--record_source_end -->
+
+<!-- /srien_list -->
+<div data-role="page" id="srien_list" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+        <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<h1>警報裝置</h1>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview">
+			<li><a href="#srien_source">
+				<img src="image/alarm_bg.png" class="ui-li-icon">
+				3f12a1
+			</a></li>
+			<li><a href="#srien_source">
+				<img src="image/alarm_bg.png" class="ui-li-icon">
+				WDG71n
+			</a></li>			
+		</ul>
+ </div><!--/content_end --> 
+	  
+ </div><!-- /srien_list_end -->
+<!-- /srien_list end -->
+  
+<!-- /srien_source -->
+<div data-role="page" id="srien_source" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">警報感測來源</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">		
+			<li class="a">
+			警報設定 :  連續警報聲響
+			</li>
+			<li class="a">
+			鈴聲設定 :  溫度 
+			</li>
+		<li data-role="list-divider">光線感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+										<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li data-role="list-divider">光線感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li data-role="list-divider">溫度感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>					
+					<td><a href="#tem_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+		<li data-role="list-divider">聲音感測列表:</li>
+		<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider">移動感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#motion_set" style="color:#666666"> 感測器_小狗</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#motion_set" style="color:#666666"> 1F客廳_efgh1</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+						<td><a href="#motion_set" style="color:#666666"> 1F客廳_efgh03</a></td>
+						<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider">門窗感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td><a href="#door_set" style="color:#666666">感測器_門窗</a></td>
+						<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td><a href="#door_set" style="color:#666666">1F客廳_大門</a></td>
+						<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>
+						<td><a href="#door_set" style="color:#666666"> 1F客廳_efgh1</a></td>
+						<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!--srien_source_end -->
+ 
+<!-- /switch_list -->
+<div data-role="page" id="switch_list" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+        <a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<h1>插座裝置</h1>
+ </div><!--/header -->
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview">
+			<li><a href="#switch_source">
+				<img src="image/wifi_switch.png" class="ui-li-icon">
+				電扇
+			</a></li>
+			<li><a href="#switch_source">
+				<img src="image/wifi_switch.png" class="ui-li-icon">
+				WSG70n_123321
+			</a></li>			
+		</ul>
+ </div>
+</div><!--/content_end --> 
+<!-- /switch_list end -->
+ 
+<!-- /switch_source -->
+ <div data-role="page" id="switch_source" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">插座感測來源</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#motion_list_end"  data-role="button" data-inline="true" data-mini="true" data-theme="g" data-mini="true">完成</a>
+	</div><!-- /header -->
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">		
+		<li class="a">
+			插座設定 : 開啟 
+		</li>
+		<li data-role="list-divider">光線感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li data-role="list-divider">溫度感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>					
+					<td><a href="#tem_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider">聲音感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider">移動感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td > <a href="#motion_set" style="color:#666666">感測器_小狗</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td>  <a href="#motion_set" style="color:#666666">1F客廳_efgh1</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+						<td> <a href="#motion_set" style="color:#666666"> 1F客廳_efgh03</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li data-role="list-divider">門窗感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td ><a href="#door_set" style="color:#666666">感測器_門窗</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td> <a href="#door_set" style="color:#666666">1F客廳_大門</td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>
+						<td><a href="#door_set" style="color:#666666">1F客廳_efgh1</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!--srien_source_end -->
+ 
+ <!-- /alldevice_list -->
+<div data-role="page" id="alldevice_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">全動作</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+			
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">		
+		<li data-role="list-divider" class="a">警報器</li>
+		<li class="a">
+			31af12  :	連續警報聲響 溫度警報音 
+		</li>
+		<li class="a">
+			WDG71n : 連續警報聲響 溫度警報音 
+		</li>
+		<li data-role="list-divider" class="a">智慧插座</li>
+		<li class="a">
+			電扇 : 一般
+		</li>
+		<li class="a">
+			WSG70n : 循環
+		</li>
+		<li data-role="list-divider" class="a">喇叭裝置</li>
+		<li class="a">
+			31af12 : 連續警報聲響  溫度警報音 
+		</li>
+		<li class="a">
+			WDG71n : 連續警報聲響  溫度警報音 
+		</li>
+		<li data-role="list-divider" class="a">網路攝影機</li>
+		<li class="a">
+			IPJC2_11aadd: 自動
+		</li>
+		<li class="a">
+			IPJC1_df6900: IPJC1n
+		</li>
+		<li data-role="list-divider" class="a">光線感測列表:</li>
+		<li class="a" >
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">1F客廳</a></td><!-- -->
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td > <a href="#light_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+				</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#light_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+				</table>
+			</li>
+			<li data-role="list-divider" class="a">溫度感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#tem_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/td.png" style="width:36px;height:36px;">
+					</td>					
+					<td><a href="#tem_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+			<li data-role="list-divider" class="a">聲音感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#sound_set" style="color:#666666">感測器</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/vd.png" style="width:36px;height:36px;">
+					</td>
+					<td ><a href="#sound_set" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+			<li data-role="list-divider" class="a">移動感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#motion_set" style="color:#666666"> 感測器_小狗</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="#motion_set" style="color:#666666"> 1F客廳_efgh1</a></td>
+					<td class="next_page" data-mini="true"></td>
+				</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/md.png" style="width:36px;height:36px;">
+					</td>
+						<td><a href="#motion_set" style="color:#666666"> 1F客廳_efgh03</a></td>
+						<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+			<li data-role="list-divider" class="a">門窗感測列表:</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td><a href="#door_set" style="color:#666666"> 感測器_門窗</a></td>
+						<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>					
+						<td><a href="#door_set" style="color:#666666"> 1F客廳_大門</a></td>
+						<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+			<li class="a">
+				<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="images/dd.png" style="width:36px;height:36px;">
+					</td>
+						<td><a href="#door_set" style="color:#666666"> 1F客廳_efgh1</a></td>
+						<td class="next_page" data-mini="true"></td>
+					</tr>
+			</table>
+			</li>
+		</ul>
+	</div>
+<!-- /content end -->
+</div>
+<!-- /alldevice_list end -->
+ 
+ <!-- /alldevice_list_2 -->
+<div data-role="page" id="alldevice_list_2" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+        <h1>全動作2</h1>
+    	 <a  href="#" data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+ </div><!--/header -->
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">    
+		<li class="a">
+			聲音設定 : 高於&nbsp; 60 &nbsp;dB 
+			<p class="ui-li-count">50dB</p>
+		</li>
+		<li class="a">
+			亮度設定 : 高於&nbsp; 1000 &nbsp;Lm 
+			<p class="ui-li-count">1000Lm</p>
+		</li>
+		<li class="a">
+			溫度設定 : 高於&nbsp;  30 &nbsp;°C
+			<p class="ui-li-count">27°C</p>
+		</li>
+		<li class="a">
+			移動設定 : 關閉
+		</li>
+		<li class="a">
+			門窗設定 : 關閉
+		</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/monitor.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="" style="color:#666666">推播通知</a></td>
+
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider" class="a">警報器列表:</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#alarm_list" rel="external" style="color:#666666">1F客廳</a></td>
+					<td class="next_page" data-mini="true"></td>					<!---->
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#alarm_list"  rel="external" style="color:#666666">感測器</a></td>
+					
+					<td class="next_page" data-mini="true"></td><!---->
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td width="40px">
+						<img src="image/alarm_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#alarm_list"  rel="external" style="color:#666666">車庫</a></td>
+					<td class="next_page" data-mini="true"></td>
+					<!---->
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider" class="a">智慧插座列表:</li>	
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td width="40px">
+						<img src="image/wifi_switch.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#switch_list"  rel="external" style="color:#666666" onclick="alert_setting('b','l_alert_type')">1F電扇</a></td>
+					<td class="next_page" data-mini="true"></td>
+					<!---->
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"/>
+					</td>
+					<td width="40px">
+						<img src="image/wifi_switch.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#switch_list"  rel="external" style="color:#666666">WSG70N_123321</a></td>
+					<td class="next_page" data-mini="true"></td>
+					<!---->
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider" class="a">喇叭裝置列表:</li>	
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/speaker_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#speaker_list"  rel="external" style="color:#666666">IPJC1n</a></td>
+					<td class="next_page" data-mini="true"></td>
+					<!---->
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none"  />
+					</td>
+					<td width="40px">
+						<img src="image/speaker_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#speaker_list"  rel="external" style="color:#666666">IPJC2n</a></td>
+					<td class="next_page" data-mini="true"></td>
+					<!---->
+				</tr>
+			</table>	
+        </li>	
+		<li data-role="list-divider" class="a">網路攝影機列表:</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" checked />
+					</td>
+					<td width="40px">
+						<img src="image/cam_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#cam_list" rel="external" style="color:#666666">IPJC1n</a></td>
+					<td class="next_page" data-mini="true"></td>
+					<!---->
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" checked />
+					</td>
+					<td width="40px">
+						<img src="image/cam_bg.png" style="width:36px;height:36px;">
+					</td>
+					<td><a href="../html/sensor.html#cam_list" rel="external" style="color:#666666">IPJC2n</a></td>
+					<td class="next_page" data-mini="true"></td>
+					<!---->
+				</tr>
+			</table>	
+        </li>	
+	</ul>
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+ <!-- /alldevice_list end_2 -->
+ </body>
+ 
+ </html> 

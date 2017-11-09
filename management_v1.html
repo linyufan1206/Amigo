@@ -1,0 +1,1134 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body>
+<!-- /manage_type -->
+<div data-role="page" id="wol_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<a href="../index.html#wireframe" rel="external" data-role="button" class="back" style="color:#fff">首頁</a>
+		<h1>Pdnet系統設定</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li><a href="#deviceall_manage">
+				<h2>裝置管理</h2>
+			</a></li>
+			<li><a href="#notification">
+				<h2>推播設定</h2>
+			</a></li>
+			<li><a href="#account_manage">				
+				<h2>帳號管理</h2>
+			</a></li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /deviceall_manage -->
+<div data-role="page" id="deviceall_manage" data-mini="true" data-theme="f">
+
+ <div data-role="header" data-theme="f" style="height:40px;padding-top:5px;">		
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1>裝置設定</h1>
+		<div data-role="controlgroup" data-type="horizontal" style="float: right;margin: -45px 5px;">
+		<a href="#wol_list" data-role="button" data-theme="g">
+			<img src="image/wol.png"></a>
+		<a data-role="button" data-theme="g">GUI</a>
+		</div>
+ </div><!--/header -->
+  
+ <div data-role="content" data-theme="d"><!--/content -->
+ 	<ul data-role="listview" data-divider-theme="d">
+		<li data-role="list-divider">分享器列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/router.png" style="width:30px;height:30px;">
+					</td>
+					<td>GR267c_135da0</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/router_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>BR261c_a15c20</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider">無線訊號延伸器列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/device_ap.png" style="width:30px;height:30px;">
+					</td>
+					<td>BRC70x</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/device_wifiap.png" style="width:30px;height:30px;">
+					</td>
+					<td>BRC70n</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/device_ap_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>BR476n</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/device_wifiap_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>BRB72n</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider">網路攝影機列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/camera.png" style="width:30px;height:30px;">
+					</td>
+					<td>IPJC2n_aa11dd</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/camera_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>IPJC1n_df6900</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider">感測器列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/wifi_sensor.png" style="width:30px;height:30px;">
+					</td>
+					<td>
+						<a href="#rule_manage" style="color:#333">感測器</a>
+					</td>
+					<td><img src="image/right.png" style="float:right;"></td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table style="margin-left:30px;" width="90%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/md.png" style="width:30px;height:30px;">
+					</td>
+					<td>
+						<a href="#zigbee_list" style="color:#333">小狗</a></td>
+					<td style="float:right;">
+						<!--80%	-->						
+						<img src="image/battery_27.png" width="36px" height="36px">
+						<img src="image/right.png" >
+					</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table style="margin-left:30px;" width="90%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/dd.png" style="width:30px;height:30px;">
+					</td>
+					<td>
+						<a href="#zigbee_list" style="color:#333">小狗</a></td>
+					<td style="float:right;color:red;">
+					<!--20%-->					
+					<img src="image/battery_25.png" width="36px" height="36px">
+						<img src="image/right.png" >
+					</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table style="margin-left:30px;" width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/md_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>3f12a1</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table style="margin-left:30px;" width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/dd_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>3f12a3</td>
+				</tr>
+			</table>	
+        </li>		
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/wifi_sensor_off.png" style="width:30px;height:30px;">
+					</td>
+					<td>
+						<a href="#" style="color:#000">WDG71n</a>
+					</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider">智慧插座列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/wifi_switch.png" style="width:30px;height:30px;">
+					</td>
+					<td>電扇</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/wifi_switch_2.png" style="width:30px;height:30px;">
+					</td>
+					<td>WSG70n_123321</td>
+				</tr>
+			</table>	
+        </li>
+		<li data-role="list-divider">多媒體列表</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/media.png" style="width:30px;height:30px;">
+					</td>
+					<td>CM790x_ad3120a</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px">
+						<input type="checkbox" data-role="none"/>
+					</td>
+					<td width="30px">
+						<img src="image/nas.png" style="width:30px;height:30px;">
+					</td>
+					<td>WD091n_1211aa</td>
+				</tr>
+			</table>	
+        </li>
+		<!--
+		<li data-role="list-divider">其他設定</li>
+		<li><a href="#email">雲訊息通知信箱</a></li>
+		-->
+	</ul>
+ </div><!--/content_end--> 
+	
+ <div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#rename" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;">重新命名</a>
+		<a href="#delete" data-rel="dialog" data-role="button"  data-theme="f" data-mini="true" data-inline="true" style="width:120px;">刪除</a>
+		</div>
+ </div>
+</div><!-- /page7_end --> 
+
+
+<!-- /rule_manage -->
+<div data-role="page" id="rule_manage" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">規則管理</h1>
+		<a href="#deviceall_manage" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li><a href="#sound_rule">
+				<img src="images/vd.png" class="ui-li-icon">
+				聲音感測規則管理
+			</a></li>
+			<li><a href="#temp_rule">
+				<img src="images/td.png" class="ui-li-icon">
+				溫度感測規則管理
+			</a></li>
+			<li><a href="#light_rule">
+				<img src="images/ld.png" class="ui-li-icon">
+				光線感測規則管理
+			</a></li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /sound_rule -->
+<div data-role="page" id="sound_rule" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">聲音感測</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<!--
+		<ul data-role="listview">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+			WSG70n_123321
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="images/md_2.png" class="ui-li-icon-checkbox">
+			WDG71n_ad1212_12aadd
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="images/dd_2.png" class="ui-li-icon-checkbox">
+			WDG71n_ad1212_ac12ad
+			</label></li>
+		</ul>
+		-->
+		<ul data-role="listview" data-divider-theme="d">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_123321
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_ad1122
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_ba12ca
+			</label></li>
+			<li data-role="list-divider">離線裝置</li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				車庫照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				玄關照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				WSG70n_aadd11
+			</label></li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /temp_rule -->
+<div data-role="page" id="temp_rule" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">溫度感測</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_123321
+			</label></li>
+			<li data-role="list-divider">離線裝置</li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				車庫照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				玄關照明
+			</label></li>
+			<li>
+				裝置尚未使用
+			</li>
+			<li>
+				裝置尚未使用
+			</li>
+			<li>
+				裝置尚未使用
+			</li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /light_rule -->
+<div data-role="page" id="light_rule" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">光線感測</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				1F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電扇
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				2F電燈
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch.png" class="ui-li-icon-checkbox">
+				WSG70n_123321
+			</label></li>
+			<li data-role="list-divider">離線裝置</li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				車庫照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				玄關照明
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="image/wifi_switch_2.png" class="ui-li-icon-checkbox">
+				WSG70n_aadd11
+			</label></li>
+			<li>
+				裝置尚未使用
+			</li>
+			<li>
+				裝置尚未使用
+			</li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /zigbee_list -->
+<div data-role="page" id="zigbee_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">Zigbee裝置</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/dd.png" class="ui-li-icon-checkbox">
+				<a href="#zigbee_rule" style="color:#4f4f4f">WDG71n_a9a100_12aa11</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/dd.png" class="ui-li-icon-checkbox">
+				<a href="#zigbee_rule" style="color:#4f4f4f">WDG71n_a9a100_12aa22</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/md.png" class="ui-li-icon-checkbox">
+				<a href="#zigbee_rule" style="color:#4f4f4f">WDG71n_a9a100_12aa44</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/md.png" class="ui-li-icon-checkbox">
+				<a href="#zigbee_rule" style="color:#4f4f4f">WDG71n_a9a100_12aa55</a>
+			</label></li>
+			<li data-role="list-divider">離線裝置</li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/dd_2.png" class="ui-li-icon-checkbox">
+				<a href="#off_zigbee_rule" style="color:#666666">WDG71n_a9a100_12aa77</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/dd_2.png" class="ui-li-icon-checkbox">
+				<a href="#off_zigbee_rule" style="color:#666666">WDG71n_a9a100_12aa88</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/md_2.png" class="ui-li-icon-checkbox">
+				<a href="#off_zigbee_rule" style="color:#666666">WDG71n_a9a100_12aa99</a>
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true">
+				<input type="checkbox">
+				<img src="images/md_2.png" class="ui-li-icon-checkbox">
+				<a href="#off_zigbee_rule" style="color:#666666">WDG71n_a9a100_12aa00</a>
+			</label></li>
+			<li>
+				裝置尚未使用
+			</li>
+			<li>
+				裝置尚未使用
+			</li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /wol_list -->
+<div data-role="page" id="wol_list" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">遠端PC</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="image/desktop_off.png" class="ui-li-icon-checkbox">
+			Home PC
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="image/desktop_off.png" class="ui-li-icon-checkbox">
+			Public PC
+			</label></li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+ 
+<!-- /notification -->
+<div data-role="page" id="notification" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>推播設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d">
+		<li>
+			<h2>推播通知</h2>			
+			<fieldset class="ui-li-aside">
+				<select data-inline="true" data-mini="true" onchange="notify(this,'audio')">
+					<option value="OFF" selected>ON</option>
+					<option value="ON">OFF</option>
+				</select>
+			</fieldset>
+		</li>
+		<li id="audio">
+			<h2>推播聲音:</h2>
+			<fieldset class="ui-li-aside">
+			    <select id="white_balance" data-inline="true" data-mini="true" onchange="notify(this,'sound')">
+			        <option value="OFF">ON</option>
+			        <option value="ON">OFF</option>
+			    </select>
+			</fieldset>
+		</li>
+	</ul>
+ </div><!--/content_end -->  
+</div><!-- /page3_end -->
+
+
+<!-- /account_manage -->
+<div data-role="page" id="account_manage" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">帳號管理</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a href="#new_account" data-role="button" data-inline="true" data-mini="true" data-theme="g">新增</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li><a href="#function_group_v2">Tom</a></li>
+			<li><a href="#function_group" onclick="edit_acc(this,'John')">John</a></li>
+			<li><a href="#function_group" onclick="edit_acc(this,'Marry')">Marry</a></li>
+			<li><a href="#function_group" onclick="edit_acc(this,'Guest')">Guest</a></li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /new_account -->
+<div data-role="page" id="new_account" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">新增帳號</h1>
+		<a  data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">帳號:</h2>
+				<input type="text" value="" data-clear-btn="true" style="width:200px;display:inline;">
+			</li>
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">密碼:</h2>
+				<input type="password" value="" data-clear-btn="true" style="width:200px;display:inline;">
+			</li>
+			<li data-role="list-divider">權限設定</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>監控保全</td>
+					</tr>
+				</table>				
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>檔案分享</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>影音娛樂</td>
+					</tr>
+				</table>
+			</li>
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td><a href="#custom_set" style="color:#333333;">自訂</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /function_group_v2 -->
+<div data-role="page" id="function_group_v2" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">帳號設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">帳號:</h2>
+				<input type="text" value="Tom" data-clear-btn="true" style="width:200px;display:inline;">
+			</li>
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">密碼:</h2>
+				<input type="password" value="123456" data-clear-btn="true" style="width:200px;display:inline;">
+			</li>
+			<li data-role="list-divider">權限設定</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>副管理者</td>
+					</tr>
+				</table>				
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>一般使用者</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>進階使用者</td>
+					</tr>
+				</table>
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c">	
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#delete" data-theme="d">移除帳號</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div>	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /function_group -->
+<div data-role="page" id="function_group" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">帳號設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-divider-theme="d">
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">帳號:</h2>
+				<input type="text" value="" data-clear-btn="true" id="user_field" style="width:200px;display:inline;">
+			</li>
+			<li data-role="fieldcontain">
+				<h2 style="margin-right:20px;display:inline;">密碼:</h2>
+				<input type="password" value="123456" data-clear-btn="true" style="width:200px;display:inline;">
+			</li>
+			<li data-role="list-divider">權限設定</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>監控保全</td>
+					</tr>
+				</table>				
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td>檔案分享</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>影音娛樂</td>
+					</tr>
+				</table>
+			</li>
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none"></td>
+						<td><a href="#custom_set" style="color:#333333;">自訂</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c">	
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#delete" data-theme="d">移除帳號</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div>	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /custom_set -->
+<div data-role="page" id="custom_set" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">自訂</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+		<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲訊息</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲播放</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲上傳</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲下載</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲音響</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲電視</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲投影</td>
+					</tr>
+				</table>
+			</li>
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td><a href="#cam_set" style="color:#333333;">雲監控</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td><a href="#cam_set" style="color:#333333;">雲保全</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li>				
+				<table width="100%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td><a href="#cam_set" style="color:#333333;">雲感測</a></td>
+						<td><img src="image/right.png" style="float:right;"></td>
+					</tr>
+				</table>				
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>雲網管</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>本機檔案</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>Pdnet網路狀態圖</td>
+					</tr>
+				</table>
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+
+<!-- /cam_set -->
+<div data-role="page" id="cam_set" data-theme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">設定</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff;">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview">
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>僅可觀看</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td>可觀看/設定</td>
+					</tr>
+				</table>
+			</li>
+		</ul>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+<!-- /manage_function -->
+
+<!-- Start of third page: #email -->
+<div data-role="page" id="email" data-theme="f">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">雲訊息通知信箱</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<h4>輸入電子郵件帳號</h4>
+		<input id="doc_name" data-theme="d" placeholder="sample@sample.com.tw" >		
+		<a href="#deviceall_manage" data-role="button" data-theme="g" data-inline="true" data-mini="true" style="float:right;">確定</a>
+	</div><!-- /content -->
+	<div style="color:#8f8f8f;text-align:center;font-size:14px;">設定完成後，雲訊息通知將會寄送到此郵件。</div>
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #rename -->
+<div data-role="page" id="rename" data-theme="a" style="margin:0 auto;text-align:center;">
+
+	<div data-role="content" data-theme="a">
+		<h4>重新命名</h4>
+		<input id="doc_name" data-theme="d">
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true">確定</a><br>
+	</div><!-- /content -->
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #login_delete -->
+<div data-role="page" id="login_delete" data-theme="a">
+
+	<div data-role="content">
+	
+		<div style="text-align:center;">
+		<h4>刪除裝置<br>確定要刪除此裝置嗎?</h4>
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true" >確定</a>
+		</div>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+ </body>
+ </html> 

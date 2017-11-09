@@ -1,0 +1,660 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body> 
+<!-- /upload_folder -->
+<div data-role="page" id="upload_folder" data-mini="true" data-theme="f">
+ 
+	<div data-role="header" data-theme="f">
+		<h1>選擇檔案</h1>
+		<a href="../index.html#wireframe" rel="external" data-role="button" class="back" style="color:#fff">首頁</a>
+	</div><!--/header -->
+ 
+	<div data-role="content"><!--/content -->
+		<ul data-role="listview" data-theme="d" data-divider-theme="d">
+			<li>
+				<a href="#upload_movie" >
+				<img src="image/document2.png" class="ui-li-icon">
+				影片
+				</a>
+			</li>
+			<li>
+				<a href="#upload_music">
+				<img src="image/document2.png" class="ui-li-icon">
+				音樂
+				</a>
+			</li>
+			<li>
+				<a href="#upload_picture">
+				<img src="image/document2.png" class="ui-li-icon">
+				照片
+				</a>
+			</li>
+			<li>
+				<a href="#upload_file">
+				<img src="image/document2.png" class="ui-li-icon">
+				檔案
+				</a>
+			</li>
+			<li>
+				<a href="#upload_else">
+				<img src="image/document2.png" class="ui-li-icon">
+				其它
+				</a>
+			</li>
+			<li>
+				<a href="#upload_album">
+				<img src="image/document2.png" class="ui-li-icon">
+				相機膠卷
+				</a>
+			</li>
+			<li>
+				<a href="#upload_record">
+				<img src="image/document2.png" class="ui-li-icon">
+				錄音檔
+				</a>
+			</li>
+			<li>
+				<a href="">
+				<img src="image/document2.png" class="ui-li-icon">
+				雲監控
+				</a>
+			</li>
+			<li>
+				<a href="">
+				<img src="image/document2.png" class="ui-li-icon">
+				SD卡(檔案總管)
+				</a>
+			</li>
+		</ul>					
+ </div><!--/content_end -->
+</div><!-- /page5_end -->
+
+
+<!-- /upload_folder_map -->
+<div data-role="page" id="upload_folder_map" data-mini="true" data-theme="f">
+ 
+	<div data-role="header" data-theme="f">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!--/header -->
+ 
+	<div data-role="content"><!--/content -->
+		<ul data-role="listview" data-theme="d" data-divider-theme="d">
+			<li>
+				<a href="#upload_movie">
+				<img src="image/document2.png" class="ui-li-icon">
+				影片
+				</a>
+			</li>
+			<li>
+				<a href="#upload_music">
+				<img src="image/document2.png" class="ui-li-icon">
+				音樂
+				</a>
+			</li>
+			<li>
+				<a href="#upload_picture">
+				<img src="image/document2.png" class="ui-li-icon">
+				照片
+				</a>
+			</li>
+			<li>
+				<a href="#upload_file">
+				<img src="image/document2.png" class="ui-li-icon">
+				檔案
+				</a>
+			</li>
+			<li>
+				<a href="#upload_else">
+				<img src="image/document2.png" class="ui-li-icon">
+				其它
+				</a>
+			</li>
+			<li>
+				<a href="#upload_album">
+				<img src="image/document2.png" class="ui-li-icon">
+				相機膠卷
+				</a>
+			</li>
+			<li>
+				<a href="">
+				<img src="image/document2.png" class="ui-li-icon">
+				雲監控
+				</a>
+			</li>
+			<li>
+				<a href="">
+				<img src="image/document2.png" class="ui-li-icon">
+				SD卡(檔案總管)
+				</a>
+			</li>
+		</ul>					
+ </div><!--/content_end --> 
+ 
+</div><!-- /page5_end -->
+
+
+<!-- /storageall_upload -->
+<div data-role="page" id="storageall_upload" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1>選擇路徑</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a><!--
+		<a href="#wol_list" data-rel="dialog" dtat-role="button" data-inline="true" data-theme="g">編輯</a>-->
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+
+	<ul data-role="listview" data-theme="d" data-dividertheme="d">
+		<li><a href="#save_folder">
+			<img src="image/usb_stick.png" class="ui-li-icon">
+			GR267c_135da0
+		</a></li>
+		<li><a href="#save_folder">
+			<img src="image/usb_stick.png" class="ui-li-icon">
+			IPJC1n
+		</a></li>
+		<li><a href="#save_folder">
+			<img src="image/usb_stick.png" class="ui-li-icon">
+			IPJC2n
+		</a></li>
+		<li><a href="#">
+			<img src="image/desktop.png" class="ui-li-icon">
+			Home PC
+		</a></li>
+		<li><a href="#wol_wait" data-rel="dialog">
+			<img src="image/desktop_off.png" class="ui-li-icon">
+			Public PC
+		</a></li>
+		<li><a href="#">
+			<img src="image/hard_drive.png" class="ui-li-icon">
+			CM790x_ad3120a
+		</a></li>
+		<li><a href="#">
+			<img src="image/nas.png" class="ui-li-icon">
+			WD091n_ad1212
+		</a></li>		
+
+		<li data-role="list-divider" data-mini="true">最近上傳位置</li>		
+		<li><a href="#save_folder">
+			<img src="image/document2.png" class="ui-li-icon">
+			GR267c_135da0/admin
+		</a></li>	
+		<li><a href="#save_folder">
+			<img src="image/document2.png" class="ui-li-icon">
+			WD091n_ad1212/雲音響播放清單
+		</a></li>
+	<li></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+ </div><!-- /page7_end -->   
+
+ 
+<!-- /save_folder -->
+<div data-role="page" id="save_folder" data-mini="true" data-theme="f">
+ 
+	<div data-role="header" data-theme="f">		
+		<h1>選擇路徑</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+	</div><!--/header -->
+ 
+	<div data-role="content"><!--/content -->
+
+	<ul data-role="listview" data-theme="d" data-divider-theme="d">
+		<li><a href="#upload_movie">
+			<img src="image/document2.png" class="ui-li-icon">
+			work
+		</a></li>
+		<li><a href="#upload_music">
+			<img src="image/document2.png" class="ui-li-icon">
+			download
+		</a></li>
+		<li><a href="#upload_picture">
+			<img src="image/document2.png" class="ui-li-icon">
+			movive
+		</a></li>
+		<li><a href="#upload_file">
+			<img src="image/document2.png" class="ui-li-icon">
+			音樂
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="text-align:center;">	
+	<a href="#document" data-rel="dialog" data-role="button" data-theme="d" style="width:120px;" class="but">新增資料夾</a>
+	<a href="#waiting2" data-role="button" data-theme="d" style="width:120px;" class="but" onclick="wait2(this)">上傳</a>
+</div><!--/footer -->
+
+</div><!-- /page5_end -->
+
+
+<!-- /upload_movie -->
+<div data-role="page" id="upload_movie" data-theme="f">
+ 
+	<div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#waiting2" data-role="button" class="og_but" data-theme="g" onclick="wait2(this)">上傳</a>
+	</div><!--/header -->
+ 
+	<div data-role="content" data-theme="d"><!--/content -->
+		<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;">
+		<label class="a">
+			<input type="checkbox"/>
+			<img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+			A Team.avi
+		</label>
+		<label  class="a">
+			<input type="checkbox"/>
+			<img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+			不倒翁的奇幻旅程.avi
+		</label>
+		<label  class="a">
+			<input type="checkbox"/>
+			<img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+			逆光飛翔.avi
+		</label>
+		<label  class="a">
+			<input type="checkbox"/>
+			<img src="image/mov.png" style="margin-right:10px;width:24px;height:24px;">
+			男朋友 女朋友.avi
+		</label>
+		</fieldset>
+	</div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">上次上傳位置</span>
+	<br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">
+	/movie/<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">BRB72n_ddaa22</div>
+	</div>
+	<a href="#storageall_upload" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+<!-- /upload_music -->
+<div data-role="page" id="upload_music" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#waiting2" data-role="button" class="og_but" data-theme="g" onclick="wait2(this)">上傳</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label  class="a"><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Payphone.mp3 </label>
+		<label  class="a"><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Sorry Sorry.mp3 </label>
+		<label  class="a"><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Kiss me.mp3 </label>
+		<label  class="a"><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">青花瓷.mp3 </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">上次上傳位置</span><br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">/movie/<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">BRB72n_ddaa22</div></div>
+	<a href="#storageall_upload" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+<!-- /upload_picture -->
+<div data-role="page" id="upload_picture" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#waiting2" data-role="button" class="og_but" data-theme="g" onclick="wait2(this)">上傳</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;">
+		<label  class="a"><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000103.jpg </label>
+		<label  class="a"><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000102.jpg</label>
+		<label  class="a"><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000101.jpg</label>
+		<label  class="a"><input type="checkbox"/><img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">DC000100.jpg</label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">上次上傳位置</span><br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">/movie/<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">BRB72n_ddaa22</div></div>
+	<a href="#storageall_upload" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+<!-- /upload_file -->
+<div data-role="page" id="upload_file" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#waiting2" data-role="button" class="og_but" data-theme="g" onclick="wait2(this)">上傳</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;">
+		<label  class="a"><input type="checkbox"/><img src="image/ducu.png" style="margin-right:10px;width:24px;height:24px;">PI.pdf</label>
+		<label  class="a"><input type="checkbox"/><img src="image/ducu.png" style="margin-right:10px;width:24px;height:24px;">Introduction.ppt</label>
+		<label  class="a"><input type="checkbox"/><img src="image/ducu.png" style="margin-right:10px;width:24px;height:24px;">Product.xls</label>
+		<label  class="a"><input type="checkbox"/><img src="image/ducu.png" style="margin-right:10px;width:24px;height:24px;">IPv6.doc</label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">上次上傳位置</span><br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">/movie/<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">BRB72n_ddaa22</div></div>
+	<a href="#storageall_upload" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+<!-- /upload_else -->
+<div data-role="page" id="upload_else" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#waiting2" data-role="button" class="og_but" data-theme="g" onclick="wait2(this)">上傳</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;">
+		<label  class="a"><input type="checkbox"/><img src="image/else.png" style="margin-right:10px;width:24px;height:24px;">design.ai</label>
+		<label  class="a"><input type="checkbox"/><img src="image/else.png" style="margin-right:10px;width:24px;height:24px;">router.dwg</label>
+		<label  class="a"><input type="checkbox"/><img src="image/else.png" style="margin-right:10px;width:24px;height:24px;">pic.zip</label>
+		<label  class="a"><input type="checkbox"/><img src="image/else.png" style="margin-right:10px;width:24px;height:24px;">demo.exe</label>
+	</fieldset>
+	
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">上次上傳位置</span><br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">/movie/<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">BRB72n_ddaa22</div></div>
+	<a href="#storageall_upload" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+<!-- /upload_album -->
+<div data-role="page" id="upload_album" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		
+		<h1>相機膠卷</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#waiting_pic" data-role="button" class="og_but" data-theme="g" onclick="wait_pic(this)">上傳</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="h" ><!--/content -->
+  <div class="ui-grid-d">
+	<div class="ui-block-a"><img src="image/d1.jpg" class="grip"></div>
+	<div class="ui-block-b"><img src="image/d2.jpg" class="grip"></div>
+	<div class="ui-block-c"><img src="image/d3.jpg" class="grip"></div>
+	<div class="ui-block-d"><img src="image/d4.jpg" class="grip"></div>
+	<div class="ui-block-e"><img src="image/d5.jpg" class="grip"></div>
+
+	<div class="ui-block-a"><img src="image/d6.jpg" class="grip"></div>
+	<div class="ui-block-b"><img src="image/d1.jpg" class="grip"></div>
+	<div class="ui-block-c"><img src="image/d2.jpg" class="grip"></div>
+	<div class="ui-block-d"><img src="image/d3.jpg" class="grip"></div>
+	<div class="ui-block-e"><img src="image/d4.jpg" class="grip"></div>
+
+	<div class="ui-block-a"><img src="image/d5.jpg" class="grip"></div>
+	<div class="ui-block-b"><img src="image/d1.jpg" class="grip"></div>
+	<div class="ui-block-c"><img src="image/d2.jpg" class="grip"></div>
+	<div class="ui-block-d"><img src="image/d3.jpg" class="grip"></div>
+	<div class="ui-block-e"><img src="image/d4.jpg" class="grip"></div>
+
+	<div class="ui-block-a"><img src="image/d5.jpg" class="grip"></div>
+	<div class="ui-block-b"><img src="image/d6.jpg" class="grip"></div>
+	<div class="ui-block-c"><img src="image/d1.jpg" class="grip"></div>
+	<div class="ui-block-d"><img src="image/d2.jpg" class="grip"></div>
+	<div class="ui-block-e"><img src="image/d3.jpg" class="grip"></div>
+
+	<div class="ui-block-a"><img src="image/d4.jpg" class="grip"></div>
+	<div class="ui-block-b"><img src="image/d5.jpg" class="grip"></div>
+	<div class="ui-block-c"><img src="image/d6.jpg" class="grip"></div>
+	<div class="ui-block-d"><img src="image/d1.jpg" class="grip"></div>
+	<div class="ui-block-e"><img src="image/d2.jpg" class="grip"></div>
+ </div><!-- /grid-d -->
+	
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">上次上傳位置</span><br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">/movie/<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">BRB72n_ddaa22</div></div>
+	<a href="#storageall_upload" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+ 
+</div><!-- /page4_end -->
+
+
+<!-- /wol_list -->
+<div data-role="page" id="wol_list" data-theme="d" data-dividertheme="d">
+
+	<div data-role="header" data-theme="f">
+		<h1 style="margin:10px 50px;">遠端PC</h1>
+		<a data-rel="back"" data-role="button" class="back">上一頁</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d" data-dividertheme="d">
+		<ul data-role="listview">
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="image/desktop_off.png" class="ui-li-icon-checkbox">
+			Home PC
+			</label></li>
+			<li class="li_height"><label class="ui-li-checkbox" data-mini="true"><input type="checkbox">
+			<img src="image/desktop_off.png" class="ui-li-icon-checkbox">
+			Public PC
+			</label></li>
+		</ul>
+		<br>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="c" style="border:none;">	
+		<div style="width:280px;margin:0 auto;">
+		<a href="#login_delete" data-rel="dialog" data-role="button"  data-theme="f" >刪除</a>
+		</div>
+	</div>
+</div><!-- /page popup -->
+
+<!-- /upload_record -->
+<div data-role="page" id="upload_record" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#waiting2" data-role="button" class="og_but" data-theme="g" onclick="wait2(this)">上傳</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label class="a"><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">語音001.avi</label>
+		<label class="a"><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">語音002.mp3 </label>
+		<label class="a"><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">語音003.mp3 </label>
+		<label class="a"><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">語音004.mp3 </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="h" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">上次上傳位置</span><br>
+	<img src="image/document2.png" style="width:48px;height:40px;">
+	<div style="font-size:14px;margin:-35px 55px;">/movie/<br>
+	<div style="font-weight:lighter;font-size:10px;color:#808080;">BRB72n_ddaa22</div></div>
+	<a href="#storageall_upload" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+
+
+<!-- Start of third page: #document -->
+<div data-role="page" id="document" data-theme="a" style="margin:0 auto;text-align:center;">
+	<div data-role="content">
+		<h4>新增資料夾</h4>
+		請輸入資料夾名稱
+		<input id="doc_name" data-theme="d">
+		<a data-rel="back" data-role="button" class="can_but" data-inline="true">取消</a>
+		<a data-rel="back" data-role="button" class="che_but" data-inline="true">確定</a><br>
+	</div><!-- /content -->
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #waiting2 -->
+<div data-role="page" id="waiting2" data-theme="d" data-dividertheme="d">
+
+	<div data-role="header" data-theme="f">
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1>上傳中</h1>
+		<a data-role="button" data-rel="back" class="og_but" data-theme="g">取消</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d" data-dividertheme="d">
+	
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Payphone.mp3 <br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Sorry Sorry.mp3<br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Kiss me.mp3<br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">青花瓷.mp3<br>
+			<img src="image/load.gif"></label>
+	</fieldset>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #waiting_pic -->
+<div data-role="page" id="waiting_pic" data-theme="d" data-dividertheme="d">
+
+	<div data-role="header" data-theme="f">
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<h1>上傳中</h1>
+		<a data-role="button" data-rel="back" class="og_but" data-theme="g">取消</a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d" data-dividertheme="d">
+	
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/> <img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">20140506.jpg<br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">20131547.jpg<br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">20131879.jpg<br>
+			<img src="image/load.gif"></label>
+		<label><input type="checkbox"/> <img src="image/picture.png" style="margin-right:10px;width:24px;height:24px;">201456982.jpg<br>
+			<img src="image/load.gif"></label>
+	</fieldset>
+	</div><!-- /content -->
+	
+</div><!-- /page popup -->
+
+
+<!-- Start of third page: #upload -->
+<div data-role="page" id="upload" data-theme="d" data-dividertheme="d">
+
+	<div data-role="header"  data-theme="f">
+		<a href="../index.html#wireframe" rel="external" data-role="button" data-inline="true" data-theme="g">首頁</a>
+		<h1>上傳成功</h1>
+	</div><!-- /header -->
+
+	<div data-role="content"  data-theme="f">	
+		<div id="upload_finish" >
+		<ul data-role="listview" data-theme="d">
+			<li>Hanging Around.mp3</li>
+			<li>不倒翁奇幻旅程.mov</li>
+		</ul>
+		</div>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="h">	
+		<div style="width:280px;margin:0 auto;">
+			<a href="#upload_folder" data-role="button" data-theme="f" class="but">上傳其他檔案</a>
+		</div>
+	</div>
+
+</div><!-- /page popup -->
+
+<!-- Start of third page: #upload_pic -->
+<div data-role="page" id="upload_pic" data-theme="d" data-dividertheme="d">
+
+	<div data-role="header"  data-theme="f">
+		<a href="../index.html#wireframe" rel="external" data-role="button" data-inline="true" data-theme="g">首頁</a>
+		<h1>上傳成功</h1>
+	</div><!-- /header -->
+
+	<div data-role="content"  data-theme="f">	
+		<div id="upload_finishred" >
+		<ul data-role="listview" data-theme="d">
+			<li>2014506.jpg</li>
+			<li>20131547.jpg</li>
+		</ul>
+		</div>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="h">	
+		<div style="width:280px;margin:0 auto;">
+			<a href="#upload_folder" data-role="button" data-theme="f" class="but">上傳其他檔案</a>
+		</div>
+	</div>
+
+</div><!-- /page popup -->
+
+ </body>
+ </html> 

@@ -1,0 +1,959 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+	<title>Pdapp</title>
+	<link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />	
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/jquery_etop.min.css" />
+	<link rel="stylesheet" href="../themes/jquery_etop.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="../themes/sapido.css"/>
+	<script src="../themes/sapido.js"></script>	
+</head>
+
+ <body>
+ 
+<!-- /device_select -->
+<div data-role="page" id="device_select" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>選擇裝置</h1>
+		<a href="../index.html#wireframe" rel="external" data-role="button" class="back" style="color:#fff">首頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#music_download">
+			<img src="image/document2.png" class="ui-li-icon">
+			本機檔案
+		</a></li>
+		<li><a href="#091_music">
+			<img src="image/nas.png" class="ui-li-icon">
+			WD091n
+			<p class="ui-li-aside" style="margin-right:40px;margin-top:8px;width:110px;">			
+				<a href="#" onclick="media_airplay(this)">
+					<img src="image/stop_bg.png" style="width:30px;height:30px;display:inline;" id="play_status">
+				</a>
+				<a href="#091_schedule_list"><img src="image/schedule_on.png" style="width:30px;height:30px;display:inline;"></a>			
+			</p>
+		</a></li>
+	</ul>
+				
+ </div><!--/content_end --> 
+ 
+</div><!-- /page7_end -->
+
+
+<!-- /music_download -->
+<div data-role="page" id="music_download" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>選擇播放音樂</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#play_music">
+			<img src="image/document2.png" class="ui-li-icon">
+			音樂
+		</a></li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			本機資料夾(android)
+		</a></li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			網路下載(android)
+		</a></li>
+		<li>
+			<a href="" id="link">
+			<img src="image/document2.png" class="ui-li-icon" >
+			專案
+			</a>
+		</li>
+	</ul>
+				
+ </div><!--/content_end --> 
+ 
+</div><!-- /page7_end -->
+
+
+<!-- /music_download_map -->
+<div data-role="page" id="music_download_map" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>選擇播放音樂</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+	<!--
+		<li><a href="#play_music_map">
+			<img src="image/document2.png" class="ui-li-icon">
+			影片
+		</a></li>
+		-->
+		<li><a href="#play_music_map">
+			<img src="image/document2.png" class="ui-li-icon">
+			音樂
+		</a></li>
+		<!--
+		<li><a href="#play_music_map">
+			<img src="image/document2.png" class="ui-li-icon">
+			照片
+		</a></li>
+		<li><a href="#play_music_map">
+			<img src="image/document2.png" class="ui-li-icon">
+			文件
+		</a></li>
+		<li><a href="#play_music_map">
+			<img src="image/document2.png" class="ui-li-icon">
+			其他
+		</a></li>
+		<li><a href="#play_music_map">
+			<img src="image/document2.png" class="ui-li-icon">
+			相機膠卷
+		</a></li>
+		<li><a href="#play_music_map">
+			<img src="image/document2.png" class="ui-li-icon">
+			雲監控
+		</a>
+		</li>
+		-->
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			SD卡(檔案總管)
+		</a></li>
+		<li>
+			<a href="" id="link">
+			<img src="image/document2.png" class="ui-li-icon" >
+			專案
+			</a>
+		</li>
+	</ul>
+				
+ </div><!--/content_end --> 
+ 
+</div><!-- /page7_end -->
+ 
+ 
+<!-- /play_music -->
+<div data-role="page" id="play_music" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#player" data-role="button" class="og_but" data-theme="g">播放</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label>
+		<input type="checkbox"/>
+		<img src="image/document2.png" style="margin-right:10px;width:30px;height:24px;">
+		Maroon 5</label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Payphone.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Sorry Sorry.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Kiss me.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">青花瓷.mp3 </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+<div data-role="footer" data-position="fixed" data-theme="z" style="margin:5px -3px;text-align:right;" id="airplay_button">
+	<!--	<a data-role="button" onclick="airplay('airplay')" data-theme="h"><img src="image/airplay_bk.png" height="16px"></a>-->
+		<a data-role="button" class="ui-icon-airplay" onclick="airplay('airplay')" data-theme="g" data-iconpos="notext"></a>
+</div><!--/footer -->
+
+ <div data-role="footer" data-position="fixed" data-theme="c" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">揚聲器</span><br>
+	
+	<img src="image/speaker.png" style="width:30px;height:30px;margin-bottom:10px;">
+	
+	<div style="font-size:14px;margin:-35px 40px;">/IPJC1n</div>
+	
+	<a href="#speaker_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+	
+ </div><!--/footer -->
+ 
+ <!--
+<div data-role="footer" data-position="fixed" data-theme="a" style="margin:0 auto;text-align:center;display:none;" id="airplay">	
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_pc.png" style="float:left" width="16px">iPhone</a><br><br>
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_sp.png" style="float:left" width="16px">BR476n_cd0060</a><br><br>
+	<a data-role="button" class="can_but_long" data-theme="a" onclick="air_cancel(this)">取消</a>
+</div>-->
+
+</div><!-- /page7_end -->
+
+ 
+<!-- /091_music -->
+<div data-role="page" id="091_music" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a data-rel="back" data-role="button" class="og_but" data-theme="g" onclick="media_airplay('play')">播放</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Give me some sunshine.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;" checked>I surrender.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">I wanna go home.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;" checked>Let me go.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">兩腳書櫥的逃亡.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;" checked>離開.mp3 </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+ 
+ <div data-role="footer" data-position="fixed" data-theme="c" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">播放設定</span><br>
+	
+	<img src="image/speaker.png" style="width:30px;height:30px;margin-bottom:10px;">
+	
+	<div style="font-size:12px;margin:-40px 40px;">
+		循環播放<br>
+		播放位置:IPJC1n
+	</div>
+	
+	<a href="#speaker_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+	
+ </div><!--/footer -->
+ 
+ <!--
+<div data-role="footer" data-position="fixed" data-theme="a" style="margin:0 auto;text-align:center;display:none;" id="airplay">	
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_pc.png" style="float:left" width="16px">iPhone</a><br><br>
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_sp.png" style="float:left" width="16px">BR476n_cd0060</a><br><br>
+	<a data-role="button" class="can_but_long" data-theme="a" onclick="air_cancel(this)">取消</a>
+</div>
+-->
+</div><!-- /page7_end -->
+
+ 
+<!-- /091_schedule_list -->
+<div data-role="page" id="091_schedule_list" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+		<h1>音樂排程</h1>
+		<a data-rel="back" data-role="button" class="back" style="color:#fff">上一頁</a>	
+		<a href="#091_schedule" data-role="button" data-theme="g">新增</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+		<ul data-role="listview" data-mini="true">
+			<li>
+		<table width="92%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td style="color:#333333;">每天</td>
+						<td width="30px"><a data-role="button" href="#schedule_setting" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a></td>
+						<td width="30px"><a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a></td>
+					</tr>
+					<tr>
+					 <td></td>
+					 <td><p>7:00-18:00</p></td>
+					</tr>
+		</table>
+		</li>
+		<li>
+		<table width="92%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td style="color:#333333;">星期一</td>
+						<td width="30px"><a data-role="button" href="#schedule_setting" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a></td>
+						<td width="30px"><a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a></td>
+					</tr>
+					<tr>
+					 <td></td>
+					 <td><p>17:00-20:00</p></td>
+					</tr>
+				</table>
+		</li>
+		<li>
+		<table width="92%">
+					<tr>
+						<td width="30px"><input type="checkbox" data-role="none" checked></td>
+						<td style="color:#333333;">星期六</td>
+						<td width="30px"><a data-role="button" href="#schedule_setting" class="ui-icon-edit" data-theme="h" data-iconpos="notext"></a></td>
+						<td width="30px"><a data-role="button" data-rel="dialog" href="#delete" class="ui-icon-logindel" data-theme="h" data-iconpos="notext"></a></td>
+					</tr>
+					<tr>
+					 <td></td>
+					 <td><p>9:00-18:00</p></td>
+					</tr>
+				</table>
+		</li>
+		</ul>
+ </div><!--/content_end --> 
+ 
+</div>
+
+
+<!-- /091_schedule -->
+<div data-role="page" id="091_schedule" data-mini="true" data-theme="d">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>排程設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>	
+ 	<a data-rel="back" data-role="button" data-inline="true" data-mini="true" data-theme="g">完成</a>
+</div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content --> 	
+	<ul data-role="listview" data-theme="d" data-divider-theme="d">
+		<li>
+			<h2>工作日:</h2>
+			<fieldset class="ui-li-aside">
+			    <select id="white_balance" data-inline="true" data-mini="true">
+			        <option value="1">星期一</option>
+			        <option value="4">星期二</option>
+			        <option value="7">星期三</option>
+			        <option value="10" selected>星期四</option>
+			        <option value="14">星期五</option>
+			        <option value="14">星期六</option>
+			        <option value="14">星期日</option>
+			        <option value="14">每天</option>
+			    </select>
+			</fieldset>
+		</li>
+		<li>
+			<h2>開始時間:</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select>
+					<option>00 時</option>
+					<option>01 時</option>
+					<option>02 時</option>
+					<option>03 時</option>
+					<option>04 時</option>
+					<option>05 時</option>
+					<option>06 時</option>
+					<option>07 時</option>
+					<option>08 時</option>
+					<option>09 時</option>
+					<option>10 時</option>
+					<option>11 時</option>
+					<option>12 時</option>
+					<option>13 時</option>
+					<option>14 時</option>
+					<option>15 時</option>
+					<option>16 時</option>
+					<option>17 時</option>
+					<option>18 時</option>
+					<option>19 時</option>
+					<option>20 時</option>
+					<option>21 時</option>
+					<option>22 時</option>
+					<option>23 時</option>
+				</select>
+				<select>
+					<option>00 分</option>
+					<option>01 分</option>
+					<option>02 分</option>
+					<option>03 分</option>
+					<option>04 分</option>
+					<option>05 分</option>
+					<option>06 分</option>
+					<option>07 分</option>
+					<option>08 分</option>
+					<option>09 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</li>
+		<li>
+			<h2>結束時間:</h2>
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-li-aside">
+				<select>
+					<option>00 時</option>
+					<option>01 時</option>
+					<option>02 時</option>
+					<option>03 時</option>
+					<option>04 時</option>
+					<option>05 時</option>
+					<option>06 時</option>
+					<option>07 時</option>
+					<option>08 時</option>
+					<option>09 時</option>
+					<option>10 時</option>
+					<option>11 時</option>
+					<option>12 時</option>
+					<option>13 時</option>
+					<option>14 時</option>
+					<option>15 時</option>
+					<option>16 時</option>
+					<option>17 時</option>
+					<option>18 時</option>
+					<option>19 時</option>
+					<option>20 時</option>
+					<option>21 時</option>
+					<option>22 時</option>
+					<option>23 時</option>
+				</select>
+				<select>
+					<option>00 分</option>
+					<option>01 分</option>
+					<option>02 分</option>
+					<option>03 分</option>
+					<option>04 分</option>
+					<option>05 分</option>
+					<option>06 分</option>
+					<option>07 分</option>
+					<option>08 分</option>
+					<option>09 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</li>
+		<li>
+			<h2>揚聲器:</h2>
+			<fieldset class="ui-li-aside">
+			    <select id="white_balance" data-inline="true" data-mini="true">
+			        <option value="1">IPJC1n</option>
+			        <option value="4">IPJC2n</option>
+			        <option value="7">BR476n</option>
+			    </select>
+			</fieldset>
+		</li>
+		<li data-role="list-divider">歌曲列表:</li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/mus.png" style="width:30px;height:36px;">
+					</td>
+					<td>Give me some sunshine.mp3</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/mus.png" style="width:30px;height:36px;">
+					</td>
+					<td>I surrender.mp3</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/mus.png" style="width:30px;height:36px;">
+					</td>
+					<td>I wanna go home.mp3</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/mus.png" style="width:30px;height:36px;">
+					</td>
+					<td>Let me go.mp3</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/mus.png" style="width:30px;height:36px;">
+					</td>
+					<td>兩腳書櫥的逃亡.mp3</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/mus.png" style="width:30px;height:36px;">
+					</td>
+					<td>離開.mp3</td>
+				</tr>
+			</table>	
+        </li>
+		<li>
+			<table width="100%">
+				<tr>
+					<td width="30px"><input type="checkbox" data-role="none" />
+					</td>
+					<td width="40px">
+						<img src="image/mus.png" style="width:30px;height:36px;">
+					</td>
+					<td>兩腳書櫥的逃亡.mp3</td>
+				</tr>
+			</table>	
+        </li>
+	</ul>
+ </div><!--/content_end -->  
+ 
+ <!--
+ <div data-role="footer" data-position="fixed" data-theme="c" style="padding:5px;">	
+
+	<span style="font-size:12px;font-weight:lighter;color:gray;margin:0 20px;">揚聲器</span><br>
+	
+	<img src="image/speaker.png" style="width:30px;height:30px;margin-bottom:10px;">
+	
+	<div style="font-size:14px;margin:-35px 40px;">/IPJC1n</div>
+	
+	<a href="#speaker_list" data-role="button" data-inline="true" data-theme="g" style="float:right;margin-right:10px;">變更</a>
+	
+ </div>
+ /footer -->
+ 
+</div><!-- /page3_end -->
+
+
+<!-- /song_list -->
+<div data-role="page" id="song_list" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a data-rel="back" data-role="button" class="og_but" data-theme="g">完成</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Give me some sunshine.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;" checked>I surrender.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">I wanna go home.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;" checked>Let me go.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">兩腳書櫥的逃亡.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">我會想念你.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">下半輩子.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;" checked>離開.mp3 </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+
+</div><!-- /page7_end -->
+
+
+<!-- /play_music_map -->
+<div data-role="page" id="play_music_map" data-mini="true" data-theme="d" data-dividertheme="d">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#player" data-role="button" class="og_but" data-theme="g">播放</a>
+ </div><!--/header -->
+
+ <div data-role="content"><!--/content -->
+
+	<fieldset data-role="controlgroup" style="width:120%;height:120%;margin:-15px -20px;"> 
+		<label>
+		<input type="checkbox"/>
+		<img src="image/document2.png" style="margin-right:10px;width:30px;height:24px;">
+		Maroon 5</label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Payphone.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Sorry Sorry.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">Kiss me.mp3 </label>
+		<label><input type="checkbox"/> <img src="image/mus.png" style="margin-right:10px;width:24px;height:24px;">青花瓷.mp3 </label>
+	</fieldset>
+				
+ </div><!--/content_end --> 
+ 
+<div data-role="footer" data-position="fixed" data-theme="z" style="margin:5px -3px;text-align:right;">
+	<!--	<a data-role="button" onclick="airplay('airplay')" data-theme="h"><img src="image/airplay_bk.png" height="16px"></a>-->
+		<a data-role="button" class="ui-icon-airplay" onclick="airplay('airplay_map')" data-theme="g" data-iconpos="notext"></a>
+</div><!--/footer -->
+ 
+<div data-role="footer" data-position="fixed" data-theme="a" style="margin:0 auto;text-align:center;display:none;" id="airplay_map">	
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_pc.png" style="float:left" width="16px">iPhone</a><br><br>
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_sp.png" style="float:left" width="16px">BR476n_cd0060</a><br><br>
+	<a data-role="button" class="can_but_long" data-theme="a" onclick="air_cancel(this)">取消</a>
+</div><!--/footer -->
+
+</div><!-- /page7_end -->
+
+
+<!-- speaker_list -->
+<div data-role="page" id="speaker_list" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>播放設定</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+	<a href="#device_select" data-role="button" class="og_but" data-theme="g" onclick="media_airplay('play')">播放</a>
+ </div><!--/header --> 
+ <div data-role="content" data-theme="d"><!--/content -->
+ 
+	<ul data-role="listview">
+		<li>
+			<h2>播放位置</h2>			
+			<fieldset class="ui-li-aside">
+				<select data-inline="true" data-mini="true" data-mini="true" class="a" style="font-size:10px;font-family:Microsoft JhengHei">
+					<!--<option value="OFF">WD091n</option>-->
+					<option value="ON">IPJC1n</option>
+					<option value="ON">IPJC2n</option>
+					<option value="ON">BR476n</option>
+					<option value="ON">全部播放</option>
+					</select>
+			</fieldset>			
+		</li>
+		<li>
+			<h2>播放模式:</h2>
+			<fieldset class="ui-li-aside">
+			    <select data-inline="true" data-mini="true" onchange="circle_mode(this,'timer','timers')" style="font-family:Microsoft JhengHei;font-size:10px" class="a" >
+			        <option value="OFF">依序播放</option>
+			        <option value="ON">定時播放</option>
+					<option value="OFF" >循環播放</option>
+			   </select>
+			</fieldset>
+		</li>
+		<li name="timer" style="display:none">
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true"  class="a" >
+				<select style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>0 時</option>
+					<option>1 時</option>
+					<option>2 時</option>
+					<option>3 時</option>
+					<option>4 時</option>
+					<option>5 時</option>
+					<option>6 時</option>
+					<option>7 時</option>
+					<option>8 時</option>
+					<option>9 時</option>
+					<option>10 時</option>
+				</select>
+				<select style="font-size:10px;font-family:Microsoft JhengHei">
+					<option>1 分</option>
+					<option>2 分</option>
+					<option>3 分</option>
+					<option>4 分</option>
+					<option>5 分</option>
+					<option>6 分</option>
+					<option>7 分</option>
+					<option>8 分</option>
+					<option>9 分</option>
+					<option>10 分</option>
+					<option>11 分</option>
+					<option>12 分</option>
+					<option>13 分</option>
+					<option>14 分</option>
+					<option>15 分</option>
+					<option>16 分</option>
+					<option>17 分</option>
+					<option>18 分</option>
+					<option>19 分</option>
+					<option>20 分</option>
+					<option>21 分</option>
+					<option>22 分</option>
+					<option>23 分</option>
+					<option>24 分</option>
+					<option>25 分</option>
+					<option>26 分</option>
+					<option>27 分</option>
+					<option>28 分</option>
+					<option>29 分</option>
+					<option>30 分</option>
+					<option>31 分</option>
+					<option>32 分</option>
+					<option>33 分</option>
+					<option>34 分</option>
+					<option>35 分</option>
+					<option>36 分</option>
+					<option>37 分</option>
+					<option>38 分</option>
+					<option>39 分</option>
+					<option>40 分</option>
+					<option>41 分</option>
+					<option>42 分</option>
+					<option>43 分</option>
+					<option>44 分</option>
+					<option>45 分</option>
+					<option>46 分</option>
+					<option>47 分</option>
+					<option>48 分</option>
+					<option>49 分</option>
+					<option>50 分</option>
+					<option>51 分</option>
+					<option>52 分</option>
+					<option>53 分</option>
+					<option>54 分</option>
+					<option>55 分</option>
+					<option>56 分</option>
+					<option>57 分</option>
+					<option>58 分</option>
+					<option>59 分</option>
+				</select>
+			</fieldset>
+		</li>
+</ul>
+ </div><!-- /page7_end -->
+</div>
+
+
+
+<!-- /player -->
+<div data-role="page" id="player" data-mini="true" data-theme="a">
+ 
+ <div data-role="header" data-theme="f">	
+	<h1>Pay phone.mp3</h1>
+	<a  data-rel="back" data-role="button" class="back" style="color:#fff;">結束</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->  
+	<img src="image/player_b.gif" style="width:100%;" height="500px">	
+ </div><!--/content_end -->  
+ 
+ <div data-role="footer" data-position="fixed" style="text-align:center;" data-theme="z">
+	
+	<div> 3/20</div>
+	<div class="ios_player" >
+		<a href="#" data-role="button" data-theme="z" data-inline="true" onclick="play_style('circle_style')"><img src="image/normal.png" id="circle_style" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/back.png" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true" onclick="play_bar('play_icon')"><img src="image/play.png" id="play_icon" width="16px" height="16px"></a>
+		<a href="#" data-role="button" data-theme="z" data-inline="true"><img src="image/next.png" width="16px" height="16px"></a>
+		<!--<a href="#" data-role="button" data-theme="z" data-inline="true" onclick="airplay('airplay2')"><img src="image/airplay.png" width="20px" height="16px"></a>-->
+		<input type="range" data-mini="true" data-theme="c" data-track-theme="a" data-highlight="true" min="0" max="100" value="50">
+	</div>
+ </div>
+ 
+<div data-role="footer" data-position="fixed" data-theme="a" style="margin:0 auto;text-align:center;display:none;" id="airplay2">	
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_pc.png" style="float:left" width="16px">iPhone</a><br><br>
+	<a data-role="button" class="device_option_player" data-theme="f" onclick="air_cancel(this)"><img src="image/air_sp.png" style="float:left" width="16px">BR476n_cd0060</a><br><br>
+	<a data-role="button" class="can_but_long" data-theme="a" onclick="air_cancel(this)">取消</a>
+</div><!--/footer -->
+
+</div><!-- /page3_end -->
+
+
+<!-- /download_list -->
+<div data-role="page" id="download_list" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f" data-position="fixed">		
+		<h1>選擇檔案</h1>
+		<a data-rel="back" data-role="button" class="back">上一頁</a>
+		<a href="#stop_music" data-role="button" class="og_but" data-theme="g">播放</a>
+ </div><!--/header -->
+ 
+ <div data-role="content" data-theme="d"><!--/content -->
+
+	<ul data-role="listview">
+		<li><a href="#download_movie">
+			<img src="image/document2.png" class="ui-li-icon">
+			影片
+		</a></li>
+		<li><a href="#download_music">
+			<img src="image/document2.png" class="ui-li-icon">
+			音樂
+		</a></li>
+		<li><a href="#download_picture">
+			<img src="image/document2.png" class="ui-li-icon">
+			照片
+		</a></li>
+		<li><a href="#download_file">
+			<img src="image/document2.png" class="ui-li-icon">
+			文件
+		</a></li>
+		<li><a href="#download_else">
+			<img src="image/document2.png" class="ui-li-icon">
+			其他
+		</a></li>
+		<li><a href="#album">
+			<img src="image/document2.png" class="ui-li-icon">
+			相機膠卷
+		</a></li>
+		<li><a href="#download_camera">
+			<img src="image/document2.png" class="ui-li-icon">
+			雲監控
+		</a>
+		</li>
+		<li><a href="">
+			<img src="image/document2.png" class="ui-li-icon">
+			SD卡(檔案總管)
+		</a></li>
+		<li>
+			<a href="" id="link">
+			<img src="image/document2.png" class="ui-li-icon" >
+			專案
+			</a>
+		</li>
+	</ul>
+				
+ </div><!--/content_end --> 
+</div><!-- /page7_end -->
+
+
+<!-- Music_Streaming -->
+<div data-role="page" id="music" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>音樂</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+	<div style="height:150px;">
+	<p style="text-align:center;">請選擇欲串流的喇叭</p>
+	<a href="#play_music" data-role="button" data-theme="f">廚房</a>
+	<a href="#play_music" data-role="button" data-theme="f">浴室</a>
+	</div>		
+ </div><!--/content_end --> 
+ 
+ <div data-role="footer" data-posistion="fixed" data-theme="z">
+	<div style="width:280px;margin:0 auto;">
+	<p style="text-align:center;">檔案傳輸</p>	
+	<a href="download.html#storageall" rel="external" data-role="button"  data-theme="f" data-mini="true" class="but">下載檔案</a>
+	<a href="upload.html#upload_folder" rel="external" data-role="button"  data-theme="f" data-mini="true" class="but">上傳檔案</a>
+	</div>
+ </div>
+
+ </div><!-- /page7_end -->
+
+ 
+<!-- stop_music -->
+<div data-role="page" id="stop_music" data-mini="true" data-theme="f">
+ 
+ <div data-role="header" data-theme="f">
+	<h1>音樂</h1>
+	<a data-rel="back" data-role="button" class="back">上一頁</a>
+ </div><!--/header -->
+ 
+ <div data-role="content"><!--/content -->
+	<div style="height:150px;">
+	<p style="text-align:center;">目前串流至廚房</p>
+	<a href="#music" data-role="button" data-theme="f">停止串流</a>
+	</div>		
+ </div><!--/content_end --> 
+ 
+ <div data-role="footer" data-posistion="fixed" data-theme="z">
+	<div style="width:280px;margin:0 auto;">
+	<p style="text-align:center;">檔案傳輸</p>	
+	<a href="download.html#storageall" rel="external" data-role="button"  data-theme="f" data-mini="true" class="but">下載檔案</a>
+	<a href="upload.html#upload_music" rel="external" data-role="button"  data-theme="f" data-mini="true" class="but">上傳檔案</a>
+	</div>
+ </div>
+
+ </div><!-- /page7_end -->
+
+ </body>
+ </html> 
